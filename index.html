@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Método Jane — Plan de estudio</title>
-<meta name="description" content="Plan de estudio de 26 semanas sobre las técnicas reales de lectura de personas que El Mentalista dramatiza: observación, línea base, lectura en frío, rapport, elicitación, enfoque cognitivo de veracidad, memoria y ética.">
+<meta name="description" content="Plan de estudio de 26 semanas sobre las técnicas reales de lectura de personas: observación, línea base, lectura en frío, rapport, elicitación, enfoque cognitivo de veracidad, memoria y ética. Incluye un mapa de las dieciocho ramas del mentalismo —de Corinda al modelo PEACE— y un catálogo de más de doscientos indicios observables con sus explicaciones alternativas.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -182,17 +182,28 @@ tailwind.config = {
         La hipnosis de escena queda afuera: no sostiene lo que la serie le hace hacer.
       </p>
 
+      <p class="mt-5 max-w-[38rem] font-body text-[1.05rem] leading-[1.7] text-bone3">
+        Y el plan no termina en la serie. Abajo hay dos cosas que no salen de la ficción: un
+        <a href="#ramas" class="text-bone2 underline decoration-amberdim hover:decoration-amber">mapa de las dieciocho ramas</a>
+        que se llaman mentalismo —del swami de Corinda al modelo PEACE, del cumberlandismo a la grafología— y, al final,
+        un <a href="#catalogo" class="text-bone2 underline decoration-amberdim hover:decoration-amber">catálogo de indicios observables</a>
+        del tipo <em>marca de anillo sin anillo, se lo sacó hace poco</em>: cada uno con lo que sugiere, con lo que lo invalida y con cuánto pesa.
+      </p>
+
       <div class="mt-11 flex flex-wrap items-center gap-3">
         <a href="#modulos" class="rounded-full bg-amber px-6 py-3 font-body text-[15px] font-medium text-ink transition-colors hover:bg-amber2">
           Empezar por el módulo 01
         </a>
-        <a href="#rutina" class="rounded-full border border-line2 px-6 py-3 font-body text-[15px] text-bone2 transition-colors hover:border-bone3 hover:text-bone">
-          Ver la rutina diaria
+        <a href="#catalogo" class="rounded-full border border-line2 px-6 py-3 font-body text-[15px] text-bone2 transition-colors hover:border-bone3 hover:text-bone">
+          Ir al catálogo de indicios
+        </a>
+        <a href="#ramas" class="rounded-full border border-line2 px-6 py-3 font-body text-[15px] text-bone2 transition-colors hover:border-bone3 hover:text-bone">
+          Las ramas del oficio
         </a>
       </div>
     </div>
 
-    <dl class="mt-16 grid max-w-[54rem] grid-cols-2 gap-x-8 gap-y-7 border-t border-line pt-8 sm:grid-cols-4">
+    <dl class="mt-16 grid max-w-[54rem] grid-cols-2 gap-x-8 gap-y-7 border-t border-line pt-8 sm:grid-cols-4 lg:grid-cols-6">
       <div>
         <dt class="font-mono text-[11px] uppercase tracking-[0.12em] text-bone3">Duración</dt>
         <dd class="num mt-1.5 font-display text-[1.85rem] font-medium text-bone">26 semanas</dd>
@@ -208,6 +219,14 @@ tailwind.config = {
       <div>
         <dt class="font-mono text-[11px] uppercase tracking-[0.12em] text-bone3">Ejercicios</dt>
         <dd id="stat-drills" class="num mt-1.5 font-display text-[1.85rem] font-medium text-bone">—</dd>
+      </div>
+      <div>
+        <dt class="font-mono text-[11px] uppercase tracking-[0.12em] text-bone3">Ramas</dt>
+        <dd id="stat-ramas" class="num mt-1.5 font-display text-[1.85rem] font-medium text-bone">—</dd>
+      </div>
+      <div>
+        <dt class="font-mono text-[11px] uppercase tracking-[0.12em] text-bone3">Indicios</dt>
+        <dd id="stat-cat" class="num mt-1.5 font-display text-[1.85rem] font-medium text-amber">—</dd>
       </div>
     </dl>
   </div>
@@ -285,6 +304,16 @@ tailwind.config = {
             <span id="reset-label">Borrar mi progreso</span>
           </button>
         </div>
+
+        <div class="mt-8 border-t border-line pt-5">
+          <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-bone3">Fuera del plan</p>
+          <div class="mt-3 space-y-px">
+            <a href="#ramas" class="block rounded-md px-2 py-[7px] font-body text-[.94rem] text-bone3 hover:bg-ink2 hover:text-bone">Las ramas del oficio</a>
+            <a href="#etica" class="block rounded-md px-2 py-[7px] font-body text-[.94rem] text-bone3 hover:bg-ink2 hover:text-bone">Ética y autodefensa</a>
+            <a href="#fuentes" class="block rounded-md px-2 py-[7px] font-body text-[.94rem] text-bone3 hover:bg-ink2 hover:text-bone">Bibliografía</a>
+            <a href="#catalogo" class="block rounded-md px-2 py-[7px] font-body text-[.94rem] text-amber hover:bg-ink2 hover:text-amber2">Catálogo de indicios</a>
+          </div>
+        </div>
       </aside>
 
       <!-- Lista de módulos -->
@@ -307,6 +336,41 @@ tailwind.config = {
 
         <div id="lista" class="space-y-px"></div>
         <p id="sin-resultados" class="hidden py-16 text-center font-body text-bone3">Nada coincide con esa búsqueda.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── Ramas del mentalismo ───────────────────────── -->
+<section id="ramas" class="border-b border-line bg-ink2">
+  <div class="mx-auto max-w-[1500px] px-5 py-16 sm:px-8 sm:py-20">
+
+    <div class="grid gap-10 lg:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] lg:gap-16">
+      <div class="lg:sticky lg:top-24 lg:self-start">
+        <h2 class="font-display text-[1.9rem] font-semibold leading-[1.12] tracking-[-0.01em] text-bone sm:text-[2.4rem]">
+          Las ramas del oficio
+        </h2>
+        <p class="mt-5 max-w-[28rem] font-body text-[1.05rem] leading-[1.7] text-bone3">
+          Bajo la palabra <em>mentalismo</em> conviven tres cosas distintas que nadie separa: un arte escénico con método
+          oculto, un conjunto de disciplinas empíricas sobre conducta y conversación, y un mercado de pseudociencias que
+          se cuelga de las dos anteriores. La serie no distingue. Este mapa sí.
+        </p>
+        <p class="mt-4 max-w-[28rem] font-body text-[1rem] leading-[1.7] text-bone3">
+          El criterio para separarlas es simple: preguntá qué pasa si el otro sabe cómo funciona. Un oficio escénico
+          deja de producir el efecto. Un campo empírico sigue funcionando igual. Una pseudociencia nunca funcionó.
+        </p>
+      </div>
+
+      <div class="min-w-0">
+        <div class="no-print mb-8 flex flex-wrap items-center gap-2 border-b border-line pb-6">
+          <span class="mr-1 font-mono text-[11px] uppercase tracking-[0.14em] text-bone3">Familia</span>
+          <button data-rama="all"    class="rchip rounded-full border border-amber bg-amber px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-ink">Todas</button>
+          <button data-rama="oficio" class="rchip rounded-full border border-line px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-bone2 hover:border-line2">Oficio escénico</button>
+          <button data-rama="campo"  class="rchip rounded-full border border-line px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-bone2 hover:border-line2">Campo empírico</button>
+          <button data-rama="pseudo" class="rchip rounded-full border border-line px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-bone2 hover:border-line2">Sobrevendido</button>
+        </div>
+
+        <div id="ramas-lista" class="divide-y divide-line border-y border-line"></div>
       </div>
     </div>
   </div>
@@ -408,10 +472,95 @@ tailwind.config = {
   </div>
 </section>
 
+<!-- ───────────────────────── Catálogo de indicios ───────────────────────── -->
+<section id="catalogo" class="border-b border-line bg-ink2">
+  <div class="mx-auto max-w-[1500px] px-5 py-16 sm:px-8 sm:py-20">
+
+    <div class="grid gap-10 lg:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] lg:gap-16">
+
+      <div class="lg:sticky lg:top-24 lg:self-start">
+        <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-amber">Apéndice</p>
+        <h2 class="mt-3 font-display text-[1.9rem] font-semibold leading-[1.12] tracking-[-0.01em] text-bone sm:text-[2.6rem]">
+          Catálogo de indicios
+        </h2>
+        <p class="mt-5 max-w-[28rem] font-body text-[1.05rem] leading-[1.7] text-bone3">
+          La parte que de verdad se usa. Cada entrada tiene tres líneas: <span class="text-bone2">lo que ves</span>,
+          <span class="text-bone2">lo que sugiere</span> y <span class="text-bone2">por qué puede estar mal</span>.
+          La tercera línea es la importante: sin ella esto es un horóscopo con vocabulario técnico.
+        </p>
+
+        <div class="mt-7 rounded-xl border border-line bg-ink3 p-5">
+          <div class="flex items-center gap-2.5">
+            <svg class="h-[18px] w-[18px] text-amber"><use href="#i-alert"/></svg>
+            <h3 class="font-body text-[1.05rem] font-semibold text-bone">Tres reglas antes de usarlo</h3>
+          </div>
+          <ol class="mt-4 space-y-3 font-body text-[.99rem] leading-[1.6] text-bone3">
+            <li><span class="font-mono text-[11px] text-amber">01</span> &nbsp;Un indicio es una pregunta, no una conclusión. Sirve para elegir qué preguntar después, nunca para decidir sobre alguien.</li>
+            <li><span class="font-mono text-[11px] text-amber">02</span> &nbsp;Manda la tasa base. Si en tu ciudad casi nadie anda en bici, la botamanga arremangada pesa poco aunque el indicio sea bueno.</li>
+            <li><span class="font-mono text-[11px] text-amber">03</span> &nbsp;Hay indicios que se observan y no se dicen. Salud, identidad, orientación, consumo, historia de abuso. Acertar en voz alta ahí no es habilidad: es exponer a alguien.</li>
+          </ol>
+        </div>
+
+        <div class="mt-6 grid grid-cols-3 gap-3 font-mono text-[11px] uppercase tracking-[0.08em]">
+          <div class="rounded-lg border border-line px-3 py-2.5">
+            <span class="block text-sage">Alta</span>
+            <span class="mt-1 block normal-case tracking-normal text-bone3">Pocas explicaciones rivales</span>
+          </div>
+          <div class="rounded-lg border border-line px-3 py-2.5">
+            <span class="block text-amber">Media</span>
+            <span class="mt-1 block normal-case tracking-normal text-bone3">Necesita confirmación</span>
+          </div>
+          <div class="rounded-lg border border-line px-3 py-2.5">
+            <span class="block text-terra">Baja</span>
+            <span class="mt-1 block normal-case tracking-normal text-bone3">Casi nunca decide nada</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="min-w-0">
+        <div class="no-print mb-7 space-y-4 border-b border-line pb-6">
+          <div class="relative">
+            <svg class="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-bone3"><use href="#i-search"/></svg>
+            <input id="q-cat" type="search" placeholder="Buscar un indicio: anillo, callo, suela, bronceado…" autocomplete="off"
+                   class="w-full rounded-full border border-line bg-ink py-2.5 pl-10 pr-3 font-body text-[15px] text-bone placeholder:text-bone3 hover:border-line2 focus:border-amberdim focus:outline-none">
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="mr-1 font-mono text-[11px] uppercase tracking-[0.14em] text-bone3">Peso</span>
+            <button data-conf="all"   class="cchip rounded-full border border-amber bg-amber px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-ink">Todos</button>
+            <button data-conf="alta"  class="cchip rounded-full border border-line px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-bone2 hover:border-line2">Alta</button>
+            <button data-conf="media" class="cchip rounded-full border border-line px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-bone2 hover:border-line2">Media</button>
+            <button data-conf="baja"  class="cchip rounded-full border border-line px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-bone2 hover:border-line2">Baja</button>
+            <span id="cat-count" class="num ml-auto font-mono text-[11px] text-bone3"></span>
+          </div>
+
+          <div id="cat-grupos" class="flex flex-wrap gap-x-4 gap-y-1.5 pt-1"></div>
+        </div>
+
+        <div id="catalogo-lista"></div>
+        <p id="cat-vacio" class="hidden py-16 text-center font-body text-bone3">Ningún indicio coincide con esa búsqueda.</p>
+
+        <p class="mt-12 max-w-[44rem] border-t border-line pt-7 font-body text-[1rem] leading-[1.7] text-bone3">
+          El catálogo se lee de una manera y se practica de otra. Leerlo entero de corrido no sirve: se elige una
+          categoría por semana, se la barre en la calle, y se anota cada vez que un indicio de esa categoría aparece
+          y cada vez que resulta ser otra cosa. La segunda columna del cuaderno, la de los fallos, es la que convierte
+          esto en una habilidad en lugar de en una colección de frases ingeniosas.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <footer class="mx-auto max-w-[1500px] px-5 py-12 sm:px-8">
-  <p class="max-w-[40rem] font-body text-sm leading-[1.7] text-bone3">
+  <p class="max-w-[44rem] font-body text-sm leading-[1.7] text-bone3">
     Plan de estudio de uso personal. <em>El Mentalista</em> es ficción; las técnicas listadas acá existen fuera de la
     ficción con las limitaciones que cada módulo indica. Nada de esto sirve para acusar a nadie de nada.
+  </p>
+  <p class="mt-4 max-w-[44rem] font-body text-sm leading-[1.7] text-bone3">
+    El catálogo final es un inventario de heurísticas de observación, no un instrumento diagnóstico. Varias entradas
+    tocan salud, identidad y consumo: están ahí para que reconozcas lo que estás viendo y ajustes tu conducta, no para
+    que lo digas en voz alta. Un indicio bien leído cambia la próxima pregunta. Nunca cierra un caso.
   </p>
 </footer>
 
@@ -897,6 +1046,10 @@ const DEFENSA = [
   'Los fallos se evaporan de la conversación y los aciertos se repiten. Anotá los fallos: la proporción real suele sorprender.',
   'Ante una afirmación sobre vos, pedí la versión falsable: "¿qué sería falso de mí, entonces?". La lectura en frío no sobrevive a esa pregunta.',
   'La presión de tiempo y la emoción alta son parte del método, no del contenido. Si te apuran, es señal.',
+  'Si alguien acierta demasiado y demasiado rápido, la hipótesis barata no es la percepción: es que ya lo sabía. Preguntate quién pudo hablar antes, y qué hay publicado con tu nombre.',
+  'La misma frase puede significar dos cosas distintas para vos y para el resto de la sala. Si sentís que un comentario fue dirigido a vos y nadie más lo notó, probablemente esa era la idea.',
+  'Cuando alguien te vende un indicador unívoco de un estado interno, lo que te está vendiendo es la sensación de saber. Los indicadores unívocos del comportamiento humano no existen.',
+  'Pedí verificación antes del resultado, no después: "¿qué esperás que pase si te equivocás?". Todo método que no responde esa pregunta se está protegiendo de ella.',
 ];
 
 const BIBLIO = [
@@ -912,6 +1065,536 @@ const BIBLIO = [
   { t: 'Humans Are Pretty Lousy Lie Detectors', a: 'Scientific American', d: 'Buena síntesis divulgativa de la crítica a las microexpresiones, con las objeciones de Hartwig y Suchotzki.', url: 'https://www.scientificamerican.com/article/humans-are-pretty-lousy-lie-detectors/' },
   { t: 'Masterclass in Eliciting Intelligence Information', a: 'CREST, Centre for Research and Evidence on Security Threats', d: 'Repertorio de elicitación con base empírica. Fuente del módulo 7.', url: 'https://crestresearch.ac.uk/download/2250/report_masterclass_in_eliciting_intelligence_information-2.pdf' },
   { t: 'Cold reading', a: 'Entrada de referencia general', d: 'Inventario de las técnicas del módulo 4: Barnum, arcoíris, escopeta, pesca, negativo evanescente.', url: 'https://en.wikipedia.org/wiki/Cold_reading' },
+
+  { t: 'Thirteen Steps to Mentalism', a: 'Tony Corinda, 1958', d: 'El mapa del mentalismo como oficio escénico: swami, lectura de lápiz y labios, billets, book tests, Q&A, presentación. Base de la sección de ramas.', url: 'https://en.wikipedia.org/wiki/Corinda' },
+  { t: 'Guide to Cold Reading', a: 'Ray Hyman, 1977', d: 'Las trece reglas del lector en frío escritas por un psicólogo que trabajó de adivino. La regla 13 es la que explica todo el negocio: decile lo que quiere oír.', url: 'https://www.skeptics.com.au/resources/articles/guide-to-cold-reading-ray-hyman/' },
+  { t: 'The Full Facts Book of Cold Reading', a: 'Ian Rowland, 1998', d: 'El catálogo técnico completo: arcoíris, hecho difuso, enunciado Jacques, pasto más verde, bifurcación, muñeca rusa, negativo evanescente.', url: 'https://www.ianrowlandcorporate.com/blog/the-most-common-cold-reads-how-they-work-and-why-they-fool-us' },
+  { t: 'Muscle reading / Cumberlandismo', a: 'Entrada de referencia general', d: 'La rama que sí lee al cuerpo: efecto ideomotor por contacto. Mismo mecanismo que la ouija y la radiestesia.', url: 'https://en.wikipedia.org/wiki/Muscle_reading' },
+  { t: 'Billet reading y el principio de uno adelante', a: 'Entrada de referencia general', d: 'La mecánica del acto de preguntas y respuestas de los psíquicos de escenario, formalizada por Annemann en los años treinta.', url: 'https://en.wikipedia.org/wiki/Billet_reading' },
+  { t: 'Left of Bang', a: 'Van Horne & Riley, 2014 — programa Combat Hunter, USMC', d: 'Observación operativa en seis dominios: kinésica, biométrica, proxémica, geográfica, iconografía y atmosférica. Útil como checklist, débil como predicción.' },
+  { t: 'TSA Behavior Detection: GAO-14-159 y GAO-17-608R', a: 'Government Accountability Office, 2013 y 2017', d: 'El experimento natural más caro de la historia sobre lectura conductual: de 178 fuentes aportadas por la TSA, 3 tenían evidencia científica suficiente.', url: 'https://www.gao.gov/products/gao-17-608r' },
+  { t: 'The Criminal Profiling Illusion', a: 'Snook, Cullen, Bennell, Taylor & Gendreau, 2008', d: 'Los perfiladores no superan consistentemente a legos. La persuasión del método viene de la retórica y del caso vívido, no de la validez medida.', url: 'https://journals.sagepub.com/doi/10.1177/0093854808321528' },
+  { t: 'Cues to Deception', a: 'DePaulo et al., 2003', d: '158 indicios de engaño, 1.338 estimaciones. La mediana del tamaño de efecto es d = 0,10. Ese número es el que desarma la industria del lenguaje corporal.', url: 'https://smg.media.mit.edu/library/DePauloEtAl.Cues%20to%20Deception.pdf' },
+  { t: 'Truth-Default Theory', a: 'Timothy R. Levine, 2014', d: 'Creemos por defecto, y eso es adaptativo. Las mentiras que se descubren casi nunca se descubren mirando: se descubren por terceros, por evidencia física o por confesión.', url: 'https://gwern.net/doc/psychology/2014-levine.pdf' },
+  { t: 'Validity of content-based techniques for credibility assessment', a: 'Oberlader et al., Applied Cognitive Psychology, 2021', d: 'Meta-análisis con corrección por sesgo de publicación: CBCA y monitoreo de realidad discriminan; SCAN no.', url: 'https://onlinelibrary.wiley.com/doi/full/10.1002/acp.3776' },
+  { t: 'SCAN cannot distinguish between truthful and fabricated accounts', a: 'Bogaard, Meijer, Vrij & Merckelbach, Frontiers in Psychology, 2016', d: 'La técnica de análisis de declaraciones más vendida a policías no supera al azar. Módulo 8 y catálogo de falsos indicios.', url: 'https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2016.00243/full' },
+  { t: 'Verbal Lie Detection: Its Past, Present and Future', a: 'Vrij, Granhag, Ashkenazi, Ganis, Leal & Fisher, 2022', d: 'Estado del arte de la detección verbal: enfoque cognitivo, verificabilidad, uso estratégico de evidencia.', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9775025/' },
+  { t: 'Interview and interrogation methods and their effects on true and false confessions', a: 'Revisión sistemática Campbell, actualización 2024', d: 'Los métodos de recolección de información consiguen confesiones verdaderas comparables y casi eliminan las falsas frente a los acusatorios tipo Reid.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11465838/' },
+  { t: 'The Eyes Don’t Have It: Lie Detection and Neuro-Linguistic Programming', a: 'Wiseman, Watt, ten Brinke, Porter, Couper & Rankin, PLoS ONE, 2012', d: 'Tres estudios, cero relación entre dirección de la mirada y mentira. El entierro formal de los "patrones de acceso ocular" de la PNL.', url: 'https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0040259' },
+  { t: 'Graphology', a: 'Entrada de referencia general, con meta-análisis de Dean y de Neter & Ben-Shakhar', d: 'Correlación nula con rasgos de personalidad y con desempeño laboral. Se incluye para que la reconozcas, no para que la uses.', url: 'https://en.wikipedia.org/wiki/Graphology' },
+  { t: 'Thin slices of expressive behavior as predictors of interpersonal consequences', a: 'Ambady & Rosenthal, 1992', d: 'Juicios de dos segundos que predicen evaluaciones de un semestre. El techo y el piso de la intuición social, medidos.', url: 'https://en.wikipedia.org/wiki/Thin-slicing' },
+  { t: 'Memory detection with the Concealed Information Test: a meta-analysis', a: 'Meijer, Selle, Elber & Ben-Shakhar, Psychophysiology, 2014', d: 'El único paradigma psicofisiológico con buen respaldo, y sólo sirve cuando hay detalles del hecho que el inocente no puede conocer.', url: 'https://onlinelibrary.wiley.com/doi/abs/10.1111/psyp.12239' },
+  { t: 'Chameleons bake bigger pies and take bigger pieces', a: 'Maddux, Mullen & Galinsky, JESP, 2008', d: 'Mimetismo estratégico en negociación: más acuerdos y más valor creado, con la confianza como mediador. La versión medida del "reflejo".', url: 'https://www.sciencedirect.com/science/article/abs/pii/S0022103107000297' },
+  { t: 'Occupational stigmata', a: 'Enciclopedia de Salud y Seguridad en el Trabajo, OIT', d: 'La versión médica del catálogo de indicios: callos, cicatrices y marcas cuya forma y ubicación delatan el oficio. Cuello del violinista, callo del ordeñador.', url: 'https://www.iloencyclopaedia.org/part-i-47946/skin-diseases/item/485-stigmata' },
+  { t: 'Sherlockian Abduction Master List', a: 'Comunidad LessWrong, lista abierta', d: 'El intento más serio de catalogar indicios observacionales con nivel de confianza declarado. Fuente parcial del catálogo final, con sus advertencias incluidas.', url: 'https://www.lesswrong.com/posts/Yz33koDN5uhSEaB6c/sherlockian-abduction-master-list' },
+];
+
+/* ══════════════════════════════════════════════════════════════════════
+   RAMAS DEL MENTALISMO
+   ══════════════════════════════════════════════════════════════════════ */
+
+const TIPOS = {
+  oficio: { etiqueta: 'Oficio escénico', color: 'text-amber', borde: 'border-amberdim', punto: 'bg-amber' },
+  campo:  { etiqueta: 'Campo empírico',  color: 'text-sage',  borde: 'border-sage',     punto: 'bg-sage' },
+  pseudo: { etiqueta: 'Sobrevendido',    color: 'text-terra', borde: 'border-terra',    punto: 'bg-terra' },
+};
+
+const RAMAS = [
+{
+  n: 'Mentalismo escénico clásico', tipo: 'oficio', alias: 'Los trece pasos · Corinda, Annemann, Nelson',
+  que: 'El cuerpo de oficio que define al mentalismo como arte. Corinda lo ordenó en 1958 en trece capítulos que todavía son el índice del rubro entero. Nada de esto es percepción: es método oculto más guion.',
+  nucleo: [
+    'Swami gimmick: una mina de grafito montada en la uña o el pulgar que permite escribir después de conocer la respuesta. Es el secreto que sostiene la mitad de las "predicciones" del mundo.',
+    'Lectura de lápiz, de labios, de sonido y de tacto: reconstruir lo que alguien escribe mirando el extremo del lápiz, la punta del bolígrafo o escuchando el trazo.',
+    'Mnemotecnia y sistemas mentales, que es la única parte del libro que además es una habilidad real transferible.',
+    'Predicciones, vendas y visión a través de vendajes, billets, book tests, telepatía a dos con código verbal, rutinas mediumnísticas, cartas.',
+    'El acto de preguntas y respuestas, los golpes de prensa, y el capítulo trece, que es el que casi nadie estudia: guion y presentación.',
+  ],
+  llevas: 'La lección estructural del oficio: el efecto no vive en el método sino en el encuadre. El mismo secreto, presentado de dos maneras, es un truco menor o un momento imposible.',
+  limite: 'Estudiar esta rama sirve exactamente para dejar de confundir artesanía con percepción. Quien no la conoce atribuye a intuición lo que es una mina de grafito.',
+},
+{
+  n: 'Lectura en frío', tipo: 'oficio', alias: 'Hyman, Rowland, Forer',
+  que: 'Producir la impresión de saber cosas sobre alguien que acabás de conocer, usando estructura lingüística, tasas base demográficas y la validación que hace la propia víctima. Es la rama más peligrosa del oficio porque funciona sin aparatos.',
+  nucleo: [
+    'Barnum o Forer: enunciados que casi cualquiera valida como propios. En el experimento original, 4,26 sobre 5 de precisión percibida con un perfil idéntico para todos.',
+    'Arcoíris: el rasgo y su opuesto en la misma frase. "Sos reservado, pero cuando hay confianza te soltás."',
+    'Hecho difuso: parece específico y es casi universal. "Veo una conexión con Europa."',
+    'Enunciado Jacques: el guion de etapas vitales según la edad visible del sujeto.',
+    'Pasto más verde: la insatisfacción genérica con el camino elegido, que la mayoría siente.',
+    'Bifurcación: la frase construida para cobrarse en cualquiera de los dos sentidos.',
+    'Pregunta desviada: una pregunta disfrazada de afirmación, para que la información la ponga el otro.',
+    'Muñeca rusa: empezar amplio y estrechar según la reacción, quedándose con el mérito del final.',
+    'Terroncitos de azúcar: el halago que compra permiso para el resto de la lectura.',
+    'Buena adivinanza: la apuesta de alta probabilidad demográfica disfrazada de visión.',
+    'Negativo evanescente: "usted no trabaja con las manos, ¿no?", que se cobra igual si la respuesta es sí.',
+  ],
+  llevas: 'Las trece reglas de Hyman en una sola: confianza, escuchar más de lo que decís, y decirle a la persona lo que quiere oír. La técnica es un envase; el contenido lo aporta quien escucha.',
+  limite: 'Doble uso puro. La misma secuencia que entretiene en una mesa es la que factura a una viuda. Se estudia para reconocerla, no para practicarla con gente que no sabe que está pasando.',
+},
+{
+  n: 'Lectura en caliente', tipo: 'oficio', alias: 'Pre-show, OSINT, compinches, doble realidad',
+  que: 'La rama que directamente sabe de antemano. En escena es legítima porque el marco es un espectáculo; fuera de escena es recopilación de información sobre una persona, con todo lo que eso implica.',
+  nucleo: [
+    'Trabajo previo: conversaciones con el público antes del show, fichas de reserva, redes sociales, el dato que alguien dejó en la cola.',
+    'Compinches y "compinche instantáneo": una persona a la que se le pide una colaboración mínima en voz baja y que después queda como testigo independiente.',
+    'Doble realidad: la misma frase significa una cosa para el espectador que participa y otra para la sala. Ninguno de los dos ve la contradicción.',
+    'Uno adelante: leer el sobre siguiente mientras se dice en voz alta el anterior. Es la columna vertebral del acto de preguntas y respuestas desde el siglo XIX.',
+    'Rasgado central de Al Baker: leer un papel doblado en el acto mismo de romperlo.',
+  ],
+  llevas: 'Un criterio de defensa: cuando alguien acierta demasiado y demasiado rápido, la hipótesis barata no es la percepción, es que ya lo sabía. Preguntá siempre quién pudo haber hablado antes.',
+  limite: 'Aplicada a personas concretas fuera de un escenario, esta rama se llama investigación de fuentes abiertas y tiene consecuencias legales y éticas reales. El marco no es opcional.',
+},
+{
+  n: 'Cumberlandismo o lectura muscular', tipo: 'oficio', alias: 'Contact mind reading, hellstromismo',
+  que: 'La única rama del mentalismo que de verdad lee el cuerpo. El intérprete toma la mano o la muñeca del sujeto y detecta la tensión mínima e involuntaria que aparece cuando se acerca al objeto que el otro está pensando. Le debe el nombre a Stuart Cumberland.',
+  nucleo: [
+    'Efecto ideomotor: el pensamiento produce micromovimiento sin intención ni conciencia. Es el mismo mecanismo de la ouija, de la radiestesia con varillas y del caso de Clever Hans, el caballo que "contaba" porque leía la postura de su entrenador.',
+    'Versión sin contacto: seguir la mirada, la orientación del torso, el cambio de respiración y la detención del paso.',
+    'Retroalimentación continua: no se adivina, se navega. El intérprete avanza y corrige veinte veces por segundo.',
+  ],
+  llevas: 'El concepto más útil de toda la lista para el mundo real: la gente filtra hacia dónde va su atención antes de decidir decirlo. No dice qué piensa, dice dónde está mirando.',
+  limite: 'Requiere contacto o distancia corta y un sujeto que efectivamente sepa la respuesta y coopere. No funciona con alguien que oculta activamente, que es justo el caso que a todo el mundo le interesa.',
+},
+{
+  n: 'Forzajes psicológicos y equívoco', tipo: 'oficio', alias: 'El 7, el 37, el elefante gris',
+  que: 'Conseguir que alguien "elija libremente" lo que ya estaba elegido, usando sesgos de respuesta compartidos por la mayoría de la población. No es control mental: es estadística de respuestas más fraseo.',
+  nucleo: [
+    'Número del 1 al 10: la mayoría dice 7. Del 1 al 5: la mayoría dice 3.',
+    'Dos dígitos entre 1 y 50, ambos impares y distintos: 37 se lleva alrededor de un tercio de las respuestas, y 35 buena parte del resto.',
+    'Categorías con un miembro prototípico dominante: herramienta y martillo, flor y rosa, vegetal y zanahoria, figura geométrica y círculo o triángulo, mueble y silla.',
+    'El elefante gris de Dinamarca: una cadena aritmética forzada más la letra que sale, más el país y el animal prototípicos.',
+    'Equívoco o elección del mago: el significado de la elección se define después de hecha, de modo que cualquier respuesta lleva al mismo lugar.',
+    'Priming y fraseo: el orden de los ejemplos, el ritmo y el gesto mueven la distribución de respuestas sin que el otro lo registre.',
+  ],
+  llevas: 'La idea que atraviesa todo el plan: la gente es mucho más previsible en agregado que individualmente. Trabajás con distribuciones, no con personas.',
+  limite: 'Un forzaje psicológico que sale el 35 % de las veces falla el 65 %. Todo el oficio está en tener salida para el fallo, y toda la ilusión de poder está en que el público no ve los fallos.',
+},
+{
+  n: 'Mnemotecnia competitiva', tipo: 'campo', alias: 'Loci, sistema mayor, PAO',
+  que: 'La rama que Corinda puso en el paso tres y que además es una habilidad genuina, medida y entrenable, sin asteriscos. Es la única parte del mentalismo escénico que sigue funcionando cuando nadie mira.',
+  nucleo: [
+    'Método de loci: recorrido espacial conocido, imágenes concretas y absurdas en cada punto fijo.',
+    'Sistema mayor: mapa consonante-dígito que convierte números en palabras, y palabras en imágenes.',
+    'PAO, persona-acción-objeto: comprime tres dígitos o tres cartas en una sola escena.',
+    'Nombres y caras: el cuello de botella real de la vida social, y el sistema con peor transferencia automática.',
+    'Repaso espaciado: sin él, el palacio se degrada como cualquier otra cosa.',
+  ],
+  llevas: 'Un efecto grande sobre recuerdo serial frente al repaso simple, y reorganización funcional sostenida a cuatro meses en los estudios de neuroimagen.',
+  limite: 'La transferencia es angosta. Entrena la memoria para material que codificás deliberadamente, no la memoria en general ni la inteligencia.',
+},
+{
+  n: 'Mentalismo sin aparatos', tipo: 'oficio', alias: 'Propless',
+  que: 'La rama moderna que renuncia a objetos, papeles y cartas, y trabaja sólo con lenguaje, atención y asociación. Es la que más se parece a lo que la ficción muestra, y por eso la más confundida con percepción.',
+  nucleo: [
+    'Cadenas de asociación: pedir un recuerdo, una persona, un lugar, y quedarse con los tres o cuatro atributos que la propia respuesta regala.',
+    'Lectura del retardo: cuánto tarda alguien en contestar dice más sobre la respuesta que la respuesta.',
+    'Reencuadre de fallos: convertir el error en un paso intermedio del procedimiento.',
+    'Uso deliberado de la memoria del espectador, que reordena lo que pasó a favor del intérprete en cuanto la historia cierra.',
+  ],
+  llevas: 'El descubrimiento incómodo: buena parte del efecto no lo produce el intérprete, lo produce la memoria del público veinte minutos después.',
+  limite: 'Sin objetos no hay prueba, y sin prueba la única verificación posible es el recuerdo del otro. Esta rama es la más fácil de creer y la más difícil de auditar.',
+},
+{
+  n: 'Mediumnismo y fraude psíquico', tipo: 'pseudo', alias: 'La rama que hay que conocer para desarmarla',
+  que: 'La aplicación comercial de todo lo anterior a personas en duelo. Históricamente es el origen del oficio, no una desviación: el mentalismo de salón nació imitando a las hermanas Fox.',
+  nucleo: [
+    'Lectura en frío a gran escala, con mucha gente en la sala y aciertos cobrados por quien levanta la mano.',
+    'Lectura en caliente disfrazada: fichas, conversaciones previas, personal de sala escuchando en la fila.',
+    'Selección de recuerdo: los aciertos se repiten y los fallos se evaporan de la conversación, incluida la del propio cliente.',
+    'El caso Popoff, con un pinganillo recibiendo desde la sala los datos de las fichas de oración, sigue siendo la demostración más limpia del método.',
+  ],
+  llevas: 'Un test de defensa que no falla: contá los fallos en voz alta. La lectura psíquica no sobrevive a un registro escrito de sus propios errores.',
+  limite: 'Aquí no hay versión buena. Es el único lugar del plan donde la técnica y el daño son la misma cosa.',
+},
+{
+  n: 'Observación operativa', tipo: 'campo', alias: 'Left of Bang, programa Combat Hunter del USMC',
+  que: 'La versión militar y policial de la observación estructurada: en vez de buscar mentirosos, buscar anomalías respecto de la línea base de un lugar. Ordenada en seis dominios que funcionan como checklist.',
+  nucleo: [
+    'Kinésica: postura, tensión y movimiento del cuerpo respecto de lo que hace el resto.',
+    'Biométrica: respuestas autónomas visibles, sudor, color, respiración.',
+    'Proxémica: quién se acerca a quién, quién evita a quién, qué distancias se sostienen.',
+    'Geográfica: cómo se mueve la gente en ese espacio, qué recorridos son normales y cuál no lo es.',
+    'Iconografía: símbolos, banderas, pintadas, ropa, marcas de pertenencia.',
+    'Atmosférica: el clima colectivo del lugar y, sobre todo, su cambio brusco.',
+  ],
+  llevas: 'El mejor de los seis para la vida civil es el atmosférico: cuando un lugar cambia de humor, casi siempre alguien lo supo antes que vos y vas a poder ver quién.',
+  limite: 'La evaluación de su primo civil, el programa SPOT de la TSA, es demoledora: de 178 fuentes aportadas para justificar 36 indicadores conductuales, sólo 3 tenían evidencia científica suficiente. Sirve como orden de atención, no como predictor de intención.',
+},
+{
+  n: 'Abducción sherlockiana', tipo: 'oficio', alias: 'Semiología de indicios, estigmas ocupacionales',
+  que: 'La rama del catálogo: leer marcas físicas y objetos para inferir historia. Tiene un pariente respetable en medicina, la dermatología ocupacional, que cataloga callos y cicatrices cuya forma y ubicación identifican el oficio.',
+  nucleo: [
+    'Estigmas ocupacionales documentados: cuello del violinista, callo del ordeñador en el pulgar, callo del tejedor, hiperqueratosis del mecanógrafo, marcas del picapedrero.',
+    'Desgaste diferencial: la suela, el puño de la camisa, el bolsillo trasero, la correa del reloj, el borde del teléfono.',
+    'Marcas por ausencia, que son las mejores: el surco del anillo que no está, la piel clara donde estaba el reloj, el pliegue de la gorra en la frente.',
+    'Inferencia por combinación: un solo indicio casi nunca decide; tres indicios independientes que apuntan al mismo lugar sí mueven la aguja.',
+  ],
+  llevas: 'El catálogo del final de esta página. Es la rama con mejor relación entre esfuerzo y resultado de todo el plan, siempre que se use para preguntar mejor.',
+  limite: 'Es abducción, es decir, la explicación más simple que viene a la cabeza, que es un sesgo, no un método. El registro escrito de fallos es obligatorio o esta rama produce exactamente la confianza sin exactitud que el plan quiere evitar.',
+},
+{
+  n: 'Perfilación criminal', tipo: 'pseudo', alias: 'Offender profiling',
+  que: 'La rama que la ficción convirtió en la imagen misma del leer gente, y la que peor sobrevivió al escrutinio empírico.',
+  nucleo: [
+    'Inferencia de características del autor a partir de la escena, por tipologías organizado/desorganizado.',
+    'Perfilado geográfico, que es la parte estadística y la única con respaldo decente.',
+    'Asesoramiento conductual a la investigación, que en la práctica funciona más como ordenamiento de prioridades que como identificación.',
+  ],
+  llevas: 'Un caso de estudio sobre cómo se fabrica credibilidad: el meta-análisis de Snook y colegas muestra que los perfiladores no superan consistentemente a legos, y que la persuasión del campo viene de la retórica y del caso vívido.',
+  limite: 'Se estudia para entender por qué convence, no para usarlo. El perfilado geográfico es la excepción parcial, y es matemática, no lectura de personas.',
+},
+{
+  n: 'Análisis de contenido verbal', tipo: 'campo', alias: 'CBCA, monitoreo de realidad, verificabilidad, SCAN',
+  que: 'La rama que dejó de mirar la cara y se puso a mirar el texto. Es donde la detección de engaño tiene su evidencia menos mala, con una excepción notoria.',
+  nucleo: [
+    'CBCA: criterios de contenido como cantidad de detalle, estructura desordenada, correcciones espontáneas, admisión de falta de memoria. Nació para testimonio infantil.',
+    'Monitoreo de realidad: los recuerdos vividos traen más detalle perceptual y contextual; los fabricados, más razonamiento.',
+    'Enfoque de verificabilidad: no importa cuánto detalle hay, importa cuánto de ese detalle es comprobable por un tercero, y si el entrevistado lo sabe.',
+    'SCAN: el método comercial más vendido a policías, y el único del grupo que en pruebas controladas no discrimina mejor que el azar.',
+  ],
+  llevas: 'Un principio que cambia el trabajo: se puede diseñar la entrevista para que el detalle comprobable aparezca, en vez de esperar sentado a ver una señal.',
+  limite: 'El meta-análisis con corrección por sesgo de publicación deja a CBCA y monitoreo de realidad por encima del azar, pero lejos de servir como prueba individual. Y SCAN directamente hay que descartarlo.',
+},
+{
+  n: 'Entrevista investigativa', tipo: 'campo', alias: 'PEACE, HIG, entrevista cognitiva, SUE',
+  que: 'La rama mejor sostenida de toda esta lista, y la más aburrida de todas, que probablemente sea el mismo hecho dicho dos veces.',
+  nucleo: [
+    'Modelo PEACE: preparación, entablar, relato, cierre, evaluación. No acusatorio, orientado a recolección.',
+    'Entrevista cognitiva: restablecer el contexto, informar todo, cambiar el orden, cambiar la perspectiva.',
+    'Uso estratégico de la evidencia: retener lo que se sabe hasta que el relato se comprometa.',
+    'El contraste con el método Reid, acusatorio y presuntivo de culpa: en el estudio de referencia con escenario de trampa, cero por ciento de confesiones falsas con estilo PEACE contra cincuenta por ciento con estilo Reid.',
+  ],
+  llevas: 'La conclusión del informe del HIG, que es la frase más importante del plan entero: los métodos no coercitivos basados en rapport y recolección de información son también los más eficaces.',
+  limite: 'Requiere tiempo, preparación y renunciar a la escena dramática. Por eso pierde en televisión y en capacitaciones comerciales.',
+},
+{
+  n: 'Psicofisiología del engaño', tipo: 'pseudo', alias: 'Polígrafo, test de información oculta, pupilometría',
+  que: 'La rama que reemplaza al observador por un aparato, con resultados muy distintos según qué pregunta hace el aparato.',
+  nucleo: [
+    'Polígrafo con preguntas de control: mide activación, no verdad. Vulnerable a contramedidas y a sesgo del examinador.',
+    'Test de información oculta: no pregunta si mentís, pregunta si reconocés un detalle que sólo el autor puede conocer. Ahí los tamaños de efecto son grandes, con P300 alrededor de 1,89.',
+    'Pupilometría y carga cognitiva: la pupila se dilata con esfuerzo mental, y también con sorpresa, dolor, emoción, luz y una lista larguísima de cosas más.',
+  ],
+  llevas: 'La distinción que importa: preguntar por activación no sirve, preguntar por reconocimiento de memoria sí. El cambio es de pregunta, no de sensor.',
+  limite: 'El test de información oculta sólo corre cuando la investigación guarda detalles que el público y el sospechoso no conocen, lo que en la práctica es la excepción. La pupila se dilata por todo: mide esfuerzo, nunca causa.',
+},
+{
+  n: 'Elicitación aplicada', tipo: 'campo', alias: 'Negociación, inteligencia, ingeniería social',
+  que: 'Conseguir que alguien cuente lo que no pensaba contar, sin preguntarlo. Es la rama con mejor rendimiento cotidiano de todo el plan, y la que más rápido se vuelve manipulación si se saca del marco.',
+  nucleo: [
+    'Etiquetado y reflejo: nombrar en voz alta el estado del otro, o repetir sus últimas tres palabras y callarse.',
+    'Declaración provocativa, conocimiento asumido, reciprocidad deliberada, halago calibrado, queja compartida.',
+    'Mimetismo estratégico: en los experimentos de negociación produce más acuerdos y más valor creado, con la confianza como mediador.',
+    'En ingeniería social, la misma caja con otro nombre: recolección en fuentes abiertas, construcción de pretexto y explotación del deseo de ser útil.',
+  ],
+  llevas: 'La regla 80/20 y el silencio de cuatro segundos rinden más que cualquier técnica del resto de la página. Casi nadie tolera un silencio y casi todos lo llenan con información.',
+  limite: 'La prueba del enterarse: si la persona, al descubrir cómo obtuviste lo que obtuviste, se sentiría estafada, no era elicitación, era una estafa chica.',
+},
+{
+  n: 'Percepción de rodajas finas', tipo: 'campo', alias: 'Thin-slicing, juicio a cero conocimiento',
+  que: 'La rama que estudia cuánto se acierta con muy poca información, que resulta ser bastante más de cero y bastante menos de lo que se cree.',
+  nucleo: [
+    'Clips de dos, cinco y diez segundos predicen evaluaciones docentes de todo un semestre, y los tres duran casi lo mismo en exactitud.',
+    'Los juicios de cero conocimiento tienen alto consenso: todos coincidimos en quién parece confiable. El consenso no es exactitud.',
+    'El acierto es mayor en rasgos expresivos y visibles, como extraversión, y cae a casi nada en rasgos internos.',
+  ],
+  llevas: 'Una calibración rápida: tu primera impresión probablemente coincide con la de los demás, y eso no dice nada sobre si es correcta.',
+  limite: 'Aplicado a confiabilidad y a criminalidad, este campo tiene un problema serio de sesgo: el consenso sobre qué cara parece honesta reproduce prejuicio, y se usa en decisiones reales.',
+},
+{
+  n: 'Lectura de juego', tipo: 'pseudo', alias: 'Tells de póker',
+  que: 'El laboratorio natural de la lectura conductual: adversarios que ocultan deliberadamente, dinero real, repetición masiva y registro en video.',
+  nucleo: [
+    'Los indicios más estudiados no son faciales: son de manos, de apuesta y de tiempo de decisión.',
+    'La evidencia disponible es más fuerte para patrones de apuesta que para conducta corporal.',
+    'Lo que los jugadores llaman leer es sobre todo modelar la estrategia del otro, no su cara.',
+  ],
+  llevas: 'La confirmación por contraste: en el único entorno con incentivo económico para leer cuerpos, los profesionales terminaron leyendo frecuencias, no rostros.',
+  limite: 'Casi toda la literatura popular de tells es anecdótica y no replicada. Y funciona, cuando funciona, contra un jugador específico y conocido.',
+},
+{
+  n: 'Las ramas falsas', tipo: 'pseudo', alias: 'Grafología, PNL, lenguaje corporal de catálogo',
+  que: 'Se incluyen porque vas a cruzarte con ellas presentadas como el núcleo de la disciplina, y porque son el ejemplo más limpio de confianza sin exactitud.',
+  nucleo: [
+    'Grafología: meta-análisis sobre más de doscientos estudios, correlación nula con rasgos de personalidad y con desempeño laboral. Se sigue usando en selección de personal.',
+    'Patrones de acceso ocular de la PNL: tres estudios, cero relación entre dirección de la mirada y mentira. Enseñar la regla no mejoró la detección de nadie.',
+    'Diccionarios de gestos: brazos cruzados igual defensa, tocarse la nariz igual mentira. La mediana del tamaño de efecto de 158 indicios medidos es d = 0,10.',
+    'Microexpresiones como prueba: existen como fenómeno, son raras, son ambiguas fuera de laboratorio y su entrenamiento comercial no muestra la mejora que promete.',
+    'SCAN, ya mencionado, y la mayoría de los cursos de "detección de mentiras en 8 horas".',
+  ],
+  llevas: 'La defensa: cuando alguien te vende un indicador unívoco de un estado interno, lo que te está vendiendo es la sensación de saber.',
+  limite: 'No hay uso legítimo. Esta rama está en la página con la misma función que la advertencia del filtro: para que no te la apliquen y para que no se la apliques a nadie.',
+},
+];
+
+/* ══════════════════════════════════════════════════════════════════════
+   CATÁLOGO DE INDICIOS
+   ══════════════════════════════════════════════════════════════════════ */
+
+const CONF = {
+  alta:  { etiqueta: 'Alta',  color: 'text-sage',  punto: 'bg-sage' },
+  media: { etiqueta: 'Media', color: 'text-amber', punto: 'bg-amber' },
+  baja:  { etiqueta: 'Baja',  color: 'text-terra', punto: 'bg-terra' },
+};
+
+const CAT_GRUPOS = [
+  'Manos, dedos y uñas',
+  'Brazos, muñecas y piel',
+  'Cara, cabeza y cuello',
+  'Calzado',
+  'Ropa y textiles',
+  'Lo que lleva encima',
+  'Teléfono y tecnología',
+  'Símbolos y pertenencia',
+  'Postura, marcha y movimiento',
+  'Habla, léxico y voz',
+  'Entorno: casa, escritorio, auto',
+  'Ritmo y tiempo',
+  'Dinero y consumo',
+  'Interacción social',
+  'Rastro digital',
+  'Falsos indicios',
+];
+
+const CATALOGO = [
+
+/* ── Manos, dedos y uñas ───────────────────────────────────────────── */
+{ g:0, o:'Surco y piel más clara en el anular, sin anillo puesto.', i:'Usó un anillo durante mucho tiempo y se lo sacó hace poco: horas o días, no meses. La marca se borra rápido.', a:'Oficio que obliga a sacárselo (cocina, taller, quirófano, gimnasio, pileta), hinchazón por calor, embarazo, cambio de peso, o se lavó las manos hace diez minutos.', c:'media' },
+{ g:0, o:'Surco profundo y permanente en el anular, con el anillo puesto.', i:'Lo usa siempre y hace años. El dedo se moldeó alrededor.', a:'Anillo apretado comprado en otra época del cuerpo. No dice nada sobre el estado actual del vínculo.', c:'alta' },
+{ g:0, o:'Alianza sucia por fuera y limpia por dentro.', i:'Se la saca y se la pone con frecuencia: el interior se frota, el exterior acumula.', a:'Limpieza reciente parcial, o simplemente un anillo viejo. Es el indicio favorito de la ficción y uno de los más frágiles.', c:'baja' },
+{ g:0, o:'Anillo grueso de hierro o acero en el meñique, muy gastado.', i:'Ingeniería en Canadá: el Iron Ring se entrega en una ceremonia de graduación.', a:'Joyería sin más. Verificable con una pregunta directa, y de las pocas donde preguntar no es invasivo.', c:'media' },
+{ g:0, o:'Anillo negro liso en el dedo medio de la mano derecha.', i:'Marcador informal de la comunidad asexual.', a:'Cualquier anillo negro. Y aunque acierte: es identidad privada y no se dice en voz alta.', c:'baja' },
+{ g:0, o:'Callos duros en la base de los dedos, en línea a lo ancho de la palma.', i:'Levanta peso con barra de forma regular.', a:'Trabajo con herramienta manual, remo, gimnasia, escalada. El patrón distingue: la barra deja una línea, la pala deja un óvalo.', c:'alta' },
+{ g:0, o:'Callo o hematoma crónico en la articulación del pulgar.', i:'Agarre de gancho, típico de levantamiento olímpico.', a:'Trabajo con tijeras, alicate o herramienta de pinza.', c:'media' },
+{ g:0, o:'Yemas de la mano izquierda endurecidas y aplanadas, mano derecha normal.', i:'Toca un instrumento de cuerda con la izquierda pisando: guitarra, bajo, violín.', a:'Zurdo con instrumento invertido, o trabajo que castiga una sola mano. Las yemas de escalador son de ambas manos.', c:'alta' },
+{ g:0, o:'Uñas largas y cuidadas en la mano derecha, cortadas al ras en la izquierda.', i:'Guitarra clásica, flamenco o arpa: la derecha pulsa, la izquierda pisa.', a:'Prácticamente ninguna. Es de las asimetrías más específicas que existen.', c:'alta' },
+{ g:0, o:'Uñas cortadas al ras en ambas manos, sin esmalte, sin cuidado estético.', i:'Actividad que las vuelve un estorbo: teclado intensivo, escalada, natación, instrumentos, oficio manual, cuidado de bebés.', a:'Preferencia personal, onicofagia, profesión sanitaria con protocolo de higiene.', c:'baja' },
+{ g:0, o:'Mancha de tinta en el lateral del dedo medio.', i:'Escribe a mano mucho y a diario, y apoya el bolígrafo ahí.', a:'Un bolígrafo que perdió tinta hoy. Verificable: la mancha crónica deja también un callo.', c:'media' },
+{ g:0, o:'Canto de la mano y meñique manchados de tinta o grafito.', i:'Zurdo que arrastra la mano sobre lo que acaba de escribir.', a:'Diestro escribiendo en una posición forzada. El indicio se refuerza si la mancha está siempre.', c:'alta' },
+{ g:0, o:'Índice y medio con tinción amarillo-marrón en la cara interna.', i:'Fuma tabaco, y bastante. Es uno de los pocos indicios casi unívocos del catálogo.', a:'Manipulación de químicos o tinturas. Y no distingue entre fumador actual y alguien que dejó hace poco: la tinción tarda semanas en irse.', c:'alta' },
+{ g:0, o:'Cicatrices chicas, irregulares, de corte y quemadura, en dorso de manos y antebrazos.', i:'Cocina profesional. El patrón disperso y repetido es característico.', a:'Soldadura, herrería, parrilla, laboratorio. La cocina deja cortes rectos más quemaduras puntuales; la soldadura deja salpicaduras redondas.', c:'alta' },
+{ g:0, o:'Pulpejos de los dedos con cortes finos y piel seca partida.', i:'Manipula papel, cartón o tela todo el día.', a:'Clima seco, dermatitis, lavado de manos repetido.', c:'media' },
+{ g:0, o:'Callo grueso en la eminencia hipotenar o en la base del pulgar.', i:'Herramienta de mango con impacto: martillo, pala, pico, hacha.', a:'Deporte de raqueta o de palo. La ubicación exacta del callo dice qué mango es.', c:'media' },
+{ g:0, o:'Callos o cicatrices sobre los nudillos del índice y medio, mano dominante.', i:'Signo de Russell: vómito autoinducido reiterado.', a:'Boxeo sin vendas, trabajo manual. Aun cuando la lectura sea correcta, es de las que nunca se dicen en voz alta.', c:'media' },
+{ g:0, o:'Grasa negra incrustada en cutículas y pliegues, que no sale con lavado.', i:'Mecánica, bicicletas, imprenta, lutería. Es suciedad de oficio, no de un rato.', a:'Trabajo puntual del fin de semana. El indicio fuerte es que esté en los pliegues, no en la superficie.', c:'alta' },
+{ g:0, o:'Polvo blanco seco bajo las uñas y en el dorso de la mano.', i:'Magnesio: escalada o gimnasio de fuerza.', a:'Yeso, tiza, harina. El magnesio es más fino y deja las manos resecas.', c:'media' },
+{ g:0, o:'Esmalte semipermanente con tres a cinco milímetros de uña natural crecida en la base.', i:'La última sesión fue hace unas tres semanas. La uña crece cerca de un milímetro cada semana.', a:'Casi ninguna. Es uno de los relojes más fiables que lleva una persona encima.', c:'alta' },
+{ g:0, o:'Manicura impecable conviviendo con callos de fuerza.', i:'Entrena serio y además cuida la imagen. Dos prioridades a la vez, no una.', a:'Ninguna en particular. Lo interesante es la combinación, no cada pieza.', c:'media' },
+{ g:0, o:'Manos hinchadas, rojas y frías, con dedos que cuesta cerrar.', i:'Trabajo prolongado a la intemperie, o Raynaud.', a:'Salió del frío hace cinco minutos. Comparar con la cara.', c:'baja' },
+{ g:0, o:'Callo lateral en la falange distal del dedo medio, lado del anular.', i:'Escribe a mano muchas horas por semana: estudio, docencia, oficio administrativo antiguo.', a:'Ya casi no aparece en menores de treinta. Su ausencia dice tanto como su presencia.', c:'media' },
+{ g:0, o:'Uñas con líneas transversales marcadas, todas a la misma altura.', i:'Líneas de Beau: un episodio único de enfermedad, fiebre alta, quimioterapia o desnutrición, fechable por la distancia a la cutícula.', a:'Trauma mecánico repetido, manicura agresiva. Terreno médico: se observa, no se comenta.', c:'media' },
+{ g:0, o:'Anillo de graduación o de promoción con año y escudo.', i:'Institución y año exactos, es decir, edad aproximada y origen social.', a:'Heredado. Un anillo con desgaste que no coincide con la edad del portador suele ser de otro.', c:'alta' },
+
+/* ── Brazos, muñecas y piel ────────────────────────────────────────── */
+{ g:1, o:'Franja de piel clara en la muñeca izquierda, sin reloj puesto.', i:'Usa reloj a diario, es diestro, y estuvo al sol lo suficiente como para marcar. Se lo sacó hace poco.', a:'Se lo sacó para dormir, para el gimnasio, para un trámite. La marca dura días.', c:'alta' },
+{ g:1, o:'Reloj en la muñeca derecha.', i:'Probablemente zurdo.', a:'Preferencia, lesión, trabajo que castiga una muñeca, moda. Acierta bastante más que el azar, no mucho más.', c:'media' },
+{ g:1, o:'Sensor circular blanco adherido en la cara posterior del brazo.', i:'Monitor continuo de glucosa: diabetes.', a:'Ninguna práctica. Es información médica y no se comenta jamás.', c:'alta' },
+{ g:1, o:'Parche adhesivo color piel en el hombro o el brazo, sin herida visible.', i:'Terapia de reemplazo de nicotina: está dejando de fumar, probablemente hace semanas.', a:'Parche de hormonas, analgésico o antivertiginoso. Terreno médico.', c:'media' },
+{ g:1, o:'Pulsera de papel de hospital, cortada pero todavía puesta, o su marca.', i:'Internación o guardia en las últimas horas.', a:'Pulsera de evento o de boliche, que se parecen. La de hospital tiene código de barras.', c:'alta' },
+{ g:1, o:'Hematomas ovalados en la cara interna del antebrazo, un solo brazo.', i:'Arquería sin protector: la cuerda golpea el antebrazo del brazo que sostiene el arco.', a:'Deporte de contacto, trabajo de carga, extracción de sangre. La regularidad del patrón es lo que importa.', c:'media' },
+{ g:1, o:'Cicatriz o punteado en la flexura del codo.', i:'Punciones repetidas: donante frecuente, tratamiento crónico, o uso intravenoso.', a:'Las tres son muy distintas entre sí y el indicio no las distingue. Es el ejemplo de manual de indicio que no debe usarse solo.', c:'baja' },
+{ g:1, o:'Círculos violáceos perfectos y equidistantes en la espalda o los hombros.', i:'Ventosas: terapia manual, medicina tradicional, deporte de alto rendimiento.', a:'Ninguna. El patrón es inconfundible.', c:'alta' },
+{ g:1, o:'Tatuaje reciente: piel enrojecida, brillo de crema, film transparente.', i:'Hecho en los últimos días. El enrojecimiento dura alrededor de una semana.', a:'Irritación por otra causa. El film y la geometría lo confirman.', c:'alta' },
+{ g:1, o:'Tatuaje con contorno fantasma y piel moteada.', i:'En proceso de eliminación con láser: varias sesiones, meses de trabajo, decisión de borrar algo.', a:'Tatuaje viejo mal cicatrizado.', c:'media' },
+{ g:1, o:'Vello del antebrazo chamuscado en un solo brazo, punta rizada.', i:'Trabaja con fuego o calor por un lado: parrilla, horno, soldadura, fundición.', a:'Un asado el domingo. El indicio crónico viene acompañado de cicatrices puntiformes.', c:'media' },
+{ g:1, o:'Bronceado que termina en línea neta a mitad del bíceps y en las muñecas.', i:'Trabaja al aire libre con remera de manga corta: obra, campo, reparto, jardinería.', a:'Vacaciones. La marca de trabajo es asimétrica, más marcada del lado expuesto al sol de la jornada.', c:'alta' },
+{ g:1, o:'Marca de banda elástica o de reloj deportivo con bronceado alrededor.', i:'Entrena al aire libre de forma sostenida, no esporádica.', a:'Poca. Es un buen indicio de constancia, que es distinto de aptitud.', c:'media' },
+
+/* ── Cara, cabeza y cuello ─────────────────────────────────────────── */
+{ g:2, o:'Bronceado y envejecimiento cutáneo claramente asimétricos, un lado de la cara más dañado.', i:'Pasa muchas horas conduciendo. El lado dañado es el de la ventanilla, que depende del país.', a:'Puesto de trabajo junto a una ventana, hábito de sentarse siempre del mismo lado.', c:'media' },
+{ g:2, o:'Marca clara de gafas de sol o de antiparras.', i:'Actividad exterior prolongada y reciente: montaña, agua, ciclismo, obra.', a:'Un día de playa. La marca de antiparras de nieve o de natación tiene forma propia.', c:'alta' },
+{ g:2, o:'Línea horizontal de bronceado en la frente, mitad superior pálida.', i:'Usa gorra o casco a diario: obra, campo, ciclismo, reparto.', a:'Ninguna importante. Es uno de los indicios de oficio más limpios.', c:'alta' },
+{ g:2, o:'Marca roja en el puente de la nariz, sin anteojos a la vista.', i:'Usa anteojos y se los acaba de sacar, o los cambió por lentes de contacto.', a:'Barbijo, máscara, apoyo de algún equipo. La marca de anteojos es doble y simétrica.', c:'alta' },
+{ g:2, o:'Ojos rojos al final del día con gesto repetido de tocarse el párpado.', i:'Lentes de contacto, muchas horas de pantalla, o ambas.', a:'Alergia, falta de sueño, llanto. Alta tasa de falsos positivos.', c:'baja' },
+{ g:2, o:'Mancha oscura, engrosada, en el lado izquierdo del cuello bajo la mandíbula.', i:'Cuello del violinista: violín o viola, años de práctica.', a:'Dermatitis de contacto por collar o perfume. La ubicación exacta y la forma lo definen.', c:'alta' },
+{ g:2, o:'Pabellón auricular deformado, engrosado, sin cartílago definido.', i:'Oreja de coliflor: lucha, judo, rugby, artes marciales mixtas, años de fricción.', a:'Trauma único. La bilateralidad apunta a deporte.', c:'alta' },
+{ g:2, o:'Callo o mancha oscura en el centro de la frente.', i:'Zebiba: oración frecuente con contacto de la frente en el suelo. Práctica musulmana sostenida.', a:'Otras prácticas devocionales, trabajo con casco de apoyo frontal.', c:'alta' },
+{ g:2, o:'Cruz de ceniza en la frente, un miércoles.', i:'Miércoles de ceniza, cristianismo litúrgico. Fecha exacta incluida.', a:'Prácticamente ninguna, pero es un indicio de un solo día al año.', c:'alta' },
+{ g:2, o:'Nuca con línea de corte nítida y pelos sueltos en el cuello de la camisa.', i:'Corte de pelo de hoy, probablemente de hace pocas horas.', a:'Se cortó él mismo. La nitidez del contorno distingue.', c:'alta' },
+{ g:2, o:'Piel del mentón y del cuello más clara que el resto de la cara.', i:'Tenía barba y se la sacó hace poco: días, no semanas.', a:'Ninguna importante. La diferencia de tono se iguala en una o dos semanas.', c:'alta' },
+{ g:2, o:'Marca de cordón o cinta en la piel del cuello, sin colgante.', i:'Usa algo colgado a diario y se lo sacó: credencial de trabajo, medalla, llave.', a:'Cuello de prenda ajustado.', c:'media' },
+{ g:2, o:'Mandíbula con maseteros marcados y desgaste en los bordes dentales.', i:'Bruxismo sostenido, habitualmente asociado a estrés crónico o a apnea.', a:'Anatomía, dieta dura, masticar chicle. Terreno médico, no se comenta.', c:'media' },
+{ g:2, o:'Pupilas muy dilatadas en luz intensa, con visión de cerca borrosa.', i:'Le dilataron la pupila en una consulta oftalmológica hoy.', a:'Sustancias, medicación, migraña, luz baja previa. La asimetría y el folleto en la mano deciden.', c:'media' },
+{ g:2, o:'Capilares rotos en mejillas y alas de la nariz.', i:'Exposición crónica al sol o al frío, rosácea, y en parte de los casos consumo alcohólico sostenido.', a:'Genética, piel clara, deporte de exterior. Es el indicio del catálogo con peor relación entre lo que sugiere y el daño que hace decirlo.', c:'baja' },
+{ g:2, o:'Marca circular hundida en el lóbulo o expansor retirado.', i:'Usó dilatador: la marca no se cierra sola después de cierto calibre.', a:'Ninguna. Dice algo sobre una etapa, no sobre la actual.', c:'alta' },
+{ g:2, o:'Cejas y pestañas parcialmente quemadas, con olor a humo en el pelo.', i:'Estuvo cerca de fuego hace poco: cocina, taller, incidente.', a:'Fogón, asado, chimenea.', c:'media' },
+
+/* ── Calzado ───────────────────────────────────────────────────────── */
+{ g:3, o:'Desgaste concentrado en el borde externo del talón, ambos zapatos.', i:'Patrón de marcha habitual: el pie aterriza por el borde externo. Es lo normal, sirve como base de comparación.', a:'No es un hallazgo, es la referencia contra la que se mide todo lo demás.', c:'alta' },
+{ g:3, o:'Desgaste en el borde interno de la suela y deformación del contrafuerte hacia adentro.', i:'Pronación marcada. A veces acompañada de dolor de rodilla o de cadera.', a:'Zapato mal calzado, peso, embarazo, fatiga. Observación, no diagnóstico.', c:'media' },
+{ g:3, o:'Zapatos visiblemente nuevos con el resto de la ropa gastada.', i:'Compra reciente por ocasión: entrevista, evento, regalo.', a:'Prioriza el calzado. La suela sin rayar confirma que es de esta semana.', c:'media' },
+{ g:3, o:'Zapatos caros, de buena horma, con tacos gastados y sin lustrar.', i:'Tuvo más dinero o más tiempo antes que ahora, o simplemente el calzado dejó de importarle.', a:'De segunda mano, heredado, o una lectura de clase que dice más del observador que del observado. Indicio clásico y sobrevalorado.', c:'baja' },
+{ g:3, o:'Abrasión en el empeine exterior de una sola zapatilla, con la lona deshilachada.', i:'Skate: el pie de patada raspa la lija.', a:'Poca. El patrón es específico y siempre del mismo pie.', c:'alta' },
+{ g:3, o:'Zapatillas de running con desgaste sólo en la zona delantera.', i:'Corre de antepié, o las usa para gimnasio y no para correr.', a:'Marcha en pendiente, trabajo de pie sobre la punta.', c:'media' },
+{ g:3, o:'Barro seco de color particular sólo en el borde de la suela y en el ribete.', i:'Pisó tierra en las últimas horas. El color y la textura acotan la zona.', a:'Casi todo, si no conocés los suelos de la zona. Funciona sólo con conocimiento local.', c:'baja' },
+{ g:3, o:'Calzado de seguridad con puntera marcada y suela antideslizante gruesa.', i:'Industria, obra, logística o cocina, con normativa.', a:'Ninguna. Es uniforme, no indicio.', c:'alta' },
+{ g:3, o:'Zuecos o zapatillas blancas de suela gruesa y plantilla vencida.', i:'Muchas horas de pie: salud, gastronomía, retail.', a:'Comodidad personal, problema de pie.', c:'media' },
+{ g:3, o:'Protuberancia ósea en la parte posterior del talón.', i:'Deformidad de Haglund: uso habitual de calzado rígido o de taco.', a:'Anatomía. Terreno médico.', c:'media' },
+{ g:3, o:'Marca de roce en el empeine del zapato izquierdo, ninguna en el derecho.', i:'Conduce moto: el pie izquierdo opera la palanca de cambios.', a:'Poca, si el desgaste es una franja transversal limpia.', c:'alta' },
+{ g:3, o:'Zapatilla derecha más desgastada en el talón que la izquierda.', i:'Maneja auto muchas horas: el talón derecho pivota sobre el piso.', a:'Asimetría de marcha, pierna dominante.', c:'media' },
+{ g:3, o:'Zapatos de vestir impecables con suela de cuero sin rayar.', i:'Se mueve en auto puerta a puerta, o los estrena.', a:'Los cambió al llegar. Comparar con el bolso.', c:'media' },
+{ g:3, o:'Cordones atados con nudo asimétrico o sustituidos por elásticos.', i:'Una mano limitada, apuro crónico, o preferencia funcional.', a:'Moda, comodidad.', c:'baja' },
+{ g:3, o:'Ojotas o calzado de pileta a destiempo, con bolso.', i:'Viene o va a un lugar donde se cambia: gimnasio, natación, vestuario laboral.', a:'Vive a la vuelta.', c:'media' },
+
+/* ── Ropa y textiles ───────────────────────────────────────────────── */
+{ g:4, o:'Botamanga derecha arremangada, o con banda elástica, y la izquierda no.', i:'Bicicleta: se protege la pernera de la cadena y del plato.', a:'Casi ninguna en ciudad. Es de los indicios más fiables del catálogo.', c:'alta' },
+{ g:4, o:'Mancha de grasa oscura en la cara interna de la pantorrilla derecha.', i:'Misma causa que el anterior, sin la precaución.', a:'Contacto con maquinaria.', c:'alta' },
+{ g:4, o:'Desgaste o deformación en un solo hombro de la prenda.', i:'Lleva bolso o mochila siempre del mismo lado, con peso.', a:'Cinturón de seguridad, lo que marca el hombro contrario según el país.', c:'media' },
+{ g:4, o:'Pliegues de plegado de vitrina todavía marcados en la camisa.', i:'Prenda estrenada hoy. Probablemente comprada para la ocasión.', a:'Guardada mucho tiempo sin usar, lo que también es información.', c:'alta' },
+{ g:4, o:'Arrugas horizontales marcadas en la parte posterior del muslo del pantalón.', i:'Estuvo sentado muchas horas seguidas: viaje largo, jornada de escritorio sin pausa.', a:'Tela de mala recuperación.', c:'media' },
+{ g:4, o:'Polvo blanco fino adherido a pantalón y calzado, sobre todo en rodillas.', i:'Construcción, yeso, pintura, albañilería. La rodilla marca trabajo a nivel del piso.', a:'Harina, tiza, cal de otra fuente.', c:'alta' },
+{ g:4, o:'Decoloraciones puntuales tipo salpicadura en la ropa oscura.', i:'Lavandina o cloro: limpieza, pileta, laboratorio, salud.', a:'Accidente doméstico único. La repetición es lo que informa.', c:'media' },
+{ g:4, o:'Pelo de animal concentrado en la parte baja del pantalón.', i:'Convive con un animal. La altura donde se concentra y el largo del pelo dan tamaño y tipo.', a:'Estuvo en casa ajena, o viajó en transporte compartido.', c:'alta' },
+{ g:4, o:'Mitad del atuendo es uniforme de trabajo y la otra mitad no.', i:'Salió del trabajo y se cambió a medias, o va hacia él.', a:'Ninguna importante. La pieza que quedó dice el oficio.', c:'alta' },
+{ g:4, o:'Orificios de pin o de escarapela en la solapa, sin pin puesto.', i:'Usa distintivo con frecuencia y hoy no lo lleva.', a:'Saco de segunda mano.', c:'media' },
+{ g:4, o:'Bolsillo del pecho deformado con mancha de tinta en el fondo.', i:'Lleva bolígrafos ahí todos los días: oficio con anotación constante.', a:'Un bolígrafo roto una vez. El bolsillo deformado es lo crónico.', c:'alta' },
+{ g:4, o:'Cinturón abrochado en un agujero nuevo, con el desgaste marcado en otro.', i:'Cambio de peso reciente. La dirección la dice cuál agujero está gastado.', a:'Cinturón prestado o nuevo.', c:'alta' },
+{ g:4, o:'Prenda del revés, etiqueta a la vista, o botones desfasados.', i:'Se vistió apurado o a oscuras.', a:'Diseño. Y el apuro puede ser de cualquier causa: no concluye nada más que apuro.', c:'media' },
+{ g:4, o:'Rectángulo desgastado y decolorado en el bolsillo trasero.', i:'Billetera o teléfono siempre en el mismo bolsillo. Sirve para saber dónde va la mano si se pone nervioso.', a:'Ninguna. Es un indicio de rutina, muy estable.', c:'alta' },
+{ g:4, o:'Codo derecho de la camisa con brillo y desgaste, el izquierdo no.', i:'Apoya el brazo dominante en escritorio o mostrador muchas horas.', a:'Manía postural.', c:'media' },
+{ g:4, o:'Prenda de un club, colegio, empresa, carrera o evento con año impreso.', i:'Pertenencia y fecha exactas, más un tema del que sabe hablar.', a:'Regalada, heredada, comprada de segunda mano. El indicio más fácil de leer y también de falsificar.', c:'media' },
+{ g:4, o:'Marca de bronceado a mitad del muslo, con piernas trabajadas.', i:'Ciclismo con calza, muchas horas al sol.', a:'Poca. La línea es demasiado neta para ser casual.', c:'alta' },
+{ g:4, o:'Ropa técnica de montaña usada en contexto urbano, gastada y no nueva.', i:'La usa de verdad. La ropa técnica nueva y limpia dice lo contrario.', a:'Moda. El desgaste en los puntos de roce es lo que distingue.', c:'media' },
+
+/* ── Lo que lleva encima ───────────────────────────────────────────── */
+{ g:5, o:'Llavero con muchas llaves tubulares o de seguridad y una tarjeta magnética.', i:'Responsabilidad sobre un espacio ajeno: encargado, mantenimiento, seguridad, comercio.', a:'Vive en un edificio con varios accesos.', c:'media' },
+{ g:5, o:'Llavero con llave de auto y ninguna llave de casa.', i:'Alguien más abre la puerta, o el acceso es con código. Vive acompañado, o en un edificio moderno.', a:'Dejó las llaves. Indicio débil solo, útil combinado.', c:'baja' },
+{ g:5, o:'Mosquetón de llaves colgado de la presilla del pantalón.', i:'Oficio que usa llaves constantemente y necesita las manos libres.', a:'Costumbre estética.', c:'media' },
+{ g:5, o:'Credencial con lanyard todavía puesta fuera del lugar de trabajo.', i:'Salió hace poco y no pasó por casa. La credencial suele traer nombre, empresa y a veces área.', a:'La usa como identificación general. Leer una credencial ajena en detalle ya es otra cosa.', c:'alta' },
+{ g:5, o:'Casco de moto en la mano y marca de la correa bajo el mentón.', i:'Llegó en moto hace minutos. La marca se borra rápido.', a:'Ninguna.', c:'alta' },
+{ g:5, o:'Mochila con forma rígida rectangular y esquinas marcadas.', i:'Lleva notebook. El desgaste del cierre dice cuánto la abre por día.', a:'Libros, carpeta.', c:'media' },
+{ g:5, o:'Bolso deportivo con el asa gastada de un solo lado y olor a cloro.', i:'Natación regular, no ocasional.', a:'Trabajo en pileta o en limpieza.', c:'alta' },
+{ g:5, o:'Vaso descartable de una cadena específica, a una hora específica, lejos de la sucursal.', i:'Ruta y horario reconstruibles: pasó por ahí camino a acá.', a:'Se lo dieron. Verificable por temperatura y nivel del vaso.', c:'media' },
+{ g:5, o:'Paraguas mojado en un lugar donde no llovió.', i:'Viene de otra zona, o llovió hace rato y el paraguas conserva agua.', a:'Lo mojó otra cosa. Combinar con hombros y calzado.', c:'media' },
+{ g:5, o:'Pulsera de papel de evento, entrada o ticket asomando del bolsillo.', i:'Fecha, lugar y tipo de evento. A veces precio, y por lo tanto categoría de entrada.', a:'De otra persona. Leer un ticket ajeno con detalle es invasivo.', c:'alta' },
+{ g:5, o:'Bolsa de farmacia o de un comercio concreto.', i:'Estuvo ahí, y ese comercio tiene una ubicación. El contenido, en cambio, no se mira.', a:'Reutiliza la bolsa. Muy común.', c:'baja' },
+{ g:5, o:'Un solo auricular puesto.', i:'Quiere seguir escuchando el entorno: espera algo, trabaja, o está en un lugar que no considera seguro del todo.', a:'El otro auricular sin batería. Sucede todo el tiempo.', c:'baja' },
+{ g:5, o:'Libro con marcador a un tercio y lomo sin quebrar.', i:'Empezado hace poco. Si el marcador no se mueve en días, abandonado.', a:'Relee. El desgaste del canto lo distingue.', c:'media' },
+{ g:5, o:'Batería externa y cable siempre a mano.', i:'Jornadas largas fuera de casa, o teléfono viejo. Dice rutina, no personalidad.', a:'Precaución de viaje.', c:'media' },
+{ g:5, o:'Termo y mate, o el equivalente cultural de consumo continuo.', i:'Jornada larga, probablemente con tiempos muertos: transporte, guardia, campo, estudio.', a:'Costumbre. En algunos países no informa nada por ser universal.', c:'baja' },
+{ g:5, o:'Anteojos de sol colgados del cuello de la remera, en interior.', i:'Estuvo afuera hace poco y piensa volver a salir.', a:'Accesorio.', c:'media' },
+{ g:5, o:'Cuaderno con esquinas dobladas y bordes sucios, contra uno impecable.', i:'El primero se usa a diario; el segundo es decorativo o reciente.', a:'Ninguna. Es un indicio de uso real, muy transferible.', c:'alta' },
+
+/* ── Teléfono y tecnología ─────────────────────────────────────────── */
+{ g:6, o:'Pantalla rota sin reparar, usada así por semanas.', i:'Costo, tiempo, o recambio próximo. También cierta tolerancia al desorden.', a:'Se rompió ayer. El polvo en las grietas lo distingue.', c:'media' },
+{ g:6, o:'Funda con ranura para tarjetas y billetes.', i:'No lleva billetera: sale con lo mínimo, probablemente en trayectos cortos y conocidos.', a:'Lleva las dos cosas.', c:'media' },
+{ g:6, o:'Batería por debajo del quince por ciento antes del mediodía.', i:'Teléfono viejo, o jornada que empezó mucho antes de lo que parece.', a:'Se olvidó de cargarlo. Alta frecuencia.', c:'baja' },
+{ g:6, o:'Dos teléfonos distintos, uno con funda corporativa.', i:'Separa trabajo y vida personal por política de la empresa o por decisión propia.', a:'Cambio de línea en transición.', c:'alta' },
+{ g:6, o:'Teléfono siempre boca abajo sobre la mesa.', i:'Norma de cortesía adquirida en algún ámbito, o costumbre de evitar interrupciones.', a:'Nada que ver con ocultar. Es el falso indicio favorito de las parejas y de los cursos malos.', c:'baja' },
+{ g:6, o:'Brillo al máximo y tipografía grande.', i:'Vista cansada, o uso habitual al sol.', a:'Preferencia. Edad estimada con muy poca precisión.', c:'baja' },
+{ g:6, o:'Notificaciones en un idioma distinto al de la conversación.', i:'Lengua materna o de uso principal, que puede no ser la del lugar.', a:'Teléfono heredado o configurado por otro.', c:'alta' },
+{ g:6, o:'Marca grasa de dedos concentrada en una zona de la pantalla.', i:'Una sola aplicación domina el uso. La zona indica si es teclado, pulgar derecho o izquierdo.', a:'Limpieza reciente borra el indicio por completo.', c:'media' },
+{ g:6, o:'Notebook cubierta de calcomanías de tecnologías, conferencias y comunidades.', i:'Perfil técnico, con años y eventos fechados. La iconografía más explícita que existe.', a:'Calcomanías regaladas. Igual dicen dónde estuvo.', c:'alta' },
+{ g:6, o:'Teclado con las teclas W, A, S y D visiblemente gastadas.', i:'Juega en computadora, muchas horas.', a:'Ninguna. Igual que el pad numérico gastado apunta a carga de datos o contabilidad.', c:'alta' },
+{ g:6, o:'Mouse a la izquierda del teclado con la configuración de botones sin invertir.', i:'Zurdo que se adaptó, muy común entre zurdos que aprendieron en máquinas compartidas.', a:'Espacio de escritorio.', c:'media' },
+{ g:6, o:'Auriculares con cancelación puestos en un ambiente silencioso.', i:'Necesita cortar estímulo, no ruido: concentración, regulación sensorial, o no querer conversación.', a:'Escucha algo. Preguntar es más barato que inferir.', c:'baja' },
+
+/* ── Símbolos y pertenencia ───────────────────────────────────────── */
+{ g:7, o:'Parches de club de motociclistas en chaleco cortado, con rombos y territorios.', i:'Pertenencia estructurada, con jerarquía legible para quien conoce el código.', a:'Imitación. Y es un terreno donde equivocarse en voz alta tiene costos.', c:'alta' },
+{ g:7, o:'Pin de cinta de color en la solapa.', i:'Campaña o causa concreta, deducible por color y forma.', a:'Entregado en un evento corporativo sin adhesión personal.', c:'media' },
+{ g:7, o:'Amapola roja en el ojal, a principios de noviembre.', i:'Conmemoración de veteranos en países del Commonwealth. Fecha y origen cultural.', a:'Poca.', c:'alta' },
+{ g:7, o:'Crucifijo de tres barras o icono en el cuello.', i:'Cristianismo ortodoxo, con origen cultural probable.', a:'Estética. Los símbolos religiosos se heredan y se usan sin práctica.', c:'media' },
+{ g:7, o:'Kipá, hiyab, turbante, pulsera de hilo ritual, marca frontal.', i:'Práctica religiosa visible y, en varios casos, corriente interna específica.', a:'Motivo cultural, familiar o festivo. Y son identidades protegidas: se observan, no se comentan.', c:'alta' },
+{ g:7, o:'Tatuaje de punto y coma, de pieza de rompecabezas, de infinito arcoíris, sigla de una ONG.', i:'Cada uno remite a una comunidad concreta: salud mental, autismo, recuperación.', a:'Estética sin significado. Y aunque acierte, es información sensible que no se devuelve en voz alta.', c:'media' },
+{ g:7, o:'Pañuelo de color asomando de un bolsillo trasero.', i:'Código de señalización con significado específico en ciertas comunidades.', a:'Un pañuelo. El riesgo de exponer a alguien supera con mucho el valor de acertar.', c:'baja' },
+{ g:7, o:'Insignias militares, cintas de campaña, unidad bordada en una gorra.', i:'Servicio, arma, período y a veces despliegue concreto.', a:'Prenda de recuerdo o familiar. Los detalles de las cintas son demasiado específicos para inventarse.', c:'alta' },
+{ g:7, o:'Dorsal o medalla de una carrera con año, distancia y ciudad.', i:'Fecha, ciudad, nivel de entrenamiento y probablemente comunidad de práctica.', a:'Ninguna. Y es un tema de conversación fácil y bienvenido.', c:'alta' },
+{ g:7, o:'Calcomanía de club deportivo, universidad o grupo religioso en el auto.', i:'Pertenencia, y a menudo zona de residencia.', a:'Auto usado con la calcomanía del dueño anterior. Pasa más de lo que parece.', c:'media' },
+
+/* ── Postura, marcha y movimiento ─────────────────────────────────── */
+{ g:8, o:'La mano vuelve una y otra vez al mismo punto del cuerpo sin motivo aparente.', i:'Ahí hay algo que le importa: billetera, teléfono, medicación, documentación, un objeto de valor.', a:'Picazón, prenda incómoda, hábito. Es un indicio de atención, no de contenido.', c:'media' },
+{ g:8, o:'Al entrar a un lugar, escanea el perímetro y ubica las salidas antes de sentarse.', i:'Entrenamiento profesional, o hipervigilancia por experiencia previa.', a:'Curiosidad arquitectónica. Las dos causas posibles son muy distintas entre sí y no distinguibles a simple vista.', c:'media' },
+{ g:8, o:'Elige siempre la silla con la espalda contra la pared y vista a la puerta.', i:'Misma familia que el anterior. Preferencia muy estable en quien la tiene.', a:'Llegó primero y eligió la mejor silla, que suele ser esa.', c:'baja' },
+{ g:8, o:'Cojera que sólo aparece al subir escaleras o al levantarse.', i:'Problema articular, no muscular agudo. Crónico más que reciente.', a:'Terreno médico. Se observa para no forzar a nadie a caminar rápido, no para diagnosticar.', c:'media' },
+{ g:8, o:'Camina con el torso rotado y un hombro adelantado de forma sostenida.', i:'Carga habitual asimétrica, o protección de una zona con dolor.', a:'Postura aprendida.', c:'media' },
+{ g:8, o:'Se sienta en el borde de la silla, con el abrigo puesto y el bolso en el regazo.', i:'Piensa quedarse poco. Buen momento para ir al punto.', a:'Frío, incomodidad con el lugar.', c:'alta' },
+{ g:8, o:'Marcha con pies hacia afuera y postura muy erguida.', i:'Años de danza clásica o de formación corporal similar.', a:'Anatomía de cadera. Indicio popular y bastante débil.', c:'baja' },
+{ g:8, o:'Se orienta con el torso hacia la salida mientras la conversación sigue.', i:'Quiere terminar. La dirección del torso es más honesta que la de la cara.', a:'Incomodidad con el lugar, no con vos. Es una señal de conversación, no de verdad.', c:'media' },
+{ g:8, o:'Maneja la distancia física de forma marcadamente distinta al resto del grupo.', i:'Norma cultural diferente, o relación distinta con las personas presentes.', a:'Altura, audición, timidez. La proxémica varía enormemente entre culturas.', c:'media' },
+{ g:8, o:'Se mueve con destino y ritmo constante frente a quien deambula y se detiene.', i:'Conoce el lugar. El que deambula, no.', a:'Poca. Es de los mejores indicios en espacios públicos.', c:'alta' },
+{ g:8, o:'Pasa por el mismo sitio dos veces sin comprar ni entrar a ningún lado.', i:'Espera, busca algo, o observa. El dato es el patrón, no el paso.', a:'Se perdió. Muy frecuente.', c:'media' },
+
+/* ── Habla, léxico y voz ──────────────────────────────────────────── */
+{ g:9, o:'Usa una palabra regional específica sin registrarlo.', i:'Región de origen o de residencia prolongada. Es el indicio lingüístico más barato y más fiable.', a:'Pareja o convivientes de esa región. Contagia rápido.', c:'alta' },
+{ g:9, o:'Usa un tecnicismo con total naturalidad y sin explicarlo.', i:'Ese es su campo. El que aprendió la palabra hace poco la explica o la subraya.', a:'Aficionado con mucha lectura. La prueba es la palabra de segundo nivel, no la de primero.', c:'alta' },
+{ g:9, o:'Elige por defecto una unidad de medida y no la otra.', i:'Sistema de origen o de formación: millas, libras, pulgadas, grados Fahrenheit.', a:'Contexto profesional que usa otra unidad. La ingeniería y la aviación mezclan.', c:'alta' },
+{ g:9, o:'Dice la hora en formato de veinticuatro horas, siempre.', i:'Ámbito militar, sanitario, aeronáutico, logístico, o país donde es la norma.', a:'Costumbre. Combinado con otros indicios laborales se fortalece.', c:'media' },
+{ g:9, o:'Dicta números de teléfono o documentos agrupando de una manera fija.', i:'Entrenamiento en algún sistema donde eso se hace así.', a:'Manía personal.', c:'baja' },
+{ g:9, o:'Habla de una empresa o institución en primera persona del plural.', i:'Sigue ahí y se identifica. El cambio a tercera persona marca salida o desapego, y suele ocurrir antes del anuncio formal.', a:'Costumbre de un empleo anterior que quedó. El cambio dentro de la misma conversación es lo informativo.', c:'alta' },
+{ g:9, o:'Fecha eventos personales respecto de un hito propio y no del calendario.', i:'Ese hito organiza su biografía: mudanza, enfermedad, separación, nacimiento, cambio de trabajo.', a:'Recurso narrativo. Pero la repetición es muy estable.', c:'alta' },
+{ g:9, o:'Errores sistemáticos de género, preposición o artículo, con acento neutro.', i:'La lengua materna es otra, y el patrón del error sugiere cuál.', a:'Ninguna importante, aunque acertar la lengua exacta es difícil.', c:'media' },
+{ g:9, o:'Pronuncia con exactitud un nombre extranjero que el resto pronuncia mal.', i:'Trato habitual con esa lengua, esa cultura o esa persona.', a:'Buen oído.', c:'media' },
+{ g:9, o:'Cambia de tuteo a trato formal, o al revés, en un punto concreto de la charla.', i:'Ahí cambió la relación percibida o el tema pasó a ser delicado.', a:'Hábito profesional. El cambio importa más que el estado.', c:'media' },
+{ g:9, o:'Ritmo y volumen se sostienen salvo cuando aparece un tema concreto.', i:'Ese tema tiene carga. No dice cuál carga ni por qué.', a:'Coincidencia con ruido, cansancio, interrupción. Requiere línea base del módulo 2.', c:'media' },
+{ g:9, o:'Responde con el mismo tiempo de latencia salvo en una pregunta.', i:'Esa pregunta requirió más procesamiento: recuerdo difícil, decisión sobre qué contar, o cálculo.', a:'No entendió la pregunta. Y la carga cognitiva no distingue causa: ese es todo el módulo 8.', c:'media' },
+
+/* ── Entorno: casa, escritorio, auto ──────────────────────────────── */
+{ g:10, o:'Dos tazas usadas, dos pares de zapatos en la entrada, dos cepillos.', i:'Convive con alguien, o tuvo visita que se quedó.', a:'Vive solo y desordenado. Contar es mejor que suponer.', c:'alta' },
+{ g:10, o:'Plantas vivas y bien cuidadas frente a plantas secas.', i:'Presencia en la casa, y regularidad. Las plantas son un registro de asistencia.', a:'Alguien más las riega.', c:'alta' },
+{ g:10, o:'Marcas de patas de muebles en la alfombra en una posición distinta a la actual.', i:'Reordenó hace poco, o se fue un mueble. Mudanza, separación, venta.', a:'Limpieza. La profundidad de la marca da tiempo.', c:'alta' },
+{ g:10, o:'Monitor elevado con libros, teclado externo, silla ajustada.', i:'Muchas horas ahí, y algo de conciencia postural. Puesto de trabajo real, no ocasional.', a:'Montaje heredado.', c:'alta' },
+{ g:10, o:'Asiento de bebé en el auto y migas en la parte trasera.', i:'Niños, edad estimable por el tipo de butaca.', a:'Transporta a hijos de otra persona.', c:'alta' },
+{ g:10, o:'Espejo retrovisor y asiento notoriamente fuera de la posición del conductor actual.', i:'Otra persona maneja ese auto con frecuencia, y es de otra altura.', a:'Lo movió al estacionar.', c:'alta' },
+{ g:10, o:'Rayones alrededor de la cerradura de la puerta, del lado del conductor.', i:'Abre a oscuras, apurado, con guantes, o con la coordinación afectada. Se acumula a lo largo de meses.', a:'Auto viejo, llave gastada. La lectura de alcohol es un salto que el indicio no sostiene solo.', c:'baja' },
+{ g:10, o:'Arena, barro seco, pasto o pelo en la alfombra del auto, en zonas concretas.', i:'Actividad recurrente y lugar: playa, campo, obra, perro.', a:'Un viaje único. La incrustación en la alfombra marca repetición.', c:'media' },
+{ g:10, o:'Estanterías con libros de un solo campo, todos con lomo quebrado.', i:'Ese es su tema y lo lee de verdad, no lo colecciona.', a:'Biblioteca heredada. El desgaste es lo que separa.', c:'alta' },
+{ g:10, o:'Fotos enmarcadas todas de hace más de diez años.', i:'Ese período importa, o dejó de imprimir fotos, que es lo más probable hoy.', a:'Cambió de soporte. Indicio históricamente fuerte y cada vez más débil.', c:'baja' },
+{ g:10, o:'Cocina con especias abiertas y aceite al alcance, frente a una impecable.', i:'Cocina a diario, o no cocina nunca.', a:'Orden compulsivo. La grasa en la campana no miente.', c:'alta' },
+{ g:10, o:'Medicación a la vista sobre la mesada.', i:'Tratamiento activo, y a menudo crónico.', a:'Es información de salud: se observa para no ofrecer una copa de más, nunca para comentar.', c:'alta' },
+
+/* ── Ritmo y tiempo ───────────────────────────────────────────────── */
+{ g:11, o:'Responde mensajes sistemáticamente en una franja horaria estrecha.', i:'Turno, huso horario, o rutina rígida. El patrón se ve en dos semanas de historial.', a:'Silencia notificaciones. El patrón sigue siendo informativo.', c:'alta' },
+{ g:11, o:'Llega siempre cinco minutos antes, sin excepción.', i:'Norma personal fuerte. Suele venir con más normas del mismo tipo.', a:'Vive cerca. Se distingue observando qué hace cuando llega temprano.', c:'media' },
+{ g:11, o:'Come a una hora rara y fija.', i:'Turno rotativo, jornada partida, o condición médica con horarios.', a:'Costumbre. La fijeza es lo informativo, no la hora.', c:'media' },
+{ g:11, o:'Barba de un día y la misma ropa de ayer.', i:'No pasó por su casa. Viaje, guardia, o noche fuera.', a:'Repite prenda a propósito, cada vez más común.', c:'media' },
+{ g:11, o:'Afeitado impecable a última hora de la tarde.', i:'Se afeitó después del trabajo, o tiene poco vello. Hay un evento por delante.', a:'Anatomía.', c:'media' },
+{ g:11, o:'Pide cafeína a una hora en la que la mayoría ya no lo hace.', i:'Jornada que sigue: turno noche, estudio, deadline.', a:'Tolerancia. Muy variable.', c:'baja' },
+
+/* ── Dinero y consumo ─────────────────────────────────────────────── */
+{ g:12, o:'Paga en efectivo con el monto exacto, preparado de antemano.', i:'Lleva la cuenta, presupuesto ajustado, o preferencia por no dejar rastro de consumo.', a:'Costumbre. Las tres causas son muy distintas y el indicio no separa.', c:'baja' },
+{ g:12, o:'El nivel de gasto es inconsistente entre piezas: un objeto caro y el resto barato.', i:'Ese objeto le importa de forma particular, o fue un regalo.', a:'Imitación. La consistencia informa más que el nivel absoluto.', c:'media' },
+{ g:12, o:'Conoce por nombre al personal del lugar y pide sin mirar la carta.', i:'Habitué. Probablemente trabaja o vive cerca.', a:'Vino con alguien que lo es.', c:'alta' },
+{ g:12, o:'Elige sistemáticamente la segunda opción más barata de la carta.', i:'Sensibilidad al precio con cuidado de la apariencia. Es un patrón muy documentado en restauración.', a:'Le gusta esa opción. Requiere repetición para valer algo.', c:'baja' },
+{ g:12, o:'Reloj, calzado y abrigo de gamas muy distintas entre sí.', i:'Prioridades declaradas, o un cambio reciente de situación económica.', a:'Regalos. La gama del calzado suele ser la más honesta del conjunto.', c:'media' },
+{ g:12, o:'Compra diaria en un comercio de cercanía en vez de compra grande semanal.', i:'Poco espacio de guardado, sin auto, o ingreso diario. También puede ser hábito cultural.', a:'Vive al lado. Muy determinado por la ciudad.', c:'media' },
+{ g:12, o:'Objeto de marca con detalle de acabado incorrecto.', i:'Réplica. Dice algo sobre qué señal quiere emitir, que es más informativo que el objeto.', a:'Línea antigua o modelo poco conocido. Equivocarse acá es caro socialmente.', c:'baja' },
+
+/* ── Interacción social ───────────────────────────────────────────── */
+{ g:13, o:'Antes de responder, mira a una persona concreta del grupo.', i:'Esa persona tiene la autoridad real, que puede no coincidir con la formal.', a:'Confianza personal, no jerarquía. Se confirma repitiendo la observación con otra pregunta.', c:'alta' },
+{ g:13, o:'Hay alguien a quien nadie interrumpe.', i:'Jerarquía real del grupo, otra vez, y mejor medida que por los cargos.', a:'Volumen de voz, personalidad dominante sin poder formal.', c:'alta' },
+{ g:13, o:'Trata al personal de servicio de manera marcadamente distinta al resto.', i:'Es de los predictores conductuales cotidianos más citados, y también uno de los menos medidos.', a:'Un mal día. Requiere más de una observación.', c:'media' },
+{ g:13, o:'Quien se sienta primero y elige el lugar.', i:'Comodidad con el espacio, y a menudo quién convocó realmente la reunión.', a:'Llegó primero.', c:'media' },
+{ g:13, o:'Dos personas que sincronizan postura y ritmo sin darse cuenta.', i:'Rapport genuino entre ellas. La sincronía es de las pocas señales no verbales con respaldo decente.', a:'Imitación consciente, que se ve rígida. La espontánea tiene retardo de segundos.', c:'media' },
+{ g:13, o:'Usa el nombre de pila de alguien a quien acaba de conocer, repetidamente.', i:'Técnica aprendida en ventas o en formación comercial.', a:'Costumbre cultural. Bien hecho no se nota; que se note es el indicio.', c:'media' },
+{ g:13, o:'Responde a una pregunta con una pregunta, sistemáticamente.', i:'Estrategia de conversación aprendida, defensa, o falta de información que no quiere admitir.', a:'Estilo. No concluye nada sobre veracidad.', c:'baja' },
+{ g:13, o:'Ofrece un dato personal costoso muy temprano en la conversación.', i:'Reciprocidad deliberada, o necesidad de hablar de eso. Es la apertura clásica de la elicitación.', a:'Persona abierta. Y a veces simplemente confía.', c:'media' },
+
+/* ── Rastro digital ───────────────────────────────────────────────── */
+{ g:14, o:'Firma de correo con un cargo que ya no coincide con lo que dice.', i:'Cambio de rol reciente, o firma sin actualizar. Ambas cosas son información.', a:'Plantilla corporativa. El detalle está en la fecha de la plantilla.', c:'media' },
+{ g:14, o:'Horario de envío de mensajes concentrado en una franja rara.', i:'Huso horario distinto, turno noche, o insomnio.', a:'Programación de envíos.', c:'alta' },
+{ g:14, o:'Mismo nombre de usuario en varias plataformas.', i:'Rastro unificado y enlazable. Es el primer paso de cualquier recolección en fuentes abiertas.', a:'Coincidencia de nombre. Y acá empieza un terreno donde el límite legal y ético es real.', c:'alta' },
+{ g:14, o:'Fondo de videollamada con objetos, títulos, libros o vistas identificables.', i:'Ubicación, formación, intereses, y a veces la ciudad exacta por la vista de la ventana.', a:'Fondo virtual, u oficina ajena.', c:'alta' },
+{ g:14, o:'Foto con reflejo en una ventana, en un espejo o en una pupila.', i:'Quién sacó la foto, dónde, y qué había fuera de cuadro.', a:'Resolución insuficiente casi siempre.', c:'media' },
+{ g:14, o:'Documento compartido con historial de cambios o metadatos de autoría visibles.', i:'Quién lo escribió realmente, cuándo y desde qué organización.', a:'Plantilla de terceros. Es el indicio digital con mayor rendimiento y el que más gente olvida.', c:'alta' },
+
+/* ── Falsos indicios ──────────────────────────────────────────────── */
+{ g:15, o:'Brazos cruzados.', i:'Nada. No es defensa, no es rechazo, no es cierre.', a:'Frío, comodidad, ausencia de apoyabrazos, costumbre. Es el ejemplo más famoso de folklore vendido como lectura.', c:'baja' },
+{ g:15, o:'Evita el contacto visual.', i:'Nada sobre veracidad.', a:'Norma cultural, timidez, autismo, ansiedad social, respeto jerárquico, o simplemente pensar. En varias culturas sostener la mirada es la conducta grosera.', c:'baja' },
+{ g:15, o:'Se toca la nariz o la cara mientras habla.', i:'Nada. El autocontacto no correlaciona de forma útil con el engaño.', a:'Picazón, alergia, hábito. La mediana de tamaño de efecto de los indicios conductuales medidos es d = 0,10.', c:'baja' },
+{ g:15, o:'Mira hacia arriba y a un lado al recordar.', i:'Nada. Los patrones de acceso ocular de la PNL no se sostienen.', a:'Tres estudios controlados no encontraron ninguna relación entre dirección de la mirada y mentira.', c:'baja' },
+{ g:15, o:'Suda, tiembla o se le quiebra la voz durante una acusación.', i:'Estrés. Nada más. El error de Otelo consiste exactamente en leerlo como culpa.', a:'Un inocente acusado produce la misma conducta que un culpable nervioso, y a veces más.', c:'baja' },
+{ g:15, o:'El relato tiene pausas, se corrige y cambia de orden.', i:'Eso es lo que hacen los relatos verdaderos. La corrección espontánea es criterio de credibilidad en CBCA, no de mentira.', a:'Una historia demasiado ordenada y sin correcciones es más sospechosa que una desprolija.', c:'media' },
+{ g:15, o:'Microexpresión fugaz en la cara.', i:'Nada concluyente. Existen, son raras, son ambiguas y su detección no predice engaño fuera del laboratorio.', a:'Cualquier emoción, incluida la irritación de estar siendo observado así.', c:'baja' },
+{ g:15, o:'La letra es apretada, inclinada o irregular.', i:'Nada sobre la personalidad. La grafología tiene correlación nula con rasgos medidos y con desempeño laboral.', a:'Apuro, superficie, instrumento, edad, lengua de alfabetización.', c:'baja' },
+{ g:15, o:'Usa demasiados detalles al contar algo.', i:'Nada por sí solo. En la literatura verbal el detalle abundante juega más a favor de lo vivido que en contra.', a:'Lo que importa no es el detalle, sino si es comprobable y si el que habla lo sabe.', c:'media' },
+{ g:15, o:'No quiere hablar del tema.', i:'Nada concluyente. La negativa a hablar es compatible con casi todo.', a:'Vergüenza, duelo, consejo legal, aburrimiento, privacidad. Tratarla como confesión es el atajo que produce injusticias.', c:'baja' },
+{ g:15, o:'Sonríe de una manera que no llega a los ojos.', i:'Poco. La distinción entre sonrisa genuina y social es real pero mucho más difícil de ver de lo que se cree, y no es un detector de mentiras.', a:'Cansancio, dolor, botox, control voluntario, cultura.', c:'baja' },
+{ g:15, o:'Repite la pregunta antes de contestar.', i:'Nada. Es un recurso universal para ganar tiempo, que usan igual el que miente y el que piensa.', a:'Ruido, sordera parcial, pregunta mal formulada.', c:'baja' },
+{ g:15, o:'Lleva alianza.', i:'Menos de lo que parece. Hay viudez, compromiso, separación sin sacarse el anillo, y uso deliberado para evitar acoso.', a:'Es el indicio más leído del mundo y uno de los peor calibrados.', c:'baja' },
+{ g:15, o:'Viste caro.', i:'Nada sobre patrimonio. La ropa mide gasto, y el gasto mide crédito tanto como ingreso.', a:'Regalo, segunda mano, réplica, préstamo, deuda.', c:'baja' },
+{ g:15, o:'Tiene un apretón de manos firme.', i:'Casi nada. La correlación con rasgos de personalidad es chica y el gesto es entrenado en ámbitos comerciales.', a:'Instrucción explícita, oficio manual, o simplemente fuerza.', c:'baja' },
+{ g:15, o:'Alguien acierta tres cosas seguidas sobre vos.', i:'Nada paranormal. Tres aciertos en una conversación entran cómodamente en lo que produce la lectura en frío.', a:'Contá los fallos: esa proporción es el único dato relevante, y casi nadie la registra.', c:'alta' },
 ];
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -1137,6 +1820,133 @@ function renderEstaticos() {
 }
 
 /* ══════════════════════════════════════════════════════════════════════
+   RAMAS
+   ══════════════════════════════════════════════════════════════════════ */
+
+let filtroRama = 'all';
+
+function renderRamas() {
+  const lista = RAMAS.filter(r => filtroRama === 'all' || r.tipo === filtroRama);
+
+  document.getElementById('ramas-lista').innerHTML = lista.map((r, i) => {
+    const cfg = TIPOS[r.tipo];
+    return `
+    <article class="grid gap-x-10 gap-y-5 py-8 lg:grid-cols-[minmax(0,19rem)_minmax(0,1fr)]">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="h-[6px] w-[6px] rounded-full ${cfg.punto}"></span>
+          <span class="font-mono text-[11px] uppercase tracking-[0.1em] ${cfg.color}">${cfg.etiqueta}</span>
+        </div>
+        <h3 class="mt-2.5 font-display text-[1.4rem] font-medium leading-[1.2] tracking-[-0.008em] text-bone">${esc(r.n)}</h3>
+        <p class="mt-1.5 font-mono text-[11px] uppercase tracking-[0.06em] text-bone3">${esc(r.alias)}</p>
+      </div>
+
+      <div class="min-w-0 max-w-[44rem] space-y-5">
+        <p class="font-body text-[1.05rem] leading-[1.72] text-bone2">${esc(r.que)}</p>
+
+        <ul class="space-y-2.5">
+          ${r.nucleo.map(x => `
+            <li class="flex gap-3.5 font-body text-[1rem] leading-[1.6] text-bone3">
+              <span class="mt-[.72em] h-px w-3.5 shrink-0 bg-line2"></span>
+              <span>${esc(x)}</span>
+            </li>`).join('')}
+        </ul>
+
+        <dl class="grid gap-4 border-t border-line pt-5 sm:grid-cols-2 sm:gap-8">
+          <div>
+            <dt class="font-mono text-[11px] uppercase tracking-[0.12em] text-bone3">Qué te llevás</dt>
+            <dd class="mt-2 font-body text-[1rem] leading-[1.6] text-bone2">${esc(r.llevas)}</dd>
+          </div>
+          <div>
+            <dt class="font-mono text-[11px] uppercase tracking-[0.12em] ${cfg.color}">Dónde se rompe</dt>
+            <dd class="mt-2 font-body text-[1rem] leading-[1.6] text-bone3">${esc(r.limite)}</dd>
+          </div>
+        </dl>
+      </div>
+    </article>`;
+  }).join('');
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   CATÁLOGO
+   ══════════════════════════════════════════════════════════════════════ */
+
+let filtroConf = 'all';
+let consultaCat = '';
+let grupoCat = -1;
+
+const textoIndicio = x => (x.o + ' ' + x.i + ' ' + x.a + ' ' + CAT_GRUPOS[x.g]).toLowerCase();
+
+function renderGruposCat() {
+  const cont = document.getElementById('cat-grupos');
+  const btn = (idx, etiqueta, n) => {
+    const on = grupoCat === idx;
+    return `<button data-grupo="${idx}" class="gchip font-body text-[.94rem] leading-tight transition-colors ${on ? 'text-amber' : 'text-bone3 hover:text-bone'}">
+      ${esc(etiqueta)} <span class="num font-mono text-[10px] text-bone3">${n}</span>
+    </button>`;
+  };
+  cont.innerHTML = btn(-1, 'Todo', CATALOGO.length) +
+    CAT_GRUPOS.map((g, i) => btn(i, g, CATALOGO.filter(x => x.g === i).length)).join('');
+}
+
+function renderCatalogo() {
+  let n = 0;
+
+  const html = CAT_GRUPOS.map((titulo, gi) => {
+    if (grupoCat !== -1 && grupoCat !== gi) return '';
+
+    const items = CATALOGO
+      .map((x, idx) => ({ x, idx }))
+      .filter(({ x }) => x.g === gi)
+      .filter(({ x }) => filtroConf === 'all' || x.c === filtroConf)
+      .filter(({ x }) => !consultaCat || textoIndicio(x).includes(consultaCat));
+
+    if (!items.length) return '';
+    n += items.length;
+
+    return `
+    <section class="mb-11">
+      <h3 class="sticky top-[4.4rem] z-10 -mx-1 flex items-baseline gap-3 border-b border-line2 bg-ink2/95 px-1 py-3 backdrop-blur-sm">
+        <span class="font-display text-[1.25rem] font-semibold tracking-[-0.008em] text-bone sm:text-[1.4rem]">${esc(titulo)}</span>
+        <span class="num font-mono text-[11px] text-bone3">${items.length}</span>
+      </h3>
+
+      <ol class="divide-y divide-line">
+        ${items.map(({ x, idx }) => {
+          const c = CONF[x.c];
+          return `
+          <li class="cat-item grid gap-x-5 gap-y-3 py-5 sm:grid-cols-[2.6rem_minmax(0,1fr)_5rem]">
+            <span class="num font-mono text-sm text-bone3">${String(idx + 1).padStart(3, '0')}</span>
+
+            <div class="min-w-0 max-w-[42rem] space-y-2">
+              <p class="font-body text-[1.06rem] font-semibold leading-[1.5] text-bone">${esc(x.o)}</p>
+              <p class="flex gap-3 font-body text-[1.01rem] leading-[1.6] text-bone2">
+                <span class="mt-[.1em] shrink-0 font-mono text-[10px] uppercase tracking-[0.1em] ${c.color}">Sugiere</span>
+                <span>${esc(x.i)}</span>
+              </p>
+              <p class="flex gap-3 font-body text-[.99rem] leading-[1.6] text-bone3">
+                <span class="mt-[.1em] shrink-0 font-mono text-[10px] uppercase tracking-[0.1em] text-bone3">Falla si</span>
+                <span>${esc(x.a)}</span>
+              </p>
+            </div>
+
+            <div class="flex items-start sm:justify-end">
+              <span class="flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.08em] ${c.color}">
+                <span class="h-[6px] w-[6px] rounded-full ${c.punto}"></span>${c.etiqueta}
+              </span>
+            </div>
+          </li>`;
+        }).join('')}
+      </ol>
+    </section>`;
+  }).join('');
+
+  document.getElementById('catalogo-lista').innerHTML = html;
+  document.getElementById('cat-vacio').classList.toggle('hidden', n > 0);
+  document.getElementById('cat-count').textContent = `${n} de ${CATALOGO.length} indicios`;
+}
+
+/* ══════════════════════════════════════════════════════════════════════
    PROGRESO
    ══════════════════════════════════════════════════════════════════════ */
 
@@ -1227,7 +2037,45 @@ document.addEventListener('click', e => {
         (on ? 'border-amber bg-amber text-ink' : 'border-line text-bone2 hover:border-line2');
     });
     aplicarFiltros();
+    return;
   }
+
+  const rchip = e.target.closest('.rchip');
+  if (rchip) {
+    filtroRama = rchip.dataset.rama;
+    document.querySelectorAll('.rchip').forEach(c => {
+      const on = c === rchip;
+      c.className = 'rchip rounded-full px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] border ' +
+        (on ? 'border-amber bg-amber text-ink' : 'border-line text-bone2 hover:border-line2');
+    });
+    renderRamas();
+    return;
+  }
+
+  const cchip = e.target.closest('.cchip');
+  if (cchip) {
+    filtroConf = cchip.dataset.conf;
+    document.querySelectorAll('.cchip').forEach(c => {
+      const on = c === cchip;
+      c.className = 'cchip rounded-full px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] border ' +
+        (on ? 'border-amber bg-amber text-ink' : 'border-line text-bone2 hover:border-line2');
+    });
+    renderCatalogo();
+    return;
+  }
+
+  const gchip = e.target.closest('.gchip');
+  if (gchip) {
+    const idx = Number(gchip.dataset.grupo);
+    grupoCat = grupoCat === idx ? -1 : idx;
+    renderGruposCat();
+    renderCatalogo();
+  }
+});
+
+document.getElementById('q-cat').addEventListener('input', e => {
+  consultaCat = e.target.value.trim().toLowerCase();
+  renderCatalogo();
 });
 
 document.addEventListener('change', e => {
@@ -1311,6 +2159,11 @@ function observarFases() {
 /* Arranque. */
 render();
 renderEstaticos();
+renderRamas();
+renderGruposCat();
+renderCatalogo();
+document.getElementById('stat-ramas').textContent = RAMAS.length;
+document.getElementById('stat-cat').textContent = CATALOGO.length;
 actualizarProgreso();
 </script>
 </body>
