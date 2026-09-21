@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Método Jane — Plan de estudio</title>
+<meta name="description" content="Plan de estudio de 26 semanas sobre las técnicas reales de lectura de personas que El Mentalista dramatiza: observación, línea base, lectura en frío, rapport, elicitación, enfoque cognitivo de veracidad, memoria y ética.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink:      '#12100E',
+        ink2:     '#1A1714',
+        ink3:     '#221E19',
+        ink4:     '#2C2720',
+        line:     '#352F27',
+        line2:    '#463E33',
+        bone:     '#F0EADF',
+        bone2:    '#C6BBAA',
+        bone3:    '#93897A',
+        amber:    '#E0A458',
+        amber2:   '#F0C288',
+        amberdim: '#7A5730',
+        sage:     '#93B089',
+        terra:    '#C97B5C',
+      },
+      fontFamily: {
+        display: ['Vollkorn', 'Georgia', 'serif'],
+        body:    ['Newsreader', 'Georgia', 'serif'],
+        mono:    ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+      },
+    }
+  }
+}
+</script>
+
+<style>
+  :root { color-scheme: dark; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  }
+
+  body {
+    background-color: #12100E;
+    color: #F0EADF;
+    caret-color: #E0A458;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Grano de papel: textura fija, muy baja opacidad. */
+  body::before {
+    content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    opacity: .035; mix-blend-mode: screen;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  ::selection { background: #E0A458; color: #12100E; }
+
+  ::-webkit-scrollbar { width: 11px; height: 11px; }
+  ::-webkit-scrollbar-track { background: #1A1714; }
+  ::-webkit-scrollbar-thumb { background: #3C352C; border: 3px solid #1A1714; border-radius: 99px; }
+  ::-webkit-scrollbar-thumb:hover { background: #554B3D; }
+  * { scrollbar-color: #3C352C #1A1714; scrollbar-width: thin; }
+
+  :focus-visible { outline: 2px solid #E0A458; outline-offset: 3px; border-radius: 2px; }
+  a { text-underline-offset: .22em; text-decoration-thickness: 1px; }
+
+  .num { font-variant-numeric: tabular-nums; }
+
+  /* Despliegue de módulo: grid 0fr -> 1fr, sin cálculo de altura en JS. */
+  .fold { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 620ms cubic-bezier(.16,1,.3,1); }
+  .fold > .fold-in {
+    overflow: hidden; min-height: 0;
+    opacity: 0; filter: blur(5px); transform: translateY(-6px);
+    transition: opacity 380ms ease, filter 500ms ease, transform 520ms cubic-bezier(.16,1,.3,1);
+  }
+  .is-open > .fold { grid-template-rows: 1fr; }
+  .is-open > .fold > .fold-in { opacity: 1; filter: blur(0); transform: none; transition-delay: 90ms; }
+  .is-open .chev { transform: rotate(90deg); }
+  .chev { transition: transform 420ms cubic-bezier(.16,1,.3,1); }
+
+  /* Entrada escalonada de las fases al entrar en viewport. */
+  .rise { opacity: 0; transform: translateY(14px); }
+  .rise.seen { opacity: 1; transform: none; transition: opacity 700ms ease, transform 900ms cubic-bezier(.16,1,.3,1); }
+
+  /* Casilla de práctica. */
+  .drill input:checked ~ .box { background: #E0A458; border-color: #E0A458; }
+  .drill input:checked ~ .box .tick { opacity: 1; transform: scale(1); }
+  .drill input:checked ~ .txt { color: #93897A; text-decoration: line-through; text-decoration-color: #4A4238; }
+  .tick { opacity: 0; transform: scale(.5); transition: opacity 180ms ease, transform 260ms cubic-bezier(.16,1,.3,1); }
+  .box { transition: background-color 180ms ease, border-color 180ms ease; }
+  .drill:hover .box { border-color: #7A5730; }
+
+  .nav-link[data-active="true"] { color: #F0EADF; }
+  .nav-link[data-active="true"] .dot { background: #E0A458; }
+
+  mark { background: #7A5730; color: #F0EADF; border-radius: 2px; padding: 0 .12em; }
+
+  @media print {
+    body::before, .no-print { display: none !important; }
+    body { background: #fff; color: #000; }
+    .fold { grid-template-rows: 1fr !important; }
+    .fold > .fold-in { opacity: 1 !important; filter: none !important; transform: none !important; }
+  }
+</style>
+</head>
+
+<body class="font-body antialiased">
+
+<svg width="0" height="0" class="hidden" aria-hidden="true">
+  <symbol id="i-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5L19.5 7"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></symbol>
+  <symbol id="i-reset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.6-5.9"/><path d="M20 3.5V8h-4.5"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9V3.5h10V9"/><path d="M7 18H4.5v-6a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v6H17"/><rect x="7" y="14.5" width="10" height="6" rx="1"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8.5v4.5"/><circle cx="12" cy="16.6" r=".9" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="8.5"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5h6a2.5 2.5 0 0 1 2.5 2.5v12A2 2 0 0 0 10.5 17H4z"/><path d="M20 4.5h-6A2.5 2.5 0 0 0 11.5 7v12A2 2 0 0 1 13.5 17H20z"/></symbol>
+  <symbol id="i-loop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5h13a3.5 3.5 0 0 1 0 7H8"/><path d="M7 5.5l-3 3 3 3"/><path d="M11 12.5l-3 3 3 3"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+</svg>
+
+<!-- ───────────────────────── Barra superior ───────────────────────── -->
+<header class="no-print sticky top-0 z-40 border-b border-line bg-ink/85 backdrop-blur-md">
+  <div class="mx-auto flex max-w-[1500px] items-center gap-3 px-5 py-3 sm:gap-5 sm:px-8">
+    <a href="#top" class="shrink-0 font-body text-[15px] font-semibold tracking-[-0.01em] text-bone hover:text-amber sm:text-base">
+      Método&nbsp;Jane
+    </a>
+
+    <div class="relative ml-auto w-full max-w-[19rem] sm:ml-0 sm:flex-1">
+      <svg class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-bone3"><use href="#i-search"/></svg>
+      <input id="q" type="search" placeholder="Buscar técnica, sesgo, autor…" autocomplete="off"
+             class="w-full rounded-full border border-line bg-ink2 py-2 pl-9 pr-3 font-body text-[15px] text-bone placeholder:text-bone3 hover:border-line2 focus:border-amberdim focus:outline-none">
+    </div>
+
+    <div class="hidden shrink-0 items-center gap-3 sm:flex">
+      <div class="h-[3px] w-28 overflow-hidden rounded-full bg-ink4 lg:w-40">
+        <div id="bar-top" class="h-full w-0 rounded-full bg-amber transition-[width] duration-700 ease-out"></div>
+      </div>
+      <span id="pct-top" class="num w-11 font-mono text-xs text-bone2">0 %</span>
+    </div>
+
+    <button id="btn-print" title="Imprimir el plan" aria-label="Imprimir el plan"
+            class="hidden shrink-0 rounded-full border border-line p-2 text-bone2 hover:border-line2 hover:text-bone md:block">
+      <svg class="h-[18px] w-[18px]"><use href="#i-print"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top" class="relative z-10">
+
+<!-- ───────────────────────── Portada ───────────────────────── -->
+<section class="relative overflow-hidden border-b border-line">
+  <div class="pointer-events-none absolute inset-0 opacity-[.5]"
+       style="background:radial-gradient(120% 80% at 82% -10%, rgba(224,164,88,.16), transparent 62%)"></div>
+
+  <div class="relative mx-auto max-w-[1500px] px-5 pb-20 pt-16 sm:px-8 sm:pb-28 sm:pt-24">
+    <div class="max-w-[46rem]">
+      <h1 class="font-display text-[clamp(2.5rem,7.2vw,5.1rem)] font-semibold leading-[1.02] tracking-[-0.025em] text-bone">
+        Lo que Patrick&nbsp;Jane<br>hace de verdad
+      </h1>
+
+      <p class="mt-8 max-w-[38rem] font-body text-[1.2rem] font-light leading-[1.62] text-bone2 sm:text-[1.3rem]">
+        El Mentalista dramatiza un conjunto de habilidades que sí existen: observación entrenada, lectura en frío,
+        rapport, elicitación, memoria artificial y razonamiento sobre gente. Lo que la serie oculta es cuánto de eso
+        funciona, cuánto no, y cuánto es guion.
+      </p>
+
+      <p class="mt-5 max-w-[38rem] font-body text-[1.05rem] leading-[1.7] text-bone3">
+        Este plan cubre 26 semanas. Cada módulo separa tres cosas que normalmente van mezcladas: <span class="text-bone2">lo que hace el personaje</span>,
+        <span class="text-bone2">lo que dice la evidencia</span> y <span class="text-bone2">lo que podés practicar mañana</span>.
+        La hipnosis de escena queda afuera: no sostiene lo que la serie le hace hacer.
+      </p>
+
+      <div class="mt-11 flex flex-wrap items-center gap-3">
+        <a href="#modulos" class="rounded-full bg-amber px-6 py-3 font-body text-[15px] font-medium text-ink transition-colors hover:bg-amber2">
+          Empezar por el módulo 01
+        </a>
+        <a href="#rutina" class="rounded-full border border-line2 px-6 py-3 font-body text-[15px] text-bone2 transition-colors hover:border-bone3 hover:text-bone">
+          Ver la rutina diaria
+        </a>
+      </div>
+    </div>
+
+    <dl class="mt-16 grid max-w-[54rem] grid-cols-2 gap-x-8 gap-y-7 border-t border-line pt-8 sm:grid-cols-4">
+      <div>
+        <dt class="font-mono text-[11px] uppercase tracking-[0.12em] text-bone3">Duración</dt>
+        <dd class="num mt-1.5 font-display text-[1.85rem] font-medium text-bone">26 semanas</dd>
+      </div>
+      <div>
+        <dt class="font-mono text-[11px] uppercase tracking-[0.12em] text-bone3">Módulos</dt>
+        <dd class="num mt-1.5 font-display text-[1.85rem] font-medium text-bone">12</dd>
+      </div>
+      <div>
+        <dt class="font-mono text-[11px] uppercase tracking-[0.12em] text-bone3">Práctica diaria</dt>
+        <dd class="num mt-1.5 font-display text-[1.85rem] font-medium text-bone">45 min</dd>
+      </div>
+      <div>
+        <dt class="font-mono text-[11px] uppercase tracking-[0.12em] text-bone3">Ejercicios</dt>
+        <dd id="stat-drills" class="num mt-1.5 font-display text-[1.85rem] font-medium text-bone">—</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- ───────────────────────── Advertencia de método ───────────────────────── -->
+<section class="border-b border-line bg-ink2">
+  <div class="mx-auto max-w-[1500px] px-5 py-14 sm:px-8 sm:py-16">
+    <div class="grid gap-10 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] lg:gap-16">
+      <h2 class="font-display text-[1.9rem] font-semibold leading-[1.12] tracking-[-0.01em] text-bone sm:text-[2.2rem]">
+        Antes de empezar, el filtro
+      </h2>
+
+      <div class="max-w-[42rem] space-y-6 font-body text-[1.06rem] leading-[1.72] text-bone2">
+        <p>
+          Casi todo el material popular sobre "leer a las personas" mezcla psicología sólida con folklore vendido como
+          ciencia. El problema no es que el folklore sea inútil: es que produce <em class="text-bone">confianza sin exactitud</em>,
+          que es peor que no saber nada. Alguien que cree leer mentiras acusa a inocentes.
+        </p>
+        <p>
+          Por eso cada módulo lleva un nivel de evidencia. No es decorativo: define cómo usás la habilidad.
+          Un módulo <span class="text-sage">sólido</span> podés apoyarlo para decidir. Uno <span class="text-terra">disputado</span> lo estudiás
+          para entender el fenómeno y para que no te lo apliquen, nunca para concluir sobre una persona.
+        </p>
+
+        <ul class="space-y-4 border-t border-line pt-6 text-[1.02rem]">
+          <li class="flex gap-4">
+            <span class="mt-[.55em] h-px w-5 shrink-0 bg-sage"></span>
+            <span><span class="font-mono text-xs uppercase tracking-[0.1em] text-sage">Sólida</span> — replicada, con meta-análisis o evidencia convergente. Se puede usar como apoyo de decisión.</span>
+          </li>
+          <li class="flex gap-4">
+            <span class="mt-[.55em] h-px w-5 shrink-0 bg-amber"></span>
+            <span><span class="font-mono text-xs uppercase tracking-[0.1em] text-amber">Moderada</span> — efecto real pero chico, dependiente del contexto, o con literatura en disputa parcial. Insumo, no prueba.</span>
+          </li>
+          <li class="flex gap-4">
+            <span class="mt-[.55em] h-px w-5 shrink-0 bg-terra"></span>
+            <span><span class="font-mono text-xs uppercase tracking-[0.1em] text-terra">Disputada</span> — popularísima y mal sostenida. Se estudia como fenómeno y como defensa. No concluye nada sobre nadie.</span>
+          </li>
+        </ul>
+
+        <p class="border-l border-amberdim pl-5 text-bone3">
+          Regla que atraviesa el plan entero: <span class="text-bone2">la conducta de una persona no es evidencia de lo que hizo.</span>
+          Sirve para elegir la próxima pregunta. Nada más.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── Módulos ───────────────────────── -->
+<section id="modulos" class="border-b border-line">
+  <div class="mx-auto max-w-[1500px] px-5 py-14 sm:px-8 sm:py-20">
+
+    <div class="grid gap-12 lg:grid-cols-[17rem_minmax(0,1fr)] lg:gap-14 xl:gap-20">
+
+      <!-- Índice lateral -->
+      <aside class="no-print lg:sticky lg:top-24 lg:h-[calc(100vh-8rem)] lg:overflow-y-auto lg:pr-2">
+        <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-bone3">Progreso</p>
+        <div class="mt-3 flex items-baseline gap-2">
+          <span id="pct-side" class="num font-display text-[2.6rem] font-medium leading-none text-bone">0<span class="text-[1.4rem] text-bone3"> %</span></span>
+        </div>
+        <p id="count-side" class="num mt-1.5 font-mono text-xs text-bone3">0 / 0 ejercicios</p>
+        <div class="mt-4 h-[3px] overflow-hidden rounded-full bg-ink4">
+          <div id="bar-side" class="h-full w-0 rounded-full bg-amber transition-[width] duration-700 ease-out"></div>
+        </div>
+
+        <nav id="nav" class="mt-8 space-y-px border-t border-line pt-4"></nav>
+
+        <div class="mt-8 space-y-2 border-t border-line pt-5">
+          <button id="btn-expand" class="w-full rounded-lg border border-line px-3 py-2 text-left font-body text-sm text-bone2 hover:border-line2 hover:text-bone">
+            Abrir todos los módulos
+          </button>
+          <button id="btn-reset" class="flex w-full items-center gap-2 rounded-lg border border-line px-3 py-2 text-left font-body text-sm text-bone3 hover:border-terra hover:text-terra">
+            <svg class="h-4 w-4"><use href="#i-reset"/></svg>
+            <span id="reset-label">Borrar mi progreso</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- Lista de módulos -->
+      <div class="min-w-0">
+        <div class="no-print mb-8 flex flex-wrap items-center gap-2 border-b border-line pb-6">
+          <span class="mr-1 font-mono text-[11px] uppercase tracking-[0.14em] text-bone3">Evidencia</span>
+          <button data-ev="all"      class="chip rounded-full border border-amber bg-amber px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-ink">Todas</button>
+          <button data-ev="solida"   class="chip rounded-full border border-line px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-bone2 hover:border-line2">Sólida</button>
+          <button data-ev="moderada" class="chip rounded-full border border-line px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-bone2 hover:border-line2">Moderada</button>
+          <button data-ev="disputada" class="chip rounded-full border border-line px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-bone2 hover:border-line2">Disputada</button>
+
+          <label class="drill ml-auto flex cursor-pointer select-none items-center gap-2">
+            <input id="hide-done" type="checkbox" class="peer sr-only">
+            <span class="box relative flex h-4 w-4 items-center justify-center rounded-[4px] border border-line2 bg-ink2">
+              <svg class="tick h-2.5 w-2.5 text-ink"><use href="#i-check"/></svg>
+            </span>
+            <span class="font-body text-sm text-bone3">Ocultar ejercicios hechos</span>
+          </label>
+        </div>
+
+        <div id="lista" class="space-y-px"></div>
+        <p id="sin-resultados" class="hidden py-16 text-center font-body text-bone3">Nada coincide con esa búsqueda.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── Rutina diaria ───────────────────────── -->
+<section id="rutina" class="border-b border-line bg-ink2">
+  <div class="mx-auto max-w-[1500px] px-5 py-16 sm:px-8 sm:py-20">
+    <div class="grid gap-10 lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] lg:gap-16">
+      <div class="lg:sticky lg:top-24 lg:self-start">
+        <h2 class="font-display text-[1.9rem] font-semibold leading-[1.12] tracking-[-0.01em] text-bone sm:text-[2.4rem]">
+          El bloque de 45 minutos
+        </h2>
+        <p class="mt-5 max-w-[26rem] font-body text-[1.05rem] leading-[1.7] text-bone3">
+          La estructura no cambia en 26 semanas. Lo único que cambia es el contenido del bloque central, que sigue
+          al módulo activo. Constancia diaria le gana a maratones de fin de semana: casi todo acá es memoria
+          procedimental y calibración, y las dos necesitan repetición espaciada.
+        </p>
+      </div>
+
+      <ol id="rutina-lista" class="max-w-[42rem] divide-y divide-line border-y border-line"></ol>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── Calendario ───────────────────────── -->
+<section id="calendario" class="border-b border-line">
+  <div class="mx-auto max-w-[1500px] px-5 py-16 sm:px-8 sm:py-20">
+    <h2 class="font-display text-[1.9rem] font-semibold leading-[1.12] tracking-[-0.01em] text-bone sm:text-[2.4rem]">
+      Las 26 semanas
+    </h2>
+    <p class="mt-5 max-w-[40rem] font-body text-[1.05rem] leading-[1.7] text-bone3">
+      El orden importa. Observación y línea base van primero porque todo lo demás se apoya en ellas, y la detección
+      de engaño va casi al final para que llegues con el escepticismo ya construido.
+    </p>
+
+    <div class="mt-10 overflow-x-auto">
+      <table class="w-full min-w-[42rem] border-collapse text-left">
+        <thead>
+          <tr class="border-b border-line2">
+            <th class="w-20 py-3 pr-4 font-mono text-[11px] font-normal uppercase tracking-[0.12em] text-bone3">Semana</th>
+            <th class="w-16 py-3 pr-4 font-mono text-[11px] font-normal uppercase tracking-[0.12em] text-bone3">Mód.</th>
+            <th class="py-3 pr-4 font-mono text-[11px] font-normal uppercase tracking-[0.12em] text-bone3">Foco de la semana</th>
+            <th class="w-40 py-3 font-mono text-[11px] font-normal uppercase tracking-[0.12em] text-bone3">Entregable</th>
+          </tr>
+        </thead>
+        <tbody id="cal-body" class="divide-y divide-line"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── Ética ───────────────────────── -->
+<section id="etica" class="border-b border-line bg-ink2">
+  <div class="mx-auto max-w-[1500px] px-5 py-16 sm:px-8 sm:py-20">
+    <div class="grid gap-10 lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] lg:gap-16">
+      <div>
+        <h2 class="font-display text-[1.9rem] font-semibold leading-[1.12] tracking-[-0.01em] text-bone sm:text-[2.4rem]">
+          La línea que Jane cruzó
+        </h2>
+        <p class="mt-5 max-w-[26rem] font-body text-[1.05rem] leading-[1.7] text-bone3">
+          El personaje arranca la serie como estafador: usaba exactamente estas técnicas para vender contacto con
+          muertos. Esa es la advertencia que la serie pone en el primer minuto y que casi nadie recoge.
+        </p>
+      </div>
+
+      <div class="max-w-[42rem]">
+        <p class="font-body text-[1.06rem] leading-[1.72] text-bone2">
+          Todo lo de este plan es de doble uso. La lectura en frío que impresiona en una mesa es la herramienta con
+          la que un médium factura a una viuda. La elicitación que destraba una negociación es la misma con la que
+          un estafador arma el perfil de su víctima. La diferencia no está en la técnica: está en cuatro condiciones.
+        </p>
+
+        <ol id="etica-lista" class="mt-8 space-y-5 border-t border-line pt-8"></ol>
+
+        <div class="mt-10 rounded-xl border border-line bg-ink3 p-6 sm:p-7">
+          <div class="flex items-center gap-2.5">
+            <svg class="h-[18px] w-[18px] text-amber"><use href="#i-alert"/></svg>
+            <h3 class="font-body text-[1.15rem] font-semibold text-bone">Cómo detectar que te lo están haciendo a vos</h3>
+          </div>
+          <ul id="defensa-lista" class="mt-5 space-y-3.5 font-body text-[1.02rem] leading-[1.65] text-bone2"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── Bibliografía ───────────────────────── -->
+<section id="fuentes" class="border-b border-line">
+  <div class="mx-auto max-w-[1500px] px-5 py-16 sm:px-8 sm:py-20">
+    <h2 class="font-display text-[1.9rem] font-semibold leading-[1.12] tracking-[-0.01em] text-bone sm:text-[2.4rem]">
+      De dónde sale esto
+    </h2>
+    <p class="mt-5 max-w-[40rem] font-body text-[1.05rem] leading-[1.7] text-bone3">
+      Ordenado por utilidad, no por antigüedad. Si sólo vas a leer tres cosas: el informe del HIG, el meta-análisis
+      de Bond y DePaulo, y Vrij sobre enfoque cognitivo.
+    </p>
+    <ul id="biblio" class="mt-10 divide-y divide-line border-y border-line"></ul>
+  </div>
+</section>
+
+<footer class="mx-auto max-w-[1500px] px-5 py-12 sm:px-8">
+  <p class="max-w-[40rem] font-body text-sm leading-[1.7] text-bone3">
+    Plan de estudio de uso personal. <em>El Mentalista</em> es ficción; las técnicas listadas acá existen fuera de la
+    ficción con las limitaciones que cada módulo indica. Nada de esto sirve para acusar a nadie de nada.
+  </p>
+</footer>
+
+</main>
+
+<script>
+/* ══════════════════════════════════════════════════════════════════════
+   DATOS
+   ══════════════════════════════════════════════════════════════════════ */
+
+const EV = {
+  solida:    { etiqueta: 'Evidencia sólida',    nivel: 5, color: 'text-sage',  barra: 'bg-sage'  },
+  moderada:  { etiqueta: 'Evidencia moderada',  nivel: 3, color: 'text-amber', barra: 'bg-amber' },
+  disputada: { etiqueta: 'Evidencia disputada', nivel: 1, color: 'text-terra', barra: 'bg-terra' },
+};
+
+const FASES = [
+  { n: 1, nombre: 'Percepción',   semanas: '1 – 7',   sintesis: 'Aprender a ver antes de aprender a concluir. Sin esta base, todo lo demás es adivinar con vocabulario técnico.' },
+  { n: 2, nombre: 'Lectura',      semanas: '8 – 12',  sintesis: 'Cómo se fabrica la impresión de saber cosas sobre alguien, y cómo se desarma.' },
+  { n: 3, nombre: 'Conversación', semanas: '13 – 17', sintesis: 'La parte que más rinde en la vida real: hacer que la gente quiera contarte.' },
+  { n: 4, nombre: 'Veracidad',    semanas: '18 – 20', sintesis: 'No detectar mentiras mirando caras, sino diseñar la conversación para que la diferencia aparezca.' },
+  { n: 5, nombre: 'Capacidad',    semanas: '21 – 26', sintesis: 'Memoria artificial, influencia con su letra chica, inferencia calibrada y el límite ético.' },
+];
+
+const MODULOS = [
+{
+  n: 1, fase: 1, semanas: '1 – 3', titulo: 'Observación deliberada',
+  bajada: 'La habilidad base. No es mirar más: es tener de antemano la lista de qué mirar.',
+  ev: 'solida',
+  evNota: 'La atención dirigida y el reconocimiento experto de patrones son de los efectos mejor establecidos en psicología cognitiva. Lo entrenable está demostrado; lo que no existe es la percepción "sin filtro" que muestra la serie.',
+  serie: 'Jane entra a una escena y en diez segundos nombra cinco cosas que nadie vio. La cámara lo presenta como un don. En el guion funciona porque el guionista ya sabe cuál es el detalle relevante.',
+  real: [
+    'La percepción humana es de banda angosta y la serie miente sobre eso. Los experimentos de ceguera por falta de atención (Simons y Chabris, el gorila que cruza la cancha) muestran que mirar y ver son operaciones distintas: podés tener un objeto en la fóvea durante segundos y no registrarlo si tu atención está asignada a otra cosa. La ceguera al cambio agrega lo suyo: cambios grandes entre dos vistas de la misma escena pasan desapercibidos.',
+    'Lo que hace distinto a un experto no es un aparato perceptivo mejor. Es que percibe en <em>chunks</em> con significado. El ajedrecista no ve 32 piezas, ve seis estructuras conocidas. El radiólogo no ve una imagen, ve desviaciones respecto de miles de imágenes normales que ya tiene internalizadas. Esto es una noticia buena y una mala: se entrena, pero se entrena por dominio. Ser buen observador de manos no te hace buen observador de contabilidad.',
+    'La consecuencia práctica es que la observación no se activa con esfuerzo genérico, se activa con un <strong class="text-bone">protocolo</strong>: un orden fijo de categorías que barrés siempre igual hasta que se automatiza. Y con una disciplina de registro que separa lo que viste de lo que inferiste, porque el cerebro las fusiona en el momento y después ya no podés distinguirlas.'
+  ],
+  claves: [
+    { t: 'Ceguera por desatención', d: 'Ver ocupa recursos que ya están asignados. Si no decidiste buscar algo, probablemente no esté ahí para vos.' },
+    { t: 'Chunking experto', d: 'El experto no percibe más detalles, percibe unidades con significado. Por eso la observación se entrena por dominio, no en abstracto.' },
+    { t: 'Protocolo de barrido', d: 'Un orden fijo y repetido: manos, muñecas, calzado, boca, mirada, respiración, entorno inmediato, salidas. Fijo hasta que sea reflejo.' },
+    { t: 'Dato vs. inferencia', d: '"Camisa arrugada" es un dato. "Durmió vestido" es una hipótesis. Anotarlas en la misma línea es el error que arruina todo lo que venga después.' },
+  ],
+  diario: [
+    'Kim\'s game, 10 min: 20 objetos, 60 segundos de exposición, escribir de memoria. Anotar aciertos con fecha para ver la curva.',
+    'Al entrar a cualquier espacio nuevo, barrido de 30 segundos: 3 salidas, 2 personas, 1 cosa que no encaja.',
+    'Cinco observaciones puras en el cuaderno, sin una sola inferencia. Si aparece un adjetivo interpretativo, la línea no cuenta.',
+    'Describir por escrito a alguien con quien hablaste, dos minutos después de que se fue: manos, calzado, muñeca, acento, qué tenía encima.',
+  ],
+  semanal: [
+    'Sesión de 45 min en un lugar público: ficha completa de 5 desconocidos, más 3 hipótesis por persona con nivel de confianza en porcentaje.',
+    'Auditoría del cuaderno: contar cuántas inferencias se colaron escritas como datos. El número tiene que bajar semana a semana.',
+    'Elegir un dominio propio (tu trabajo, tu deporte) y escribir la lista de los 10 "chunks" que ya reconocés sin pensar. Es tu punto de partida real.',
+  ],
+  errores: [
+    'Confundir detalle con relevancia: juntar cincuenta observaciones inútiles y sentirse observador.',
+    'Narrar antes de ver. En cuanto aparece una historia, la observación se detiene y empieza la confirmación.',
+    'Creer que observar mejor implica concluir mejor. Son dos habilidades distintas y el módulo 11 se ocupa de la segunda.',
+  ],
+},
+{
+  n: 2, fase: 1, semanas: '4 – 5', titulo: 'Línea base conductual',
+  bajada: 'Lo único que le da algún valor al no verbal: comparar a la persona consigo misma, no con un catálogo.',
+  ev: 'moderada',
+  evNota: 'Que la desviación respecto de la conducta habitual indique activación o incomodidad tiene apoyo razonable. Que indique mentira, culpa o intención, no. El tamaño del efecto es chico y el ruido contextual es enorme.',
+  serie: 'Jane registra que el sospechoso "no se está comportando como antes" y actúa sobre eso. Es de las cosas más defendibles que hace el personaje, salvo por la certeza con la que lo hace.',
+  real: [
+    'No existe un diccionario universal de gestos con valor diagnóstico. "Brazos cruzados igual defensivo" es folklore: la persona puede tener frío, puede estar cómoda, puede ser su postura de descanso desde los catorce años. Lo que sí tiene algo de señal es el <strong class="text-bone">cambio</strong>: esta persona, que hasta recién hablaba a cierto ritmo y ocupaba cierto espacio, ahora no.',
+    'La línea base tiene tres ejes y fallar en cualquiera la invalida. Es <em>individual</em> (la de él no sirve para ella), <em>contextual</em> (la de la sobremesa no sirve para la reunión de trabajo) y <em>temporal</em> (la de hoy a las nueve no sirve para hoy a las siete de la tarde, cansado).',
+    'Y aun con la base bien tomada, una desviación es una pregunta, no una respuesta. Ekman le puso nombre al error más caro de esta área: el <strong class="text-bone">error de Otelo</strong>. Otelo interpreta el miedo real de Desdémona como prueba de culpa, cuando es miedo a no ser creída. Un inocente interrogado está estresado por razones que no tienen nada que ver con haber hecho algo. Toda la literatura de confesiones falsas vive en ese error.',
+    'Sumá que la base se corre por cultura, por cansancio, por neurodivergencia, por dolor crónico, por un ambiente demasiado frío. Cada una de esas variables produce exactamente las mismas "señales" que se venden como indicadores de engaño.',
+  ],
+  claves: [
+    { t: 'Individual, contextual, temporal', d: 'Los tres ejes de una base válida. Si tomaste la base en otra situación, no tenés base: tenés un prejuicio con formato.' },
+    { t: 'Desviación ≠ causa', d: 'El cambio te dice que algo pasó. Nunca te dice qué. Tres explicaciones alternativas obligatorias antes de quedarte con una.' },
+    { t: 'Error de Otelo', d: 'El inocente estresado exhibe la misma conducta que el culpable nervioso. El estrés no distingue origen.' },
+    { t: 'Costo del contexto', d: 'Temperatura, cultura, fatiga, dolor, neurodivergencia, ansiedad social: todas mueven la base y ninguna tiene que ver con la verdad.' },
+  ],
+  diario: [
+    'Elegir una persona conocida y registrar tres marcadores de base concretos: ritmo de habla, gesto de pausa, distancia que suele tomar.',
+    'Registrar una desviación del día y escribir tres explicaciones alternativas antes de permitirte una interpretación.',
+    'Revisar interpretaciones de ayer. Marcar cuáles siguen pareciendo razonables hoy con más contexto.',
+  ],
+  semanal: [
+    'Conversación de 10 min con alguien: los primeros 5 sobre tema neutro (eso es la base), los últimos 5 sobre algo con carga. Comparar por escrito.',
+    'Verificar en voz alta: "te noté apurado, ¿pasaba algo?". Anotar tu tasa de acierto real. Va a ser más baja de lo que esperás, y ese es el punto del ejercicio.',
+    'Escribir tu propia línea base: qué hacés vos cuando estás incómodo. Te enseña cuánto varía una misma persona.',
+  ],
+  errores: [
+    'Usar un catálogo de gestos en lugar de una base individual.',
+    'Tomar la base durante la parte tensa del encuentro. Entonces la desviación aparece cuando la persona se relaja y leés todo al revés.',
+    'Saltarse la verificación. Sin feedback no hay aprendizaje, sólo confianza creciente y exactitud estancada.',
+  ],
+},
+{
+  n: 3, fase: 1, semanas: '6 – 7', titulo: 'No verbal: qué sostiene la evidencia',
+  bajada: 'El módulo que desarma el mito central de la serie. Se estudia para dejar de usarlo mal.',
+  ev: 'disputada',
+  evNota: 'El meta-análisis de Bond y DePaulo (2006), con unos 25.000 sujetos, encuentra una exactitud humana del 54 % frente a un azar del 50 %. El entrenamiento METT no superó al entrenamiento falso ni al no entrenamiento en un estudio controlado de 2019. Maria Hartwig califica las cifras del 80-90 % de "simplemente implausibles", y esos estudios confirmatorios nunca se publicaron.',
+  serie: 'Jane lee microexpresiones y sabe. Es el núcleo del personaje y es la parte menos sostenible del paquete.',
+  real: [
+    'Conviene decir el número primero, porque ordena todo lo demás: <strong class="text-bone">54 %</strong>. Esa es la exactitud media de seres humanos juzgando verdad o mentira a partir de conducta, sobre unos 25.000 sujetos. El azar es 50 %. Policías, jueces y agentes entrenados no rinden mejor que estudiantes; sólo tienen más confianza, que es exactamente la combinación peligrosa.',
+    'Sobre las microexpresiones concretamente: en estudios de conteo aparecen en alrededor del 2 % de los fotogramas y en el 22 % de los sujetos, y no sólo cuando la persona intenta ocultar algo. Es decir: la mayoría de la gente no produce el fenómeno cuando se supone que debería, y quien lo produce no siempre está ocultando. Un indicador que falta casi siempre y que también aparece sin la causa no es un indicador.',
+    'El entrenamiento tampoco salva la situación. Un estudio controlado comparó entrenamiento METT contra entrenamiento falso contra ningún entrenamiento: la exactitud en detección de engaño quedó igual, apenas por debajo del azar en el conjunto. Lo que sí sube con el entrenamiento es la confianza del que lo tomó.',
+    'Nada de esto significa que el no verbal sea inútil. Significa que está mal asignado. Sirve para leer <em>estado afectivo aproximado</em> (esta persona se puso incómoda acá), para <strong class="text-bone">regular la conversación</strong> (cuándo bajar, cuándo esperar, cuándo cambiar de tema) y para <strong class="text-bone">elegir la próxima pregunta</strong>. Ese uso, que es el que el módulo 7 y el 8 explotan, es legítimo y productivo. El uso como detector de mentiras no lo es.',
+  ],
+  claves: [
+    { t: '54 %', d: 'El techo real de la detección humana de engaño por conducta. Memorizalo como antídoto contra tu propia confianza.' },
+    { t: 'Emoción, no veracidad', d: 'Las expresiones básicas informan sobre afecto. El afecto no tiene una firma distinta según si la causa es culpa o indignación.' },
+    { t: 'Ilusión de exactitud', d: 'El entrenamiento en microexpresiones sube la confianza sin subir el acierto. Ese desfase es el daño principal.' },
+    { t: 'Reasignar el no verbal', d: 'De "detector" a "termostato de la conversación". Es el único uso que la evidencia banca.' },
+  ],
+  diario: [
+    'Diez minutos de reconocimiento de emoción: video sin audio, escribir la lectura, verificar con audio. Medir aciertos.',
+    'Prohibición activa: la palabra "miente" no entra al cuaderno durante todo el módulo. Se reemplaza por "incómodo cuando aparece X".',
+    'Una vez al día, escribir qué hiciste con la lectura no verbal: ¿concluiste algo o elegiste una pregunta? Sólo lo segundo cuenta.',
+  ],
+  semanal: [
+    'Test ciego: 10 clips de entrevistas reales con veredicto conocido. Predecir verdad o mentira y anotar. Acumular a lo largo del módulo.',
+    'Calcular tu porcentaje real. Ver de primera mano que rondás 50-60 % es el objetivo pedagógico del módulo entero.',
+    'Escribir una página sobre por qué tu confianza subjetiva no predijo tu acierto. Guardarla y releerla en el módulo 8.',
+  ],
+  errores: [
+    'Usar microexpresiones como prueba de algo. Es el camino directo a acusar a un inocente.',
+    'Confundir ansiedad con culpa, que es el error de Otelo con otro nombre.',
+    'Vender la habilidad, a otros o a vos mismo, como si fuera confiable.',
+  ],
+},
+{
+  n: 4, fase: 2, semanas: '8 – 10', titulo: 'Lectura en frío',
+  bajada: 'El motor de la escena del médium y el truco que mejor explica la sensación de "cómo sabe eso".',
+  ev: 'solida',
+  evNota: 'Como fenómeno psicológico está muy bien establecido: el efecto Forer/Barnum se replicó durante décadas, junto con la validación subjetiva, el sesgo de confirmación y la memoria selectiva de aciertos. Sólido no significa que sirva para saber cosas verdaderas sobre la gente: significa que la ilusión funciona de forma predecible.',
+  serie: 'Jane describe a un desconocido con una precisión imposible. Es literalmente el oficio con el que el personaje empezó, estafando gente con sesiones de contacto con muertos.',
+  real: [
+    'Forer, en 1948, le dio a sus estudiantes un perfil de personalidad supuestamente individual armado con frases de horóscopo. Todos recibieron el mismo texto. La precisión percibida promedio fue 4,26 sobre 5. Ese es el piso sobre el que se construye toda la lectura en frío: enunciados vagos y bivalentes que el sujeto completa con su propio material, y después atribuye al lector.',
+    'El repertorio técnico es corto y reconocible. El <strong class="text-bone">enunciado Barnum</strong>: específico en la forma, universal en el contenido. El <strong class="text-bone">ruse del arcoíris</strong>: atribuir una cualidad y su opuesta en la misma frase ("sos reservado, aunque cuando hay confianza te soltás"), de manera que ninguna persona pueda fallarla. El <strong class="text-bone">tiro de escopeta</strong>: una ráfaga de afirmaciones de baja probabilidad hasta que algo pega; el sujeto olvida las fallas y recuerda el acierto. La <strong class="text-bone">pesca</strong>: afirmar con entonación de pregunta, para convertir cualquier respuesta en un acierto. El <strong class="text-bone">negativo evanescente</strong>: "no sos de los que se rinden, ¿no?", que funciona igual con un sí que con un no. Y el <strong class="text-bone">reciclado</strong>: devolver más tarde, como revelación, un dato que la propia persona dio hace diez minutos.',
+    'La pieza que sostiene todo es la que no está en el lector: la <strong class="text-bone">validación subjetiva</strong>. El sujeto busca activamente la conexión, reinterpreta lo ambiguo en la dirección que le cierra y guarda los hits en memoria mientras descarta los misses. Por eso el lector habla la mayor parte del tiempo pero es el sujeto quien pone el significado.',
+    'Estudiar esto tiene dos propósitos legítimos y uno ilegítimo. Legítimos: entender cómo se fabrica la impresión de conocimiento, e inmunizarte para que no te lo hagan. El ilegítimo es obvio y es exactamente el pasado del personaje.',
+  ],
+  claves: [
+    { t: 'Efecto Forer / Barnum', d: 'Descripciones generales que se sienten personales. 4,26 sobre 5 de precisión percibida con un texto idéntico para todos.' },
+    { t: 'Ruse del arcoíris', d: 'Una cualidad y su opuesta en la misma frase. Nadie puede quedar afuera.' },
+    { t: 'Tiro de escopeta', d: 'Muchas afirmaciones rápidas; el sujeto filtra y se queda con el acierto. La tasa real de aciertos es irrelevante para el efecto.' },
+    { t: 'Validación subjetiva', d: 'El trabajo pesado lo hace el que escucha. Es la razón por la que la técnica sobrevive a lecturas mediocres.' },
+  ],
+  diario: [
+    'Escribir tres enunciados Barnum nuevos. Probarlos primero sobre uno mismo: si te suenan ciertos, están bien construidos.',
+    'Tomar un horóscopo o un test de personalidad y desarmar un "acierto": marcar qué parte es bivalente, qué parte es universal, qué parte completaste vos.',
+    'Registrar una vez al día en qué momento vos hiciste validación subjetiva con algo que te dijeron.',
+  ],
+  semanal: [
+    'Lectura en frío de 5 min a un voluntario <strong class="text-bone">informado</strong>, con consentimiento explícito y grabación. Contar hits y misses reales sobre la grabación, no los recordados.',
+    'Escribir tu propio perfil Barnum de 200 palabras y hacérselo leer a tres personas. Contar a cuántas les describe.',
+    'Reescribir el mismo perfil en versión falsable: afirmaciones concretas que puedan ser falsas. Comparar cuánto baja la precisión percibida.',
+  ],
+  errores: [
+    'Usarlo para engañar. Es la línea exacta entre habilidad y fraude, y no es difusa.',
+    'Creerse los propios aciertos. El lector también hace validación subjetiva sobre su propio desempeño.',
+    'Aplicarlo con gente vulnerable: duelo, enfermedad, deuda, decisiones de pareja. Ahí el daño es real.',
+  ],
+},
+{
+  n: 5, fase: 2, semanas: '11 – 12', titulo: 'Lectura en caliente y tasas base',
+  bajada: 'La mayor parte de lo que parece adivinación es preparación previa más probabilidad.',
+  ev: 'solida',
+  evNota: 'La preparación previa es trivialmente efectiva y el razonamiento con tasas base es uno de los correctivos mejor documentados contra el error de juicio (Kahneman y Tversky). Lo sólido acá es el método, no una habilidad mística.',
+  serie: 'Jane sabe cosas de gente que acaba de conocer. Casi siempre porque leyó el expediente, escuchó una conversación de pasada o dedujo de un contexto que el espectador no vio.',
+  real: [
+    'La lectura en caliente es lo opuesto a la lectura en frío: usás información que ya tenés y hacés que parezca intuición. En la industria del espectáculo esto es fraude; en investigación, negociación, periodismo o ventas consultivas es simplemente preparación, y es de lo que más rinde por minuto invertido.',
+    'El otro componente, menos glamoroso y mucho más potente, es la <strong class="text-bone">tasa base</strong>. Antes de mirar a la persona, ¿qué es probable en esta población y este contexto? La mayoría de los errores de juicio sobre gente vienen de ignorar esto y saltar directo a lo que la persona "parece". Si el 3 % de la gente en esta situación hace X, tu impresión de que este tipo hace X necesita ser muy fuerte para mover esa probabilidad.',
+    'Después está la parte que todo el mundo subestima: <strong class="text-bone">acordarse</strong>. Un porcentaje enorme de la aparente clarividencia es recordar un detalle que la persona soltó al pasar hace veinte minutos y devolverlo en el momento justo. El interlocutor casi nunca recuerda habértelo dado. El módulo 9 convierte esto en un sistema.',
+    'El límite ético es concreto: información pública, pertinente al propósito y con un propósito legítimo. Buscar el domicilio de alguien para impresionarlo en una charla no es lectura en caliente, es acoso con otro nombre.',
+  ],
+  claves: [
+    { t: 'Tasa base primero', d: 'La probabilidad previa importa más que la impresión. Esto es lo que separa el juicio calibrado de la intuición decorada.' },
+    { t: 'Preparación de 5 minutos', d: 'Contexto antes de cualquier encuentro relevante, con hipótesis escritas y probabilidad asignada.' },
+    { t: 'Registro de calibración', d: 'Si de lo que dijiste al 70 % acertás el 70 %, estás calibrado. Si acertás el 40 %, tu intuición te está mintiendo con confianza.' },
+    { t: 'Amnesia del interlocutor', d: 'La gente olvida qué te contó. Eso no es un permiso, es la razón por la que recordar parece magia.' },
+  ],
+  diario: [
+    'Cinco minutos de contexto antes de cada reunión relevante. Tres hipótesis escritas, cada una con probabilidad asignada en porcentaje.',
+    'Después del encuentro, corregir las probabilidades con lo que pasó. Una línea por hipótesis.',
+    'Anotar un detalle menor que alguien mencionó al pasar. Recuperarlo días después en conversación y observar la reacción.',
+  ],
+  semanal: [
+    'Ejercicio de Fermi: estimar 10 cantidades con intervalo de confianza del 90 % y verificar. Contar cuántas verdaderas cayeron dentro. Deberían ser 9.',
+    'Revisar el registro de calibración de la semana y graficar: predicho vs. acertado.',
+    'Elegir un contexto tuyo y escribir sus tasas base reales (en tu trabajo, ¿qué proporción de X termina en Y?). Buscar el dato si existe.',
+  ],
+  errores: [
+    'Pasar de información pública y pertinente a investigación invasiva.',
+    'Tratar la tasa base como veredicto individual. Es el punto de partida del cálculo, no la conclusión.',
+    'Sobreconfianza sistemática en los intervalos: casi todo el mundo pone intervalos demasiado angostos y lo descubre sólo midiendo.',
+  ],
+},
+{
+  n: 6, fase: 3, semanas: '13 – 15', titulo: 'Rapport y escucha activa',
+  bajada: 'Lo más real, lo más útil y lo más subestimado de todo el paquete. Si hacés un solo módulo, hacé este.',
+  ev: 'solida',
+  evNota: 'El informe del High-Value Detainee Interrogation Group (2016) y la literatura asociada concluyen que los métodos no coercitivos, basados en rapport y recolección de información, son los más eficaces para obtener información exacta. Un estudio citado en esa línea encuentra que los entrevistadores que construyen y sostienen rapport tienen cinco veces más probabilidad de obtener un relato completo o una confesión.',
+  serie: 'Jane consigue que la gente le cuente cosas que no le cuenta a la policía. Esta parte del personaje es exacta y está mejor sostenida que ninguna otra.',
+  real: [
+    'Rapport no es caer bien. Es una combinación de <strong class="text-bone">previsibilidad</strong> (la persona sabe qué esperar de vos), <strong class="text-bone">respeto de la autonomía</strong> (sabe que puede no contestar) y <strong class="text-bone">atención sostenida y visible</strong>. Se puede construir con alguien que te detesta.',
+    'El dato duro que ordena el módulo: frente a métodos acusatorios, el enfoque basado en rapport obtiene más información y más exacta. El contraste histórico es con la técnica Reid y sus derivados, que están asociados a confesiones falsas por presión, y de los que la propia literatura policial se viene alejando.',
+    'El instrumental es corto. Preguntas abiertas ("contame qué pasó" en lugar de "¿estabas ahí a las nueve?"), <strong class="text-bone">paráfrasis</strong> ("lo que escucho es que…"), reflejo de emoción ("suena a que te dejaron solo con eso"), resumen periódico, y <strong class="text-bone">silencio</strong>. El silencio de cuatro segundos después de que el otro parece haber terminado es la técnica con mejor relación esfuerzo-resultado que existe: la gente completa el vacío con información que no pensaba dar.',
+    'La entrevista motivacional aporta el mismo esqueleto en cuatro movimientos: preguntas abiertas, afirmaciones, reflejos y resúmenes. Y una métrica simple para saber si lo estás haciendo: la proporción de turno conversacional. Si hablaste más del 20 % del tiempo, no estuviste entrevistando, estuviste conversando sobre vos.',
+  ],
+  claves: [
+    { t: 'Rapport ≠ simpatía', d: 'Previsibilidad, respeto de la autonomía y atención. Funciona incluso sin agrado mutuo.' },
+    { t: 'Regla 80/20', d: 'El otro habla el 80 % del tiempo. Es medible y es el mejor diagnóstico rápido de si estás escuchando.' },
+    { t: 'Silencio de cuatro segundos', d: 'Después de que el otro termina, esperar. Lo que llena el silencio suele ser lo que importa.' },
+    { t: 'Paráfrasis hasta el "exacto"', d: 'Resumir la posición del otro hasta que confirme. Recién ahí sabés que entendiste, y recién ahí él sabe que lo escuchaste.' },
+  ],
+  diario: [
+    'Una conversación con regla 80/20 declarada para vos mismo. Estimar después quién habló más y ser honesto.',
+    'Tres paráfrasis reales en el día ("lo que escucho es…"). Anotar qué agregó la persona después de cada una.',
+    'Dos silencios de cuatro segundos. Anotar textualmente lo que apareció en ese hueco.',
+  ],
+  semanal: [
+    'Entrevista de 20 min sin una sola pregunta cerrada. Grabar y contar las que se te escaparon.',
+    'Resumir a alguien su propia posición en una discusión hasta que diga "sí, exacto". Anotar cuántos intentos tomó.',
+    'Practicar rapport con alguien con quien tenés fricción. El objetivo no es acordar, es que la conversación siga siendo posible.',
+  ],
+  errores: [
+    'Falsa empatía. Se detecta y destruye el rapport de forma no recuperable.',
+    'Interrumpir para demostrar que entendiste. Entender rápido no es el objetivo; que el otro siga hablando sí.',
+    'Espejar posturas de forma mecánica y visible. Es el consejo más repetido de los manuales malos y lo único que produce es incomodidad.',
+  ],
+},
+{
+  n: 7, fase: 3, semanas: '16 – 17', titulo: 'Elicitación',
+  bajada: 'Obtener información sin preguntar por ella. La conversación diseñada para que el otro ofrezca.',
+  ev: 'moderada',
+  evNota: 'Documentada y enseñada en contextos de inteligencia y entrevista profesional, con estudios de campo y de laboratorio detrás (la literatura del HIG y de CREST). La evidencia es buena para el conjunto y más desigual técnica por técnica.',
+  serie: 'Jane nunca pregunta "¿lo mataste?". Provoca, afirma algo falso a propósito, elogia al ego del sospechoso, y espera. El espectador lo lee como descaro; es un método.',
+  real: [
+    'La elicitación es conversación normal construida para que el interlocutor entregue información por iniciativa propia. Funciona porque explota impulsos conversacionales muy fuertes: corregir un error, completar un silencio, responder a una revelación con otra revelación, y demostrar competencia cuando se nos trata como expertos.',
+    'El repertorio operativo: la <strong class="text-bone">declaración provocativa</strong> o dato deliberadamente errado, que la gente corrige casi de manera refleja. El <strong class="text-bone">conocimiento asumido</strong>, que da por sentado un hecho ("cuando estuviste en la reunión del martes…") y deja que el otro lo confirme o lo ajuste. La <strong class="text-bone">revelación recíproca</strong>: contar algo propio de peso comparable para abrir la puerta. El <strong class="text-bone">silencio expectante</strong>. La <strong class="text-bone">apelación al experto</strong>, que convierte la pregunta en una oportunidad de lucirse. La <strong class="text-bone">queja leve</strong>, que invita a la queja del otro y con ella a los detalles. Y el <strong class="text-bone">cambio de marco</strong>: preguntar por terceros ("¿qué diría tu socio de esto?"), que baja la carga de responder.',
+    'El límite: la elicitación sin consentimiento en una relación personal es manipulación, y erosiona la confianza de forma que no se repara. En negociación profesional, investigación, periodismo o entrevista de trabajo el marco es distinto porque ambas partes saben que están en una conversación con objetivos.',
+    'Criterio práctico para el límite: si la persona supiera que estás aplicando la técnica, ¿se sentiría traicionada? Si la respuesta es sí, no es elicitación, es engaño.',
+  ],
+  claves: [
+    { t: 'Declaración provocativa', d: 'Un dato deliberadamente errado. El impulso de corregir es más fuerte que el de guardar silencio.' },
+    { t: 'Conocimiento asumido', d: 'Dar por sentado el hecho en la formulación. La persona ajusta el detalle sin notar que confirmó el marco.' },
+    { t: 'Revelación recíproca', d: 'Algo propio de peso comparable. La reciprocidad es de los efectos sociales más consistentes que existen.' },
+    { t: 'Prueba del enterarse', d: 'Si la persona se sentiría traicionada al saber qué hiciste, cruzaste la línea.' },
+  ],
+  diario: [
+    'Una técnica por día, elegida de antemano. Registrar qué se usó, qué pasó y si la persona quedó cómoda.',
+    'Contar cuántas veces en el día alguien te elicitó a vos sin que lo notaras en el momento.',
+    'Practicar el silencio expectante en una conversación donde normalmente llenarías el hueco.',
+  ],
+  semanal: [
+    'Conversación de 15 min con un objetivo de información declarado para vos mismo por escrito. Evaluar dos cosas: si lo conseguiste y si la relación quedó intacta.',
+    'Escribir tres formulaciones de conocimiento asumido para un contexto real tuyo, y elegir cuál es defendible éticamente.',
+    'Revisión de límites: listar los usos de la semana y marcar cuáles pasarían la prueba del enterarse.',
+  ],
+  errores: [
+    'Convertir la elicitación en interrogatorio. En cuanto se siente como interrogatorio, se acabó.',
+    'Usar el dato falso con gente que confía en vos. Ganás un dato y perdés la relación.',
+    'Acumular técnicas en una sola conversación. La densidad se nota aunque cada pieza sea invisible.',
+  ],
+},
+{
+  n: 8, fase: 4, semanas: '18 – 20', titulo: 'Veracidad: enfoque cognitivo',
+  bajada: 'No se detectan mentiras mirando. Se diseña la entrevista para que la diferencia se amplifique.',
+  ev: 'moderada',
+  evNota: 'El meta-análisis de Vrij (2017) muestra que el enfoque cognitivo supera al protocolo estándar de forma consistente, con efectos moderados. Sigue estando lejos de constituir prueba de nada, y usarlo como veredicto reproduce el problema que vino a resolver.',
+  serie: 'Jane sabe que mienten y se los dice. En la vida real nadie sabe eso mirando. Pero sí se puede hacer que mentir salga más caro.',
+  real: [
+    'El punto de partida es el módulo 3: las señales conductuales de engaño son débiles y poco confiables. La respuesta de Aldert Vrij y colegas fue darle vuelta el problema. Si las señales son tenues, no busques mejor: <strong class="text-bone">hacé la entrevista más exigente</strong>, porque mentir suele consumir más recursos cognitivos que decir la verdad, y el que está sobrecargado se rompe antes.',
+    '<strong class="text-bone">Orden inverso.</strong> Pedir el relato de atrás para adelante. La verdad se reconstruye desde la memoria episódica, que tolera el reordenamiento; la mentira se sostiene sobre un guion, que no. En los estudios de Vrij y colegas (2008), las entrevistas en orden inverso produjeron muchas más señales de engaño y mejoraron la detección de observadores externos.',
+    '<strong class="text-bone">Preguntas inesperadas.</strong> El que preparó una historia preparó lo esperable. Lo espacial y lo periférico no se preparan: "dibujá la disposición de la sala", "¿quién estaba sentado a la izquierda de quién?", "¿qué se escuchaba?". La verdad tiene esos datos por defecto.',
+    '<strong class="text-bone">Uso estratégico de la evidencia (SUE)</strong>, de Granhag y Hartwig. No mostrar lo que sabés. Dejar que el relato se comprometa primero. Recién entonces confrontar la inconsistencia con el dato. Revelar temprano le regala al mentiroso el mapa de lo que tiene que cubrir.',
+    '<strong class="text-bone">Enfoque de verificabilidad.</strong> Pedir detalles comprobables: quién más estaba, qué quedó registrado, qué transacción hay. El que miente tiende a dar detalles ricos pero no verificables, justamente porque los verificables lo exponen. Anunciar de entrada que vas a verificar amplifica la diferencia.',
+    'Todo esto vale en contextos donde hay algo real que verificar. Aplicarlo a tu pareja o a un amigo es a la vez inútil y corrosivo: sin evidencia externa, sin tasa base y sin propósito legítimo, lo único que producís es desconfianza con método.',
+  ],
+  claves: [
+    { t: 'Orden inverso', d: 'El relato de atrás para adelante. La memoria real lo tolera; el guion memorizado, no.' },
+    { t: 'Pregunta inesperada', d: 'Lo espacial y lo periférico no se preparan. Ahí está la diferencia.' },
+    { t: 'SUE', d: 'Guardar la evidencia hasta que el relato se comprometa. Revelar temprano es regalar el mapa.' },
+    { t: 'Verificabilidad', d: 'Detalles comprobables, no detalles ricos. Y decir de entrada que vas a comprobar.' },
+  ],
+  diario: [
+    'Reconstruir un evento propio de ayer en orden inverso, 5 minutos. Registrar cuánto cuesta aun diciendo la verdad: eso calibra tu expectativa.',
+    'Escribir dos preguntas inesperadas para una situación real. Deben ser espaciales o periféricas, nunca centrales.',
+    'Revisar si en el día juzgaste a alguien por conducta y no por contenido. Anotarlo.',
+  ],
+  semanal: [
+    'Con un voluntario que prepara dos relatos (uno verdadero, uno falso, vos no sabés cuál): aplicar orden inverso, una pregunta inesperada y verificabilidad.',
+    'Acumular resultados hasta 10 rondas y calcular tu exactitud. Comparar con el 54 % del módulo 3.',
+    'Releer la página que escribiste en el módulo 3 sobre tu confianza y tu acierto. Ver si cambió algo.',
+  ],
+  errores: [
+    'Usar esto en relaciones personales. Es el mal uso más común y el más dañino.',
+    'Tratar el resultado como veredicto. Sigue siendo una señal moderada, no una prueba.',
+    'Recaer en métodos acusatorios tipo Reid: la presión produce confesiones, no información exacta.',
+  ],
+},
+{
+  n: 9, fase: 5, semanas: '21 – 22', titulo: 'Memoria: método de loci',
+  bajada: 'La habilidad más replicable del personaje. Evidencia fuerte, resultados rápidos, techo alto.',
+  ev: 'solida',
+  evNota: 'Revisión sistemática y meta-análisis muestran un efecto grande sobre el recuerdo serial inmediato frente al repaso. La neuroimagen es convergente: hipocampo, parahipocampo y corteza retroesplenial, y el entrenamiento produce representaciones prefrontales distintas que se sostienen a cuatro meses (Science Advances, 2020; preprints de 2025). Nota importante: no transfiere a inteligencia general. Es una habilidad específica, muy buena en lo suyo.',
+  serie: 'Jane recuerda todo lo que alguien dijo y se lo devuelve en el momento exacto. La serie lo atribuye a genialidad. Es una técnica de 2.500 años que se aprende en semanas.',
+  real: [
+    'El método de loci funciona porque secuestra un sistema que ya tenés sobredesarrollado: la memoria espacial. Recordar veinte ítems arbitrarios es dificilísimo; recorrer mentalmente tu casa es trivial. La técnica consiste en colocar cada ítem, convertido en imagen vívida y concreta, en un lugar específico de un recorrido que conocés, y después recuperarlo recorriendo.',
+    'La evidencia acompaña. La revisión sistemática encuentra un efecto grande sobre recuerdo inmediato frente a la repetición. Los estudios de neuroimagen muestran activación consistente de las regiones de navegación espacial, y el entrenamiento de seis semanas produce patrones prefrontales distintos que se correlacionan con mejor memoria cuatro meses después. Dicho de otro modo: no es un truco de fiesta, es reorganización funcional.',
+    'La advertencia honesta: el entrenamiento en loci mejora la memoria para material que codificás con loci. No sube tu inteligencia general ni tu memoria de trabajo en abstracto. Un estudio comparativo encontró mejor transferencia en entrenamiento de n-back dual que en loci. Sabé qué estás comprando.',
+    'Sistemas que conviene sumar al loci: el <strong class="text-bone">sistema mayor</strong> (dígitos a consonantes, para números), <strong class="text-bone">PAO</strong> (persona-acción-objeto, para comprimir tres ítems en una imagen), la <strong class="text-bone">historia enlazada</strong> para secuencias, y un sistema dedicado de <strong class="text-bone">nombres y caras</strong>, que es el que más rinde socialmente y el que produce el efecto "cómo se acuerda".',
+  ],
+  claves: [
+    { t: 'Loci', d: 'Imagen vívida colocada en un lugar conocido. La recuperación es un recorrido, no un esfuerzo.' },
+    { t: 'Sistema mayor', d: 'Dígito a consonante, consonante a palabra. Los números dejan de ser arbitrarios.' },
+    { t: 'Nombres y caras', d: 'El subsistema de mayor rendimiento social. Rasgo distintivo, imagen del nombre, anclaje.' },
+    { t: 'Repaso espaciado', d: 'Un palacio sin repaso se degrada. Día 1, día 3, día 7, día 21.' },
+  ],
+  diario: [
+    'Quince minutos de práctica. Semana 1: construir tres palacios de 10 loci cada uno y recorrerlos hasta que sean automáticos.',
+    'Semana 2: veinte nombres y caras por día, con repaso espaciado de los de días anteriores.',
+    'Semana 2-3: sistema mayor, del 00 al 99, veinte pares por sesión.',
+  ],
+  semanal: [
+    'Prueba de retención a 24 horas: 30 ítems colocados ayer, recordados hoy. Medir porcentaje.',
+    'Prueba a 7 días sobre el mismo material, con repaso intermedio. Comparar curvas.',
+    'Aplicación real: memorizar el contenido completo de una reunión o un capítulo usando un palacio dedicado.',
+  ],
+  errores: [
+    'No repasar. El loci sin repaso espaciado se borra como cualquier otra cosa.',
+    'Reutilizar un palacio para listas que compiten entre sí, sin limpiarlo. Se contaminan.',
+    'Imágenes tibias. La imagen tiene que ser concreta, exagerada, con movimiento. Las genéricas no se enganchan.',
+  ],
+},
+{
+  n: 10, fase: 5, semanas: '23 – 24', titulo: 'Influencia y sugestión, sin hipnosis',
+  bajada: 'Lo que queda cuando sacás el mito: encuadre, anclaje, reciprocidad y el poder real de las palabras de una pregunta.',
+  ev: 'moderada',
+  evNota: 'Mezcla deliberada. El encuadre, el anclaje y la contaminación del recuerdo por la formulación de la pregunta son efectos robustos y replicados. Los principios de Cialdini son reales pero de tamaño moderado y muy dependientes del contexto. El priming social espectacular (el tipo "palabras de vejez hacen caminar más lento") no replicó y no conviene construir nada sobre eso.',
+  serie: 'Jane "sugiere" y la gente hace. Sacamos la hipnosis de escena, que no sostiene lo que la serie le hace hacer. Lo que queda es más chico y más verdadero.',
+  real: [
+    'Lo más fuerte de esta área, y lo que mejor explica las escenas de interrogatorio del personaje, viene de Loftus y Palmer: <strong class="text-bone">la formulación de la pregunta cambia el recuerdo</strong>. Preguntar a qué velocidad iban los autos cuando "se estrellaron" produce estimaciones más altas que cuando "chocaron", y una semana después los del grupo "se estrellaron" recuerdan vidrios rotos que nunca existieron. No es que respondan distinto: recuerdan distinto. Esto es enorme y explica por qué el módulo 6 insiste tanto con la pregunta abierta.',
+    '<strong class="text-bone">Encuadre.</strong> La misma información presentada como ganancia o como pérdida produce decisiones distintas y sistemáticas (Tversky y Kahneman). Es uno de los hallazgos más replicados de la psicología de la decisión.',
+    '<strong class="text-bone">Anclaje.</strong> Un número irrelevante presentado antes de una estimación arrastra la estimación hacia él. Funciona incluso cuando la gente sabe que el ancla es arbitraria, lo que lo vuelve especialmente incómodo.',
+    '<strong class="text-bone">Cialdini.</strong> Reciprocidad, compromiso y consistencia, prueba social, autoridad, simpatía, escasez. Son efectos reales; también son efectos de tamaño moderado que en la divulgación aparecen como palancas infalibles. El más fuerte para lo que nos ocupa es reciprocidad, que ya usaste en el módulo 7.',
+    'Y la parte que hay que decir aunque incomode: buena parte de la literatura de priming conductual de los 2000 no sobrevivió a la crisis de replicación. Si un libro de influencia te promete que una palabra cambia el comportamiento de alguien de forma espectacular, ese libro está citando estudios que no replicaron.',
+  ],
+  claves: [
+    { t: 'La pregunta contamina', d: 'La palabra elegida altera el recuerdo, no sólo la respuesta. Por eso las preguntas abiertas no son cortesía, son método.' },
+    { t: 'Encuadre', d: 'Ganancia o pérdida sobre el mismo dato produce decisiones distintas. Robusto y replicado.' },
+    { t: 'Anclaje', d: 'El primer número manda, incluso si es obviamente arbitrario y la persona lo sabe.' },
+    { t: 'Escepticismo con el priming', d: 'Los efectos espectaculares de priming social no replicaron. No construyas sobre esa base.' },
+  ],
+  diario: [
+    'Reformular una misma petición de tres maneras distintas (ganancia, pérdida, neutra) y registrar la respuesta.',
+    'Detectar un ancla numérica que te aplicaron en el día: precio de lista, primera cifra en una negociación, comparación inicial.',
+    'Revisar tus preguntas del día y marcar cuáles fueron sugestivas sin que te dieras cuenta.',
+  ],
+  semanal: [
+    'Experimento de anclaje con 10 personas: la mitad con ancla alta, la mitad con ancla baja, misma pregunta de estimación. Medir la diferencia de medias.',
+    'Replicar Loftus en chico: dos grupos, mismo video corto, la pregunta con verbos distintos. Comparar estimaciones.',
+    'Revisar un libro popular de influencia y buscar si sus estudios centrales replicaron.',
+  ],
+  errores: [
+    'Creer en los efectos espectaculares de priming.',
+    'Usar preguntas sugestivas cuando querés información verdadera: la contaminás de forma irreversible.',
+    'Confundir influencia con control. Los tamaños de efecto reales son moderados y eso es una buena noticia.',
+  ],
+},
+{
+  n: 11, fase: 5, semanas: '25', titulo: 'Inferencia: abducción y calibración',
+  bajada: 'Jane no deduce. Abduce. Y la serie esconde que en la vida real la mejor explicación disponible suele estar mal.',
+  ev: 'solida',
+  evNota: 'La lógica de la inferencia a la mejor explicación, el papel de las tasas base y la calibración de probabilidades subjetivas están bien establecidos. El entrenamiento de calibración con feedback mejora el juicio de forma medible.',
+  serie: 'El personaje observa tres detalles y produce una conclusión correcta. Funciona porque el guionista escribió primero la conclusión. Es el mismo truco de Sherlock Holmes con otra estética.',
+  real: [
+    'Hay que nombrar bien la operación. La <strong class="text-bone">deducción</strong> va de premisas a conclusión necesaria. La <strong class="text-bone">inducción</strong> generaliza desde casos. Lo que hacen Jane y Holmes es <strong class="text-bone">abducción</strong>: saltar a la mejor explicación disponible. La abducción es indispensable y es falible por diseño, porque "la mejor disponible" depende de qué se te ocurrió.',
+    'De ahí sale la falacia de Sherlock: "eliminado lo imposible, lo que queda, por improbable que parezca, es la verdad". Falla porque nunca tenés la lista completa de posibilidades. Lo que queda no es la verdad; es lo último que se te ocurrió.',
+    'El correctivo tiene cuatro piezas. Primero, <strong class="text-bone">tasas base</strong>: qué tan frecuente es esa explicación antes de mirar este caso. Segundo, <strong class="text-bone">hipótesis alternativas obligatorias</strong>: mínimo tres, escritas, antes de permitirte una conclusión. Tercero, <strong class="text-bone">buscar evidencia que falsee</strong> en lugar de acumular evidencia que confirme, que es lo que el cerebro hace por defecto. Cuarto, <strong class="text-bone">registro de predicciones con probabilidad</strong> y revisión periódica.',
+    'La calibración es el único antídoto real contra la trampa de todo este plan. Podés hacer todos los módulos anteriores y terminar siendo una persona segura y equivocada. El registro de predicciones es lo que te avisa.',
+  ],
+  claves: [
+    { t: 'Abducción, no deducción', d: 'Mejor explicación disponible, no conclusión necesaria. La diferencia es toda la humildad del método.' },
+    { t: 'Falacia de Sherlock', d: 'Nunca tenés la lista completa. Lo que queda es lo último que imaginaste, no la verdad.' },
+    { t: 'Tres alternativas obligatorias', d: 'Escritas, antes de concluir. Es una regla mecánica precisamente porque la intuición no la aplica sola.' },
+    { t: 'Registro de calibración', d: 'Predicciones con probabilidad y revisión. Lo único que distingue juicio entrenado de confianza acumulada.' },
+  ],
+  diario: [
+    'Tres hipótesis obligatorias escritas antes de cualquier conclusión sobre una persona.',
+    'Una predicción por día con probabilidad asignada y fecha de verificación.',
+    'Una pregunta por día del tipo "¿qué observaría si estuviera equivocado?".',
+  ],
+  semanal: [
+    'Revisión de calibración: de lo que afirmaste al 70 %, ¿cuánto acertaste? Agrupar por franja de confianza.',
+    'Tomar una conclusión tuya de hace un mes y reconstruir qué tasa base ignoraste.',
+    'Escribir el caso más fuerte posible contra tu propia lectura de una situación en curso.',
+  ],
+  errores: [
+    'Confundir plausibilidad con probabilidad. Una historia coherente no es una historia probable.',
+    'Ignorar la tasa base porque el caso individual "se siente" distinto.',
+    'No registrar los fallos. Sin registro, la memoria se queda sólo con los aciertos y tu confianza crece sin motivo.',
+  ],
+},
+{
+  n: 12, fase: 5, semanas: '26 · transversal', titulo: 'Ética, límites y autodefensa',
+  bajada: 'Transversal a todo el plan. Se revisa cada semana, no sólo al final.',
+  ev: 'solida',
+  evNota: 'No es una cuestión empírica sino normativa, pero el daño documentado del mal uso sí es empírico: confesiones falsas por métodos acusatorios, fraude de médiums sobre personas en duelo, perfilado pseudocientífico usado en decisiones reales.',
+  serie: 'El personaje arranca la serie como estafador profesional: usaba exactamente estas técnicas para vender contacto con muertos, y eso es lo que desencadena toda la tragedia de la trama. La serie pone la advertencia en el primer minuto.',
+  real: [
+    'Todo lo de este plan es de doble uso, sin excepción. La lectura en frío que impresiona en una mesa es la herramienta con la que se factura a una viuda. La elicitación que destraba una negociación es la misma con la que se arma el perfil de una víctima. El enfoque cognitivo de veracidad, mal usado, produce la convicción de culpabilidad que precede a las confesiones falsas.',
+    'La diferencia no está en la técnica. Está en cuatro condiciones que se verifican antes, no después.',
+    'Y está la otra mitad del módulo, que es defensiva: reconocer cuándo te lo están haciendo a vos. Es la aplicación más útil de todo el plan para la mayoría de la gente, porque te cruzás con esto en consultas psíquicas, en ventas, en negociaciones, en entrevistas laborales y en redes sociales, mucho más seguido de lo que te cruzás con un caso que resolver.',
+  ],
+  claves: [
+    { t: 'Consentimiento', d: 'La persona sabe en qué tipo de conversación está. La prueba del enterarse, del módulo 7, aplica acá entera.' },
+    { t: 'Propósito legítimo', d: 'Hay una razón defendible más allá de impresionar o de ganar.' },
+    { t: 'No explotar vulnerabilidad', d: 'Duelo, enfermedad, deuda, soledad, decisiones de pareja. Ahí el daño es real y documentado.' },
+    { t: 'Sin pretensión de poder', d: 'Nunca presentar esto como una capacidad que no tiene. Es la mentira que habilita todas las demás.' },
+  ],
+  diario: [
+    'Una línea en el cuaderno: ¿usé alguna técnica hoy de una manera que no contaría en voz alta?',
+    'Marcar toda conclusión del día que haya sido sobre una persona y no sobre una conducta.',
+  ],
+  semanal: [
+    'Revisión de usos de la semana contra las cuatro condiciones. Nombrar explícitamente los casos de borde.',
+    'Practicar la defensa: ante una afirmación que te describa, pedir una versión falsable ("¿qué sería falso de mí, entonces?") y ver qué pasa.',
+    'Una vez al mes, escribir dónde cruzaste o casi cruzaste la línea. Sin esa entrada, el registro no sirve.',
+  ],
+  errores: [
+    'Tratar la ética como un apéndice final del plan en vez de una revisión semanal.',
+    'Justificar el uso por el resultado. Si la técnica sólo se justifica cuando sale bien, no estaba justificada.',
+    'Confundir "puedo" con "corresponde".',
+  ],
+},
+];
+
+const RUTINA = [
+  { min: '10', t: 'Memoria', d: 'Loci, nombres y caras, o sistema mayor según la semana. Siempre con repaso espaciado de lo anterior, nunca sólo material nuevo.' },
+  { min: '10', t: 'Observación', d: 'Kim\'s game o barrido de protocolo en un espacio real. Registro escrito inmediato, porque la memoria de la observación se degrada en segundos.' },
+  { min: '15', t: 'Módulo activo', d: 'El bloque que cambia. Los ejercicios diarios del módulo de esta semana, hechos con la ficha del cuaderno a la vista.' },
+  { min: '10', t: 'Cuaderno', d: 'Tres columnas: dato, inferencia, verificación. Más la predicción del día con probabilidad asignada, y la revisión de las que vencen hoy.' },
+];
+
+const SEMANAS_PLAN = [
+  [1,1,'Protocolo de barrido: fijar el orden y repetirlo hasta que sea reflejo','20 fichas de observación'],
+  [2,1,'Kim\'s game diario y separación estricta dato / inferencia','Auditoría de inferencias'],
+  [3,1,'Chunking del dominio propio: qué patrones ya reconocés','Lista de 10 chunks'],
+  [4,2,'Tomar líneas base de tres personas conocidas','3 fichas de base'],
+  [5,2,'Desviaciones con tres explicaciones alternativas y verificación','Tasa de acierto real'],
+  [6,3,'El número 54 %: leer la evidencia contra la detección conductual','Test ciego, ronda 1'],
+  [7,3,'Reasignar el no verbal a regulación de conversación','Página sobre confianza vs. acierto'],
+  [8,4,'Forer, validación subjetiva y construcción de enunciados Barnum','21 enunciados propios'],
+  [9,4,'Arcoíris, escopeta, pesca, negativo evanescente','Lectura grabada de 5 min'],
+  [10,4,'Desarmar la propia lectura: contar hits y misses sobre la grabación','Perfil Barnum testeado'],
+  [11,5,'Preparación previa y tasas base del contexto propio','Registro de calibración'],
+  [12,5,'Estimaciones de Fermi e intervalos al 90 %','10 estimaciones verificadas'],
+  [13,6,'Regla 80/20 y preguntas abiertas','Entrevista de 20 min grabada'],
+  [14,6,'Paráfrasis, reflejo y resumen hasta el "exacto"','Conteo de preguntas cerradas'],
+  [15,6,'Silencio de cuatro segundos y rapport en fricción','Registro de lo que llenó el silencio'],
+  [16,7,'Declaración provocativa, conocimiento asumido, reciprocidad','Una técnica por día registrada'],
+  [17,7,'Prueba del enterarse: revisión de límites','Lista de casos de borde'],
+  [18,8,'Orden inverso sobre eventos propios y ajenos','10 reconstrucciones'],
+  [19,8,'Preguntas inesperadas y enfoque de verificabilidad','Set de preguntas espaciales'],
+  [20,8,'SUE: retener la evidencia hasta que el relato se comprometa','10 rondas con voluntario'],
+  [21,9,'Tres palacios de 10 loci y automatización del recorrido','30 ítems a 24 h'],
+  [22,9,'Nombres y caras más sistema mayor 00-99','Retención a 7 días'],
+  [23,10,'Encuadre, anclaje y contaminación por formulación','Experimento de anclaje, n=10'],
+  [24,10,'Cialdini con su letra chica y crisis de replicación','Réplica chica de Loftus'],
+  [25,11,'Abducción, tasas base y tres alternativas obligatorias','Revisión de calibración'],
+  [26,12,'Cierre ético, autodefensa y plan de mantenimiento','Documento de límites propios'],
+];
+
+const ETICA = [
+  { t: 'Consentimiento sobre el tipo de conversación', d: 'La persona no necesita conocer cada técnica, pero sí saber en qué marco está. Una negociación es un marco. Una charla con un amigo no lo es.' },
+  { t: 'Propósito legítimo y proporcional', d: 'Hay una razón defendible que no es impresionar ni ganar por ganar. Y la técnica es proporcional a esa razón.' },
+  { t: 'Vulnerabilidad fuera de alcance', d: 'Duelo, enfermedad grave, deuda, soledad aguda, decisiones de pareja. No hay versión buena de aplicar esto ahí.' },
+  { t: 'Nada de pretensión de poder', d: 'En el momento en que decís o dejás creer que tenés una capacidad que no tenés, dejaste de practicar una habilidad y empezaste a estafar.' },
+];
+
+const DEFENSA = [
+  'Las afirmaciones son bivalentes: describen una cosa y su opuesta. "Sos reservado pero te soltás con confianza" no puede fallar.',
+  'Te hacen hablar mucho y después te devuelven tu propia información como revelación. Contá cuánto hablaste vos.',
+  'Los fallos se evaporan de la conversación y los aciertos se repiten. Anotá los fallos: la proporción real suele sorprender.',
+  'Ante una afirmación sobre vos, pedí la versión falsable: "¿qué sería falso de mí, entonces?". La lectura en frío no sobrevive a esa pregunta.',
+  'La presión de tiempo y la emoción alta son parte del método, no del contenido. Si te apuran, es señal.',
+];
+
+const BIBLIO = [
+  { t: 'Interrogation Best Practices', a: 'High-Value Detainee Interrogation Group (FBI), 2016', d: 'El documento que ordena el campo: métodos no coercitivos, basados en rapport y en recolección de información, como los más eficaces. Base de los módulos 6 y 8.', url: 'https://www.fbi.gov/file-repository/hig-report-august-2016.pdf' },
+  { t: 'Accuracy of Deception Judgments', a: 'Bond & DePaulo, 2006', d: 'Meta-análisis sobre unos 25.000 sujetos. El 54 % que define el techo real de la detección humana de engaño por conducta.' },
+  { t: 'Outsmarting the Liars: Toward a Cognitive Lie Detection Approach', a: 'Vrij, Granhag, Mann & Leal, 2011', d: 'La reformulación del problema: no mirar mejor, entrevistar distinto. Orden inverso, carga cognitiva, preguntas inesperadas.', url: 'https://journals.sagepub.com/doi/10.1177/0963721410391245' },
+  { t: 'A cognitive approach to lie detection: a meta-analysis', a: 'Vrij et al., Legal and Criminological Psychology, 2017', d: 'Cuánto mejora realmente el enfoque cognitivo sobre el protocolo estándar. Efecto consistente y moderado.', url: 'https://bpspsychub.onlinelibrary.wiley.com/doi/abs/10.1111/lcrp.12088' },
+  { t: 'Strategic Use of Evidence (SUE)', a: 'Granhag & Hartwig, 2008', d: 'Retener la evidencia hasta que el relato se comprometa. El núcleo táctico del módulo 8.' },
+  { t: 'The Description of Personality', a: 'Bertram Forer, 1948', d: 'El experimento fundacional del efecto Barnum: perfil idéntico para todos, 4,26 sobre 5 de precisión percibida.' },
+  { t: 'Durable memories and efficient neural coding through mnemonic training using the method of loci', a: 'Science Advances, 2020', d: 'Evidencia neural del entrenamiento en loci: reorganización funcional sostenida a cuatro meses.', url: 'https://www.science.org/doi/10.1126/sciadv.abc7606' },
+  { t: 'The method of loci in the context of psychological research: a systematic review and meta-analysis', a: '2025', d: 'Efecto grande sobre recuerdo serial inmediato frente al repaso, y los límites de la transferencia.', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12514325/' },
+  { t: 'Reconstruction of Automobile Destruction', a: 'Loftus & Palmer, 1974', d: 'La formulación de la pregunta cambia el recuerdo, no sólo la respuesta. Fundamento del módulo 10 y razón de la pregunta abierta.' },
+  { t: 'Humans Are Pretty Lousy Lie Detectors', a: 'Scientific American', d: 'Buena síntesis divulgativa de la crítica a las microexpresiones, con las objeciones de Hartwig y Suchotzki.', url: 'https://www.scientificamerican.com/article/humans-are-pretty-lousy-lie-detectors/' },
+  { t: 'Masterclass in Eliciting Intelligence Information', a: 'CREST, Centre for Research and Evidence on Security Threats', d: 'Repertorio de elicitación con base empírica. Fuente del módulo 7.', url: 'https://crestresearch.ac.uk/download/2250/report_masterclass_in_eliciting_intelligence_information-2.pdf' },
+  { t: 'Cold reading', a: 'Entrada de referencia general', d: 'Inventario de las técnicas del módulo 4: Barnum, arcoíris, escopeta, pesca, negativo evanescente.', url: 'https://en.wikipedia.org/wiki/Cold_reading' },
+];
+
+/* ══════════════════════════════════════════════════════════════════════
+   ESTADO
+   ══════════════════════════════════════════════════════════════════════ */
+
+const LS_KEY = 'metodo-jane/v1';
+let hechos = new Set();
+try { hechos = new Set(JSON.parse(localStorage.getItem(LS_KEY) || '[]')); } catch (e) { hechos = new Set(); }
+const guardar = () => { try { localStorage.setItem(LS_KEY, JSON.stringify([...hechos])); } catch (e) {} };
+
+let filtroEv = 'all';
+let consulta = '';
+let ocultarHechos = false;
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]));
+const idDe = (n, tipo, i) => `m${n}-${tipo}${i}`;
+const totalDe = m => m.diario.length + m.semanal.length;
+const hechosDe = m => [
+  ...m.diario.map((_, i) => idDe(m.n, 'd', i)),
+  ...m.semanal.map((_, i) => idDe(m.n, 's', i)),
+].filter(id => hechos.has(id)).length;
+
+const TOTAL = MODULOS.reduce((a, m) => a + totalDe(m), 0);
+
+/* ══════════════════════════════════════════════════════════════════════
+   RENDER
+   ══════════════════════════════════════════════════════════════════════ */
+
+function medidor(ev) {
+  const cfg = EV[ev];
+  return Array.from({ length: 5 }, (_, i) =>
+    `<span class="h-[3px] w-4 rounded-full ${i < cfg.nivel ? cfg.barra : 'bg-ink4'}"></span>`
+  ).join('');
+}
+
+function casilla(id, texto) {
+  const on = hechos.has(id);
+  return `
+  <li class="drill-row ${on ? 'is-done' : ''}">
+    <label class="drill flex cursor-pointer select-none items-start gap-3 py-2">
+      <input type="checkbox" class="peer sr-only" data-id="${id}" ${on ? 'checked' : ''}>
+      <span class="box relative mt-[.32em] flex h-[17px] w-[17px] shrink-0 items-center justify-center rounded-[5px] border border-line2 bg-ink2">
+        <svg class="tick h-2.5 w-2.5 text-ink"><use href="#i-check"/></svg>
+      </span>
+      <span class="txt font-body text-[1.02rem] leading-[1.6] text-bone2">${texto}</span>
+    </label>
+  </li>`;
+}
+
+function bloque(titulo, icono, cuerpo) {
+  return `
+  <div>
+    <h4 class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.14em] text-bone3">
+      <svg class="h-[15px] w-[15px]"><use href="#i-${icono}"/></svg>${titulo}
+    </h4>
+    <div class="mt-3">${cuerpo}</div>
+  </div>`;
+}
+
+function moduloHTML(m) {
+  const cfg = EV[m.ev];
+  const hechosN = hechosDe(m), totalN = totalDe(m);
+  const completo = hechosN === totalN;
+
+  return `
+  <article class="mod border-b border-line" data-n="${m.n}" data-ev="${m.ev}" id="mod-${m.n}">
+
+    <button class="mod-head group flex w-full items-start gap-4 py-6 text-left sm:gap-6" aria-expanded="false" aria-controls="fold-${m.n}">
+      <span class="num mt-[.35em] shrink-0 font-mono text-sm ${completo ? 'text-amber' : 'text-bone3'} sm:text-base">${String(m.n).padStart(2, '0')}</span>
+
+      <span class="min-w-0 flex-1">
+        <span class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+          <span role="heading" aria-level="3" class="font-display text-[1.45rem] font-medium leading-[1.18] tracking-[-0.008em] text-bone transition-colors group-hover:text-amber2 sm:text-[1.75rem]">${esc(m.titulo)}</span>
+          <span class="num font-mono text-[11px] uppercase tracking-[0.1em] text-bone3">Sem. ${esc(m.semanas)}</span>
+        </span>
+        <span class="mt-2 block max-w-[44rem] font-body text-[1.03rem] leading-[1.6] text-bone3">${m.bajada}</span>
+        <span class="mt-3.5 flex flex-wrap items-center gap-x-5 gap-y-2">
+          <span class="flex items-center gap-1.5" title="${cfg.etiqueta}">
+            ${medidor(m.ev)}
+            <span class="ml-1 font-mono text-[11px] uppercase tracking-[0.08em] ${cfg.color}">${cfg.etiqueta.replace('Evidencia ', '')}</span>
+          </span>
+          <span class="num font-mono text-[11px] text-bone3">${hechosN} / ${totalN} ejercicios</span>
+        </span>
+      </span>
+
+      <span class="chev mt-2 shrink-0 text-bone3 transition-colors group-hover:text-amber">
+        <svg class="h-5 w-5"><use href="#i-chev"/></svg>
+      </span>
+    </button>
+
+    <div class="fold" id="fold-${m.n}">
+      <div class="fold-in">
+        <div class="grid gap-x-14 gap-y-10 pb-12 pl-0 pt-1 sm:pl-[3.1rem] lg:grid-cols-[minmax(0,1fr)_19rem]">
+
+          <div class="min-w-0 space-y-9">
+            <div class="border-l border-line2 pl-5">
+              <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-bone3">En la serie</p>
+              <p class="mt-2.5 max-w-[40rem] font-body text-[1.03rem] italic leading-[1.65] text-bone2">${m.serie}</p>
+            </div>
+
+            <div class="max-w-[40rem] space-y-5 font-body text-[1.07rem] leading-[1.75] text-bone2">
+              ${m.real.map(p => `<p>${p}</p>`).join('')}
+            </div>
+
+            ${bloque('Conceptos clave', 'book', `
+              <dl class="max-w-[40rem] divide-y divide-line border-y border-line">
+                ${m.claves.map(c => `
+                  <div class="grid gap-1 py-3.5 sm:grid-cols-[11rem_minmax(0,1fr)] sm:gap-5">
+                    <dt class="font-body text-[1.02rem] font-semibold text-bone">${esc(c.t)}</dt>
+                    <dd class="font-body text-[1rem] leading-[1.6] text-bone3">${c.d}</dd>
+                  </div>`).join('')}
+              </dl>`)}
+
+            ${bloque('Errores que arruinan el módulo', 'alert', `
+              <ul class="max-w-[40rem] space-y-3">
+                ${m.errores.map(e => `
+                  <li class="flex gap-3.5 font-body text-[1rem] leading-[1.6] text-bone3">
+                    <svg class="mt-[.35em] h-4 w-4 shrink-0 text-terra"><use href="#i-x"/></svg>
+                    <span>${e}</span>
+                  </li>`).join('')}
+              </ul>`)}
+          </div>
+
+          <div class="space-y-8 lg:sticky lg:top-24 lg:self-start">
+            <div class="rounded-xl border border-line bg-ink2 p-5">
+              <p class="font-mono text-[11px] uppercase tracking-[0.14em] ${cfg.color}">${cfg.etiqueta}</p>
+              <p class="mt-3 font-body text-[.97rem] leading-[1.6] text-bone3">${m.evNota}</p>
+            </div>
+
+            ${bloque('Práctica diaria', 'loop', `<ul class="-my-2">${m.diario.map((d, i) => casilla(idDe(m.n, 'd', i), d)).join('')}</ul>`)}
+            ${bloque('Práctica semanal', 'check', `<ul class="-my-2">${m.semanal.map((d, i) => casilla(idDe(m.n, 's', i), d)).join('')}</ul>`)}
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </article>`;
+}
+
+function faseHTML(f) {
+  return `
+  <div class="rise mb-1 mt-14 flex flex-wrap items-baseline gap-x-5 gap-y-1 border-b border-line2 pb-4 first:mt-0">
+    <h2 class="font-display text-[1.6rem] font-semibold tracking-[-0.01em] text-bone sm:text-[1.85rem]">${esc(f.nombre)}</h2>
+    <span class="num font-mono text-[11px] uppercase tracking-[0.1em] text-amber">Semanas ${esc(f.semanas)}</span>
+    <p class="w-full max-w-[42rem] font-body text-[1.02rem] leading-[1.6] text-bone3 sm:mt-1">${esc(f.sintesis)}</p>
+  </div>`;
+}
+
+function render() {
+  document.getElementById('lista').innerHTML =
+    FASES.map(f => faseHTML(f) + MODULOS.filter(m => m.fase === f.n).map(moduloHTML).join('')).join('');
+  document.getElementById('stat-drills').textContent = TOTAL;
+  renderNav();
+  aplicarFiltros();
+  observarFases();
+}
+
+function renderNav() {
+  document.getElementById('nav').innerHTML = MODULOS.map(m => {
+    const h = hechosDe(m), t = totalDe(m);
+    const estado = h === t ? 'bg-amber' : h > 0 ? 'bg-amberdim' : 'bg-ink4';
+    return `
+    <a href="#mod-${m.n}" data-nav="${m.n}" class="nav-link flex items-center gap-3 rounded-md px-2 py-[7px] font-body text-[.94rem] leading-tight text-bone3 transition-colors hover:bg-ink2 hover:text-bone">
+      <span class="dot h-[6px] w-[6px] shrink-0 rounded-full ${estado}"></span>
+      <span class="num shrink-0 font-mono text-[11px] text-bone3">${String(m.n).padStart(2, '0')}</span>
+      <span class="truncate">${esc(m.titulo)}</span>
+    </a>`;
+  }).join('');
+}
+
+function renderEstaticos() {
+  document.getElementById('rutina-lista').innerHTML = RUTINA.map((r, i) => `
+    <li class="grid gap-2 py-6 sm:grid-cols-[5.5rem_minmax(0,1fr)] sm:gap-8">
+      <span class="num font-mono text-sm text-amber">${r.min} min</span>
+      <div>
+        <h3 class="font-body text-[1.2rem] font-semibold text-bone">${esc(r.t)}</h3>
+        <p class="mt-1.5 font-body text-[1.02rem] leading-[1.65] text-bone3">${esc(r.d)}</p>
+      </div>
+    </li>`).join('');
+
+  document.getElementById('cal-body').innerHTML = SEMANAS_PLAN.map(([s, mod, foco, ent]) => {
+    const m = MODULOS.find(x => x.n === mod);
+    return `
+    <tr class="group transition-colors hover:bg-ink2">
+      <td class="num py-3.5 pr-4 align-top font-mono text-sm text-bone3">${String(s).padStart(2, '0')}</td>
+      <td class="py-3.5 pr-4 align-top">
+        <a href="#mod-${mod}" class="num font-mono text-sm text-amber hover:text-amber2">${String(mod).padStart(2, '0')}</a>
+      </td>
+      <td class="py-3.5 pr-4 align-top font-body text-[1.01rem] leading-[1.5] text-bone2">
+        ${esc(foco)}
+        <span class="mt-0.5 block font-mono text-[10px] uppercase tracking-[0.1em] ${EV[m.ev].color}">${esc(m.titulo)}</span>
+      </td>
+      <td class="py-3.5 align-top font-body text-[.95rem] leading-[1.5] text-bone3">${esc(ent)}</td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('etica-lista').innerHTML = ETICA.map((e, i) => `
+    <li class="grid gap-2 sm:grid-cols-[2rem_minmax(0,1fr)] sm:gap-5">
+      <span class="num font-mono text-sm text-amber">${String(i + 1).padStart(2, '0')}</span>
+      <div>
+        <h3 class="font-body text-[1.1rem] font-semibold text-bone">${esc(e.t)}</h3>
+        <p class="mt-1 font-body text-[1.01rem] leading-[1.6] text-bone3">${esc(e.d)}</p>
+      </div>
+    </li>`).join('');
+
+  document.getElementById('defensa-lista').innerHTML = DEFENSA.map(d => `
+    <li class="flex gap-3.5">
+      <span class="mt-[.72em] h-px w-4 shrink-0 bg-amberdim"></span>
+      <span>${esc(d)}</span>
+    </li>`).join('');
+
+  document.getElementById('biblio').innerHTML = BIBLIO.map(b => `
+    <li class="grid gap-2 py-5 sm:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] sm:gap-8">
+      <div>
+        <h3 class="font-body text-[1.08rem] font-semibold leading-snug text-bone">
+          ${b.url ? `<a href="${b.url}" target="_blank" rel="noopener" class="underline decoration-amberdim hover:decoration-amber">${esc(b.t)}</a>` : esc(b.t)}
+        </h3>
+        <p class="mt-1 font-mono text-[11px] uppercase tracking-[0.08em] text-bone3">${esc(b.a)}</p>
+      </div>
+      <p class="max-w-[38rem] font-body text-[1rem] leading-[1.6] text-bone3">${esc(b.d)}</p>
+    </li>`).join('');
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   PROGRESO
+   ══════════════════════════════════════════════════════════════════════ */
+
+function actualizarProgreso() {
+  const n = [...hechos].length;
+  const pct = TOTAL ? Math.round((n / TOTAL) * 100) : 0;
+
+  document.getElementById('bar-top').style.width = pct + '%';
+  document.getElementById('bar-side').style.width = pct + '%';
+  document.getElementById('pct-top').textContent = pct + ' %';
+  document.getElementById('pct-side').innerHTML = pct + '<span class="text-[1.4rem] text-bone3"> %</span>';
+  document.getElementById('count-side').textContent = `${n} / ${TOTAL} ejercicios`;
+
+  MODULOS.forEach(m => {
+    const art = document.getElementById('mod-' + m.n);
+    if (!art) return;
+    const h = hechosDe(m), t = totalDe(m);
+    art.querySelector('.mod-head .num').className =
+      'num mt-[.35em] shrink-0 font-mono text-sm sm:text-base ' + (h === t ? 'text-amber' : 'text-bone3');
+    art.querySelectorAll('.mod-head .font-mono').forEach(el => {
+      if (el.textContent.includes('ejercicios')) el.textContent = `${h} / ${t} ejercicios`;
+    });
+    const dot = document.querySelector(`[data-nav="${m.n}"] .dot`);
+    if (dot) dot.className = 'dot h-[6px] w-[6px] shrink-0 rounded-full ' + (h === t ? 'bg-amber' : h > 0 ? 'bg-amberdim' : 'bg-ink4');
+  });
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   FILTROS
+   ══════════════════════════════════════════════════════════════════════ */
+
+function textoDe(m) {
+  return [m.titulo, m.bajada, m.serie, m.evNota, ...m.real, ...m.diario, ...m.semanal, ...m.errores,
+          ...m.claves.map(c => c.t + ' ' + c.d)].join(' ').toLowerCase();
+}
+
+function aplicarFiltros() {
+  let visibles = 0;
+
+  MODULOS.forEach(m => {
+    const art = document.getElementById('mod-' + m.n);
+    if (!art) return;
+    const okEv = filtroEv === 'all' || m.ev === filtroEv;
+    const okQ = !consulta || textoDe(m).includes(consulta);
+    const ver = okEv && okQ;
+    art.classList.toggle('hidden', !ver);
+    if (ver) visibles++;
+    if (ver && consulta) art.classList.add('is-open');
+  });
+
+  document.querySelectorAll('#lista .rise').forEach((cab, i) => {
+    const f = FASES[i];
+    const algunoVisible = MODULOS.some(m => m.fase === f.n && !document.getElementById('mod-' + m.n).classList.contains('hidden'));
+    cab.classList.toggle('hidden', !algunoVisible);
+  });
+
+  document.getElementById('sin-resultados').classList.toggle('hidden', visibles > 0);
+  aplicarOcultarHechos();
+  actualizarProgreso();
+}
+
+function aplicarOcultarHechos() {
+  document.querySelectorAll('.drill-row').forEach(li => {
+    const on = li.querySelector('input').checked;
+    li.classList.toggle('hidden', ocultarHechos && on);
+  });
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   EVENTOS
+   ══════════════════════════════════════════════════════════════════════ */
+
+document.addEventListener('click', e => {
+  const head = e.target.closest('.mod-head');
+  if (head) {
+    const art = head.closest('.mod');
+    const abierto = art.classList.toggle('is-open');
+    head.setAttribute('aria-expanded', String(abierto));
+    return;
+  }
+
+  const chip = e.target.closest('.chip');
+  if (chip) {
+    filtroEv = chip.dataset.ev;
+    document.querySelectorAll('.chip').forEach(c => {
+      const on = c === chip;
+      c.className = 'chip rounded-full px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] border ' +
+        (on ? 'border-amber bg-amber text-ink' : 'border-line text-bone2 hover:border-line2');
+    });
+    aplicarFiltros();
+  }
+});
+
+document.addEventListener('change', e => {
+  const cb = e.target.closest('input[data-id]');
+  if (cb) {
+    if (cb.checked) hechos.add(cb.dataset.id); else hechos.delete(cb.dataset.id);
+    guardar();
+    actualizarProgreso();
+    aplicarOcultarHechos();
+  }
+});
+
+document.getElementById('q').addEventListener('input', e => {
+  consulta = e.target.value.trim().toLowerCase();
+  aplicarFiltros();
+});
+
+document.getElementById('hide-done').addEventListener('change', e => {
+  ocultarHechos = e.target.checked;
+  aplicarOcultarHechos();
+});
+
+document.getElementById('btn-expand').addEventListener('click', e => {
+  const mods = [...document.querySelectorAll('.mod:not(.hidden)')];
+  const abrir = !mods.every(m => m.classList.contains('is-open'));
+  mods.forEach(m => {
+    m.classList.toggle('is-open', abrir);
+    m.querySelector('.mod-head').setAttribute('aria-expanded', String(abrir));
+  });
+  e.currentTarget.textContent = abrir ? 'Cerrar todos los módulos' : 'Abrir todos los módulos';
+});
+
+/* Confirmación en dos pasos, sin diálogo del navegador. */
+let armado = false, armadoTimer = null;
+document.getElementById('btn-reset').addEventListener('click', e => {
+  const label = document.getElementById('reset-label');
+  if (!armado) {
+    armado = true;
+    label.textContent = 'Confirmar: borrar todo';
+    e.currentTarget.classList.add('border-terra', 'text-terra');
+    armadoTimer = setTimeout(() => {
+      armado = false;
+      label.textContent = 'Borrar mi progreso';
+      e.currentTarget.classList.remove('border-terra', 'text-terra');
+    }, 4000);
+    return;
+  }
+  clearTimeout(armadoTimer);
+  armado = false;
+  hechos.clear();
+  guardar();
+  document.querySelectorAll('input[data-id]').forEach(i => { i.checked = false; });
+  label.textContent = 'Progreso borrado';
+  e.currentTarget.classList.remove('border-terra', 'text-terra');
+  setTimeout(() => { label.textContent = 'Borrar mi progreso'; }, 2200);
+  actualizarProgreso();
+  aplicarOcultarHechos();
+});
+
+document.getElementById('btn-print').addEventListener('click', () => window.print());
+
+/* Resaltado del módulo activo en el índice lateral. */
+function observarFases() {
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => { if (en.isIntersecting) en.target.classList.add('seen'); });
+  }, { rootMargin: '-10% 0px -10% 0px' });
+  document.querySelectorAll('.rise').forEach(el => io.observe(el));
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      const link = document.querySelector(`[data-nav="${en.target.dataset.n}"]`);
+      if (link && en.isIntersecting) {
+        document.querySelectorAll('.nav-link').forEach(l => l.dataset.active = 'false');
+        link.dataset.active = 'true';
+      }
+    });
+  }, { rootMargin: '-15% 0px -70% 0px' });
+  document.querySelectorAll('.mod').forEach(el => spy.observe(el));
+}
+
+/* Arranque. */
+render();
+renderEstaticos();
+actualizarProgreso();
+</script>
+</body>
+</html>
